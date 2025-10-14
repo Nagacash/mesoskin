@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/Users/mauriceholda/Desktop/Coding/mesoskin/app/layout\":[\"static/media/103fc5fac08dcb15-s.p.woff2\",\"static/media/5924d7180a413da6-s.p.woff2\",\"static/media/904be59b21bd51cb-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"

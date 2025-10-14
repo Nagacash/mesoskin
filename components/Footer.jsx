@@ -1,0 +1,65 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { useContext } from "react";
+import { CursorContext } from "./CursorContext";
+import { Facebook, Instagram, Mail, Phone, MapPin } from "lucide-react";
+
+const Footer = () => {
+  const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
+
+  return (
+    <motion.footer
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, transition: { delay: 1 } }}
+      className="bg-gray-800 text-white py-8"
+    >
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Navigation Links */}
+        <div className="text-left">
+          <h3 className="text-xl font-semibold mb-4">Navigation</h3>
+          <ul className="space-y-2">
+            <li><a href="/" className="hover:text-accent transition-colors">Home</a></li>
+            <li><a href="/about" className="hover:text-accent transition-colors">Über mich</a></li>
+            <li><a href="/contact" className="hover:text-accent transition-colors">Kontakt</a></li>
+            <li><a href="/impressum" className="hover:text-accent transition-colors">Impressum</a></li>
+            <li><a href="/datenschutz" className="hover:text-accent transition-colors">Datenschutz</a></li>
+          </ul>
+        </div>
+
+
+
+        {/* Contact Information */}
+        <div className="text-center">
+          <h3 className="text-xl font-semibold mb-4">Kontakt</h3>
+          <ul className="space-y-2 mx-auto w-fit">
+            <li className="flex items-center gap-2"><Mail size={18} className="text-accent" /> E-Mail: <a href="mailto:kontakt@mesoskinhamburg.de" className="hover:text-accent transition-colors">kontakt@mesoskinhamburg.de</a></li>
+            <li className="flex items-center gap-2"><Phone size={18} className="text-accent" /> Telefon: <a href="tel:017661639830" className="hover:text-accent transition-colors">017661639830</a></li>
+            <li className="flex items-center gap-2"><MapPin size={18} className="text-accent" /> Adresse: Osterstraße 92, 20259 Hamburg</li>
+          </ul>
+        </div>
+      </div>
+      <div className="container mx-auto text-center mt-8 pt-8 border-t border-gray-700">
+        <div className="flex justify-center space-x-6 mb-4">
+          <a href="https://facebook.com/mesoskin" target="_blank" rel="noopener noreferrer" className="text-white hover:text-accent transition-colors">
+            <Facebook size={24} />
+          </a>
+          <a href="https://instagram.com/mesoskin" target="_blank" rel="noopener noreferrer" className="text-white hover:text-accent transition-colors">
+            <Instagram size={24} />
+          </a>
+          <a href="mailto:kontakt@mesoskinhamburg.de" className="text-white hover:text-accent transition-colors">
+            <Mail size={24} />
+          </a>
+        </div>
+        <motion.p
+          onMouseEnter={mouseEnterHandler}
+          onMouseLeave={mouseLeaveHandler}
+        >
+          &copy; 2025 Mesoskin. Alle Rechte vorbehalten.
+        </motion.p>
+      </div>
+    </motion.footer>
+  );
+};
+
+export default Footer;
