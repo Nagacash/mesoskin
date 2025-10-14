@@ -47,6 +47,10 @@ const CtaSection = () => {
 
         </div>
         <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ delay: 0.5, duration: 0.8 }}
           onMouseEnter={mouseEnterHandler}
           onMouseLeave={mouseLeaveHandler}
           className="xl:w-1/2 flex justify-center"

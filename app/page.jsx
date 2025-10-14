@@ -13,6 +13,7 @@ import Footer from '@/components/Footer';
 import HeroSection from '@/components/HeroSection';
 import ProcessSection from '@/components/ProcessSection';
 import FaqModal from '@/components/FaqModal';
+import ImageGallerySection from '@/components/ImageGallerySection';
 
 const Home = () => {
   const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
@@ -25,6 +26,7 @@ const Home = () => {
     <>
       <HeroSection />
       <BenefitsSection />
+      <ImageGallerySection />
       <ProcessSection />
       <CtaSection />
       <div className="text-center mb-24 flex justify-center items-center gap-4">

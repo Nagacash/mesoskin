@@ -57,7 +57,10 @@ const HeroSection = () => {
             </div>
           </motion.div>
           <div className="flex-1">
-            <div
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 2.5, duration: 0.8, ease: "easeInOut" }}
               onMouseEnter={mouseEnterHandler}
               onMouseLeave={mouseLeaveHandler}
               className="hidden xl:flex justify-end"
@@ -69,7 +72,7 @@ const HeroSection = () => {
                 alt="Skin Care Woman"
                 className="border-4 border-primary rounded-lg shadow-xl"
               />
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

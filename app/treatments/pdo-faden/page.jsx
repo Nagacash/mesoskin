@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useContext } from "react";
 import { CursorContext } from "@/components/CursorContext";
 import CtaSection from "@/components/CtaSection";
+import PdoFadenImageGallery from "@/components/PdoFadenImageGallery";
 
 const PdoFadenPage = () => {
   const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
@@ -34,9 +35,11 @@ const PdoFadenPage = () => {
         </div>
       </section>
 
+      <PdoFadenImageGallery />
+
       <div className="container mx-auto px-4">
         {/* Eingesetzt werden die Fäden Section */}
-        <section className="mb-12 py-24">
+        <section className="mb-12 py-24 px-8 rounded-lg shadow-lg bg-white mt-12">
           <motion.h2
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -49,13 +52,13 @@ const PdoFadenPage = () => {
             Eingesetzt werden die Fäden fast am ganzen Körper. Zum Beispiel:
           </motion.h2>
           <ul className="list-disc list-inside space-y-2 text-lg text-gray-700 ml-4 mb-6">
-            <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 0.4, duration: 0.8 }} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>V Shape</motion.li>
-            <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 0.5, duration: 0.8 }} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>hängende Halspartie</motion.li>
-            <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 0.6, duration: 0.8 }} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>Hängebäckchen</motion.li>
-            <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 0.7, duration: 0.8 }} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>Wangen</motion.li>
-            <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 0.8, duration: 0.8 }} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>Augenbrauen</motion.li>
-            <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 0.9, duration: 0.8 }} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>Nase</motion.li>
-            <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 1.0, duration: 0.8 }} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>Schlaffe Gesichtshaut</motion.li>
+            <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 0.4, duration: 0.8 }} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}><strong>V Shape</strong></motion.li>
+            <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 0.5, duration: 0.8 }} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}><strong>hängende Halspartie</strong></motion.li>
+            <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 0.6, duration: 0.8 }} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}><strong>Hängebäckchen</strong></motion.li>
+            <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 0.7, duration: 0.8 }} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}><strong>Wangen</strong></motion.li>
+            <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 0.8, duration: 0.8 }} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}><strong>Augenbrauen</strong></motion.li>
+            <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 0.9, duration: 0.8 }} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}><strong>Nase</strong></motion.li>
+            <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 1.0, duration: 0.8 }} onMouseEnter={mouseEnterHandler} onmouseLeave={mouseLeaveHandler}><strong>Schlaffe Gesichtshaut</strong></motion.li>
           </ul>
           <motion.p
             initial={{ opacity: 0, y: 50 }}
@@ -79,83 +82,6 @@ const PdoFadenPage = () => {
           >
             Mehr Informationen zum Ablauf, zur Nachbehandlung und zum Umfang erläutert Annette Fascher
           </motion.p>
-        </section>
-
-        {/* Häufige Fragen (FAQ) Section */}
-        <section className="mb-12 bg-white p-10 rounded-lg shadow-lg">
-          <motion.h2
-            onMouseEnter={mouseEnterHandler}
-            onMouseLeave={mouseLeaveHandler}
-            className="h2 mb-8 text-primary text-center"
-          >
-            Wichtige Informationen
-          </motion.h2>
-          <div className="space-y-10">
-            <div>
-              <motion.h3
-                onMouseEnter={mouseEnterHandler}
-                onMouseLeave={mouseLeaveHandler}
-                className="h3 mb-4 text-accent font-bold"
-              >
-                Wann sieht man die ersten Ergebnisse?
-              </motion.h3>
-              <motion.p
-                onMouseEnter={mouseEnterHandler}
-                onMouseLeave={mouseLeaveHandler}
-                className="text-lg text-gray-700"
-              >
-                Erste Ergebnisse sind bei Fäden mit Widerhäckchen direkt nach der Behandlung sichtbar. Um die volle Wirkung zu erreichen braucht die Haut 2–8 Wochen um neues Kollagen aufzubauen.
-              </motion.p>
-            </div>
-
-            <div>
-              <motion.h3
-                onMouseEnter={mouseEnterHandler}
-                onMouseLeave={mouseLeaveHandler}
-                className="h3 mb-2 text-accent"
-              >
-                Wie lange halten die Ergebnisse?
-              </motion.h3>
-              <motion.p
-                onMouseEnter={mouseEnterHandler}
-                onMouseLeave={mouseLeaveHandler}
-                className="text-lg text-gray-700"
-              >
-                9-18 Monate
-              </motion.p>
-            </div>
-
-            <div>
-              <motion.h3
-                onMouseEnter={mouseEnterHandler}
-                onMouseLeave={mouseLeaveHandler}
-                className="h3 mb-2 text-accent"
-              >
-                Nebenwirkungen Kontraindikationen
-              </motion.h3>
-              <motion.p
-                onMouseEnter={mouseEnterHandler}
-                onMouseLeave={mouseLeaveHandler}
-                className="mb-4 text-lg text-gray-700"
-              >
-                Grundsätzlich sind PDO Fäden gut verträglich. In seltenen Fällen kann es innerhalb der ersten Tage nach der Behandlung, zu einer Druckempfindlichkeit, oder ein Spannungsgefühl kommen. Kleine Hämatome sind möglich.
-              </motion.p>
-              <motion.p
-                onMouseEnter={mouseEnterHandler}
-                onMouseLeave={mouseLeaveHandler}
-                className="mb-4 text-lg text-gray-700"
-              >
-                Nach der Behandlung mit PDO Fäden, sollten Sie einige Tage auf Sport, Sauna, Schwimmbad,UV-Bestrahlung und Alkohol Verzichten.
-              </motion.p>
-              <motion.p
-                onMouseEnter={mouseEnterHandler}
-                onMouseLeave={mouseLeaveHandler}
-                className="text-lg text-gray-700"
-              >
-                Während der Schwangerschaft und Stillzeit sollte keine Behandlung mit PDO Fäden durchgeführt werden.
-              </motion.p>
-            </div>
-          </div>
         </section>
 
         {/* Call to Action Section */}

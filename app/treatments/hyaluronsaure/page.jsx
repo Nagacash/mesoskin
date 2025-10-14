@@ -32,6 +32,9 @@ const HyaluronsaurePage = () => {
             </motion.p>
           </div>
           <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 2.5, duration: 0.8, ease: "easeInOut" }}
             className="xl:w-1/2 flex justify-center xl:justify-end"
           >
             <Image

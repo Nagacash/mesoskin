@@ -60,8 +60,7 @@ const Contact = () => {
                 <div className="pt-1 flex-1">
                   <h4 className="h4 mb-2">Email address</h4>
                   <div className="flex flex-col gap-1">
-                    <p>kontakt@mesoskinhamburg.de</p>
-                    <p>serenysupport@gmail.com</p>
+                    <a href="mailto:kontakt@mesoskinhamburg.de" className="text-blue-600 hover:underline">kontakt@mesoskinhamburg.de</a>
                   </div>
                 </div>
               </div>

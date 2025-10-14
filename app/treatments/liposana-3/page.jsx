@@ -34,16 +34,15 @@ const Liposana3Page = () => {
               Die LIPOSANA3-Gerätetechnologie setzt auf 3 patentierte Frequenzmuster, die ein Behandlungskonzept aus Medizin, Ästhetik und Therapie ergibt.
             </motion.p>
           </div>
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ delay: 0.3, duration: 0.8 }}
-            onMouseEnter={mouseEnterHandler}
-            onMouseLeave={mouseLeaveHandler}
-            className="xl:w-1/2 flex justify-center xl:justify-end xl:-mr-16"
-          >
-            <Image
+                      <motion.div
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ amount: 0.3 }}
+                        transition={{ delay: 0.3, duration: 0.8 }}
+                        onMouseEnter={mouseEnterHandler}
+                        onMouseLeave={mouseLeaveHandler}
+                        className="xl:w-1/2 flex justify-center xl:justify-end xl:-mr-16"
+                      >            <Image
               src="/assets/treatments/girls2.jpg"
               width={500}
               height={350}
@@ -63,6 +62,10 @@ const Liposana3Page = () => {
             onMouseEnter={mouseEnterHandler}
             onMouseLeave={mouseLeaveHandler}
             className="h2 mb-6 text-accent mt-24"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ amount: 0.3 }}
+            transition={{ delay: 0.3, duration: 0.8 }}
           >
             Vorteile der LIPOSANA3-Technologie
           </motion.h2>
@@ -151,24 +154,24 @@ const Liposana3Page = () => {
             Preise
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 className="text-xl font-semibold mb-2 text-primary">Erstbehandlung</h3>
+            <div className="bg-white p-6 rounded-lg shadow-md text-center">
+              <h3 className="text-xl font-semibold mb-2 text-primary font-bold">Erstbehandlung</h3>
               <p className="text-gray-700 mb-4">Inclusive Consulting</p>
               <p className="text-3xl font-bold text-accent mb-2">249 Euro</p>
               <p className="text-gray-500 text-sm">Behandlungsdauer: 2 Stunden</p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 className="text-xl font-semibold mb-2 text-primary">Folgebehandlung</h3>
+            <div className="bg-white p-6 rounded-lg shadow-md text-center">
+              <h3 className="text-xl font-semibold mb-2 text-primary font-bold">Folgebehandlung</h3>
               <p className="text-gray-700 mb-4">Nach Erstsitzung</p>
               <p className="text-3xl font-bold text-accent mb-2">199 Euro</p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 className="text-xl font-semibold mb-2 text-primary">6er Abo</h3>
+            <div className="bg-white p-6 rounded-lg shadow-md text-center">
+              <h3 className="text-xl font-semibold mb-2 text-primary font-bold">6er Abo</h3>
               <p className="text-gray-700 mb-4">Paketpreis</p>
               <p className="text-3xl font-bold text-accent mb-2">999 Euro</p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 className="text-xl font-semibold mb-2 text-primary">10er Abo</h3>
+            <div className="bg-white p-6 rounded-lg shadow-md text-center">
+              <h3 className="text-xl font-semibold mb-2 text-primary font-bold">10er Abo</h3>
               <p className="text-gray-700 mb-4">Paketpreis</p>
               <p className="text-3xl font-bold text-accent mb-2">1650 Euro</p>
             </div>
