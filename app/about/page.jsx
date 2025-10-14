@@ -65,7 +65,7 @@ const About = () => {
           <p className='text-lg mb-8'>
             Bei Mesoskin Hamburg steht immer das individuelle Angebot im Zentrum. Warum? Weil jeder Mensch und jede Haut anders ist. Oder anders formuliert: Der Mensch steht im Vordergrund. Entsprechend beginnt jede Behandlung mit einem ausführlichen Beratungsgespräch und einem individuelle Therapieplan. Eine umfassende Nachbetreuung steht ebenfalls „auf dem Programm“.
           </p>
-          <button className='btn btn-lg block mx-auto'>Termin vereinbaren</button>
+
         </div>
 
         <div className='max-w-3xl mx-auto'>
@@ -82,7 +82,6 @@ const About = () => {
             emailPlaceholder='E-Mail'
             phonePlaceholder='Telefon'
             messagePlaceholder='Nachricht'
-            buttonText='Termin vereinbaren'
           />
         </div>
       </div>

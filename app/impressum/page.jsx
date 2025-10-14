@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { useContext } from "react";
 import { CursorContext } from "@/components/CursorContext";
 
+import { FaInfoCircle } from 'react-icons/fa';
+
 const ImpressumPage = () => {
   const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
 
@@ -19,100 +21,43 @@ const ImpressumPage = () => {
           <motion.h1
             onMouseEnter={mouseEnterHandler}
             onMouseLeave={mouseLeaveHandler}
-            className="h1 mb-4 text-primary"
+            className="h1 mb-4 text-primary flex items-center justify-center gap-2"
           >
-            Impressum
+            <FaInfoCircle className="text-3xl" /> Impressum
           </motion.h1>
         </div>
       </section>
 
-      <div className="container mx-auto px-4">
-        {/* Diensteanbieter Section */}
-        <section className="mb-12">
-          <motion.h2
-            onMouseEnter={mouseEnterHandler}
-            onMouseLeave={mouseLeaveHandler}
-            className="h2 mb-6 text-accent"
-          >
-            Diensteanbieter
-          </motion.h2>
-          <motion.p
-            onMouseEnter={mouseEnterHandler}
-            onMouseLeave={mouseLeaveHandler}
-            className="mb-2 text-lg text-gray-700"
-          >
+      <main className="min-h-screen container mx-auto py-12">
+        <div className="max-w-3xl mx-auto px-4">
+          <h2 className="h2 mb-4">Diensteanbieter</h2>
+          <p className="mb-2 text-lg text-gray-700">
             Annette Fascher-Wendlandt
-          </motion.p>
-          <motion.p
-            onMouseEnter={mouseEnterHandler}
-            onMouseLeave={mouseLeaveHandler}
-            className="mb-2 text-lg text-gray-700"
-          >
+          </p>
+          <p className="mb-2 text-lg text-gray-700">
             Peter-Marquard-Straße 1
-          </motion.p>
-          <motion.p
-            onMouseEnter={mouseEnterHandler}
-            onMouseLeave={mouseLeaveHandler}
-            className="mb-6 text-lg text-gray-700"
-          >
+          </p>
+          <p className="mb-6 text-lg text-gray-700">
             22303 Hamburg
-          </motion.p>
-        </section>
+          </p>
 
-        {/* Kontaktmöglichkeiten Section */}
-        <section className="mb-12 bg-gray-50 p-8 rounded-lg shadow-md">
-          <motion.h2
-            onMouseEnter={mouseEnterHandler}
-            onMouseLeave={mouseLeaveHandler}
-            className="h2 mb-6 text-accent"
-          >
-            Kontaktmöglichkeiten
-          </motion.h2>
-          <motion.p
-            onMouseEnter={mouseEnterHandler}
-            onMouseLeave={mouseLeaveHandler}
-            className="mb-2 text-lg text-gray-700"
-          >
-            <strong>E-Mail-Adresse:</strong>
-            kontakt@mesoskinhamburg.de
-          </motion.p>
-          <motion.p
-            onMouseEnter={mouseEnterHandler}
-            onMouseLeave={mouseLeaveHandler}
-            className="mb-6 text-lg text-gray-700"
-          >
-            <strong>Telefon:</strong>
-            017661639830
-          </motion.p>
-        </section>
+          <h2 className="h2 mb-4">Kontaktmöglichkeiten</h2>
+          <p className="mb-2 text-lg text-gray-700">
+            <strong>E-Mail-Adresse:</strong> kontakt@mesoskinhamburg.de
+          </p>
+          <p className="mb-6 text-lg text-gray-700">
+            <strong>Telefon:</strong> 017661639830
+          </p>
 
-        {/* Angaben zum Unternehmen Section */}
-        <section className="mb-12">
-          <motion.h2
-            onMouseEnter={mouseEnterHandler}
-            onMouseLeave={mouseLeaveHandler}
-            className="h2 mb-6 text-accent"
-          >
-            Angaben zum Unternehmen
-          </motion.h2>
-          <motion.p
-            onMouseEnter={mouseEnterHandler}
-            onMouseLeave={mouseLeaveHandler}
-            className="mb-2 text-lg text-gray-700"
-          >
-            <strong>Berufsbezeichnung:</strong>
-            Heilpraktiker/in
-          </motion.p>
-          <motion.p
-            onMouseEnter={mouseEnterHandler}
-            onMouseLeave={mouseLeaveHandler}
-            className="mb-6 text-lg text-gray-700"
-          >
-            <strong>Land in dem die Berufsbezeichnung verliehen wurde:</strong>
-            Deutschland
-          </motion.p>
-        </section>
-      </div>
+          <h2 className="h2 mb-4">Angaben zum Unternehmen</h2>
+          <p className="mb-2 text-lg text-gray-700">
+            <strong>Berufsbezeichnung:</strong> Heilpraktiker/in
+          </p>
+          <p className="mb-6 text-lg text-gray-700">
+            <strong>Land in dem die Berufsbezeichnung verliehen wurde:</strong> Deutschland
+          </p>
+        </div>
+      </main>
     </motion.div>
   );
 };

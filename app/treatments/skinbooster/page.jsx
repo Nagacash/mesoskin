@@ -41,8 +41,8 @@ const SkinboosterPage = () => {
             </motion.p>
           </div>
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0, transition: { delay: 0.6, duration: 0.8 } }}
+            initial={{ opacity: 0, y: 50, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1, transition: { delay: 0.6, duration: 0.8 } }}
             onMouseEnter={mouseEnterHandler}
             onMouseLeave={mouseLeaveHandler}
             className="xl:w-1/2 flex justify-center"
@@ -58,7 +58,8 @@ const SkinboosterPage = () => {
         </div>
       </section>
 
-        <section
+      <div className="max-w-3xl mx-auto px-4">
+        <motion.section
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -72,15 +73,11 @@ const SkinboosterPage = () => {
           >
             Was sind Skinbooster?
           </motion.h2>
-          <motion.p
-            onMouseEnter={mouseEnterHandler}
-            onMouseLeave={mouseLeaveHandler}
-            className="mb-12 text-lg text-gray-700"
-          >
-            Skinbooster sind eine revolutionäre Behandlung zur Verbesserung der Hautqualität. Diese minimalinvasive Methode nutzt hyaluronsäurehaltige Injektionen, um die Haut intensiv mit Feuchtigkeit zu versorgen, die Elastizität zu steigern und ein strahlendes, jugendliches Aussehen zu fördern. Skinbooster sind ideal für alle, die ihre Haut revitalisieren und ein frisches, gesundes Hautbild erzielen möchten.
-          </motion.p>
-        </section>
-        <section
+            <p className="mb-4 text-lg">
+              Skinbooster sind eine revolutionäre Behandlung zur Verbesserung der Hautqualität. Diese minimalinvasive Methode nutzt hyaluronsäurehaltige Injektionen, um die Haut intensiv mit Feuchtigkeit zu versorgen, die Elastizität zu steigern und ein strahlendes, jugendliches Aussehen zu fördern. Skinbooster sind ideal für alle, die ihre Haut revitalisieren und ein frisches, gesundes Hautbild erzielen möchten.
+            </p>
+        </motion.section>
+        <motion.section
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -111,33 +108,16 @@ const SkinboosterPage = () => {
             <motion.h3 onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler} className="h3 mb-2"><strong>Dekolleté</strong></motion.h3>,
             <motion.h3 onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler} className="h3 mb-2"><strong>Hände</strong></motion.h3>
           </ul>
-        </section>
-
-        <section className="pt-8 mb-24 text-center">
-          <motion.h2
-            onMouseEnter={mouseEnterHandler}
-            onMouseLeave={mouseLeaveHandler}
-            className="h2 mb-6 text-accent"
-          >
-            Der Ablauf der Behandlung
-          </motion.h2>
-          <ul className="space-y-2 text-lg text-gray-700 mb-6 text-center max-w-prose mx-auto">
-            <motion.li onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>
-              <strong>Beratungsgespräch:</strong> In einem persönlichen Gespräch klären wir Ihre Hautbedürfnisse und Ziele. Wir erläutern den Ablauf der Behandlung und beantworten Ihre Fragen.
-            </motion.li>
-            <motion.li onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>
-              <strong>Behandlung:</strong> Die Injektion der Skinbooster erfolgt in mehreren kleinen Punkten in die Haut. Die Behandlung ist in der Regel schnell und gut verträglich.
-            </motion.li>
-            <motion.li onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>
-              <strong>Nachsorge:</strong> Nach der Behandlung erhalten Sie von uns individuelle Tipps zur Hautpflege und Nachsorge, um die Ergebnisse zu optimieren.
-            </motion.li>
-          </ul>
-        </section>
-
-
+        </motion.section>
 
         {/* PROFHILO Section */}
-        <section className="pt-8 mb-24 text-center">
+        <motion.section
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="pt-8 mb-24 text-center"
+        >
           <motion.h2
             onMouseEnter={mouseEnterHandler}
             onMouseLeave={mouseLeaveHandler}
@@ -152,7 +132,7 @@ const SkinboosterPage = () => {
           >
             PROFHILO® gehört zu den ganz neuen und besonders vielversprechenden Anti-Aging-Verfahren. Durch die BAP-Injektionstechnik – kurz für Bio Aesthetic Points – verteilt sich der Wirkstoff breit im Gewebe und wirkt auf der gesamten Gesichtshaut. So strahlt Ihr gesamtes Gesicht durch das feuchtigkeitsbindende PROFHILO®.
           </motion.p>
-        </section>
+        </motion.section>
 
         <div className="text-center mb-24 flex justify-center items-center gap-4">
           <button
@@ -167,9 +147,10 @@ const SkinboosterPage = () => {
         </div>
 
         {/* Call to Action Section */}
-        <section className="text-center mb-24">
+        <motion.section className="text-center mb-24">
           <CtaSection />
-        </section>
+        </motion.section>
+      </div>
     </motion.div>
   );
 };

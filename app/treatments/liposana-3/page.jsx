@@ -35,6 +35,10 @@ const Liposana3Page = () => {
             </motion.p>
           </div>
           <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ delay: 0.3, duration: 0.8 }}
             onMouseEnter={mouseEnterHandler}
             onMouseLeave={mouseLeaveHandler}
             className="xl:w-1/2 flex justify-center xl:justify-end xl:-mr-16"
@@ -54,7 +58,7 @@ const Liposana3Page = () => {
 
 
         {/* Key Benefits Section */}
-        <section className="mb-12">
+        <section className="mb-12 py-12">
           <motion.h2
             onMouseEnter={mouseEnterHandler}
             onMouseLeave={mouseLeaveHandler}
@@ -78,20 +82,30 @@ const Liposana3Page = () => {
 
         <section className="pt-24 mb-12 bg-gray-50 p-12 rounded-lg shadow-md">
           <motion.h3
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ delay: 0.3, duration: 0.8 }}
             onMouseEnter={mouseEnterHandler}
             onMouseLeave={mouseLeaveHandler}
             className="h3 mb-4 text-accent"
           >
-            Liposana 3 jetzt bei Mesoskin.Hamburg
           </motion.h3>
           <motion.p
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
             onMouseEnter={mouseEnterHandler}
             onMouseLeave={mouseLeaveHandler}
             className="mb-6 text-lg text-gray-700"
           >
-            Verabschieden Sie sich von überschüssigen Pfunden an Bauch, Oberschenkeln und Taille mit diesem revolutionären neuen Behandlungskonzept von Liposana3.
           </motion.p>
           <motion.p
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
             onMouseEnter={mouseEnterHandler}
             onMouseLeave={mouseLeaveHandler}
             className="mb-6 text-lg text-gray-700"
@@ -100,6 +114,10 @@ const Liposana3Page = () => {
           </motion.p>
 
           <motion.h3
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ delay: 0.6, duration: 0.8 }}
             onMouseEnter={mouseEnterHandler}
             onMouseLeave={mouseLeaveHandler}
             className="h3 mb-4 text-accent"
@@ -107,17 +125,17 @@ const Liposana3Page = () => {
             Mögliche Behandlungsbereiche
           </motion.h3>
           <ul className="list-disc list-inside space-y-2 text-lg text-gray-700 ml-4 mb-6">
-            <motion.li onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>Umfang Reduzierung</motion.li>
-            <motion.li onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>Gewebsstraffung</motion.li>
-            <motion.li onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>Reiterhose</motion.li>
-            <motion.li onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>Cellulite</motion.li>
-            <motion.li onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>Übersäuerung</motion.li>
-            <motion.li onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>Lipödem</motion.li>
-            <motion.li onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>Erkrankung des Bewegungsapparates</motion.li>
-            <motion.li onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>Aktivierung des Stoffwechsels</motion.li>
-            <motion.li onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>Lymphstau</motion.li>
-            <motion.li onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>Anti-Aging</motion.li>
-            <motion.li onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>Fibromyalgie</motion.li>
+            <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 0.7, duration: 0.8 }} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>Umfang Reduzierung</motion.li>
+            <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 0.8, duration: 0.8 }} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>Gewebsstraffung</motion.li>
+            <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 0.9, duration: 0.8 }} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>Reiterhose</motion.li>
+            <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 1.0, duration: 0.8 }} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>Cellulite</motion.li>
+            <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 1.1, duration: 0.8 }} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>Übersäuerung</motion.li>
+            <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 1.2, duration: 0.8 }} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>Lipödem</motion.li>
+            <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 1.3, duration: 0.8 }} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>Erkrankung des Bewegungsapparates</motion.li>
+            <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 1.4, duration: 0.8 }} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>Aktivierung des Stoffwechsels</motion.li>
+            <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 1.5, duration: 0.8 }} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>Lymphstau</motion.li>
+            <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 1.6, duration: 0.8 }} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>Anti-Aging</motion.li>
+            <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 1.7, duration: 0.8 }} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>Fibromyalgie</motion.li>
           </ul>
         </section>
 

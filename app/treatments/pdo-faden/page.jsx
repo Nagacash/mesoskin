@@ -36,8 +36,12 @@ const PdoFadenPage = () => {
 
       <div className="container mx-auto px-4">
         {/* Eingesetzt werden die Fäden Section */}
-        <section className="mb-12">
+        <section className="mb-12 py-24">
           <motion.h2
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ delay: 0.3, duration: 0.8 }}
             onMouseEnter={mouseEnterHandler}
             onMouseLeave={mouseLeaveHandler}
             className="h2 mb-6 text-accent"
@@ -45,15 +49,19 @@ const PdoFadenPage = () => {
             Eingesetzt werden die Fäden fast am ganzen Körper. Zum Beispiel:
           </motion.h2>
           <ul className="list-disc list-inside space-y-2 text-lg text-gray-700 ml-4 mb-6">
-            <motion.li onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>V Shape</motion.li>
-            <motion.li onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>hängende Halspartie</motion.li>
-            <motion.li onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>Hängebäckchen</motion.li>
-            <motion.li onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>Wangen</motion.li>
-            <motion.li onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>Augenbrauen</motion.li>
-            <motion.li onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>Nase</motion.li>
-            <motion.li onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>Schlaffe Gesichtshaut</motion.li>
+            <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 0.4, duration: 0.8 }} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>V Shape</motion.li>
+            <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 0.5, duration: 0.8 }} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>hängende Halspartie</motion.li>
+            <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 0.6, duration: 0.8 }} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>Hängebäckchen</motion.li>
+            <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 0.7, duration: 0.8 }} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>Wangen</motion.li>
+            <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 0.8, duration: 0.8 }} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>Augenbrauen</motion.li>
+            <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 0.9, duration: 0.8 }} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>Nase</motion.li>
+            <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 1.0, duration: 0.8 }} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>Schlaffe Gesichtshaut</motion.li>
           </ul>
           <motion.p
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ delay: 1.1, duration: 0.8 }}
             onMouseEnter={mouseEnterHandler}
             onMouseLeave={mouseLeaveHandler}
             className="mb-6 text-lg text-gray-700"
@@ -61,6 +69,10 @@ const PdoFadenPage = () => {
             Der kleine Eingriff erfolgt ambulant bei Mesoskin.Hamburg und dauert zwischen einer halben und ganzen Stunde. Wichtig zu wissen: Die Behandlung ist so gut wie schmerzfrei, weil sie unter örtlicher Betäubung stattfindet.
           </motion.p>
           <motion.p
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ delay: 1.2, duration: 0.8 }}
             onMouseEnter={mouseEnterHandler}
             onMouseLeave={mouseLeaveHandler}
             className="mb-6 text-lg text-gray-700"
@@ -148,13 +160,7 @@ const PdoFadenPage = () => {
 
         {/* Call to Action Section */}
         <section className="text-center mb-12">
-          <motion.p
-            onMouseEnter={mouseEnterHandler}
-            onMouseLeave={mouseLeaveHandler}
-            className="text-xl font-bold mb-4 text-primary"
-          >
-            Jetzt Termin vereinbaren
-          </motion.p>
+
           <CtaSection />
         </section>
       </div>

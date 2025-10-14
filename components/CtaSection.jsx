@@ -23,6 +23,10 @@ const CtaSection = () => {
       <div className="container mx-auto text-center flex flex-col xl:flex-row items-center justify-center gap-8">
         <div className="xl:w-1/2">
           <motion.h2
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ delay: 0.3, duration: 0.8 }}
             onMouseEnter={mouseEnterHandler}
             onMouseLeave={mouseLeaveHandler}
             className="h2 mb-6 text-center"
@@ -30,6 +34,10 @@ const CtaSection = () => {
             Bereit für Ihre schönste Haut?
           </motion.h2>
           <motion.p
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
             onMouseEnter={mouseEnterHandler}
             onMouseLeave={mouseLeaveHandler}
             className="lead max-w-xl mx-auto mb-8 text-center"
