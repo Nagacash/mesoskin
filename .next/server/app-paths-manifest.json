@@ -1,7 +1,7 @@
 {
+  "/page": "app/page.js",
   "/about/page": "app/about/page.js",
-  "/treatments/drip-spa-infusionen/page": "app/treatments/drip-spa-infusionen/page.js",
-  "/treatments/doll-lips/page": "app/treatments/doll-lips/page.js",
   "/treatments/liposana-3/page": "app/treatments/liposana-3/page.js",
-  "/page": "app/page.js"
+  "/datenschutz/page": "app/datenschutz/page.js",
+  "/treatments/pdo-faden/page": "app/treatments/pdo-faden/page.js"
 }
