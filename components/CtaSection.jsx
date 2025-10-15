@@ -56,9 +56,9 @@ const CtaSection = () => {
           className="xl:w-1/2 flex justify-center"
         >
           <Image
-            src="/assets/treatments/machine.jpeg"
+            src="/assets/treatments/meso8.jpg"
             width={400}
-            height={300}
+            height={800}
             alt="Liposana 3 Machine"
             className="rounded-lg shadow-xl border-4 border-primary grayscale"
           />

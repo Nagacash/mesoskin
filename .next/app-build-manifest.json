@@ -11,50 +11,40 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/about/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/about/page.js"
-    ],
     "/treatments/liposana-3/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/treatments/liposana-3/page.js"
+    ],
+    "/about/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/about/page.js"
     ],
     "/treatments/pdo-faden/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/treatments/pdo-faden/page.js"
     ],
-    "/datenschutz/page": [
+    "/treatments/doll-lips/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/datenschutz/page.js"
-    ],
-    "/impressum/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/impressum/page.js"
-    ],
-    "/contact/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/contact/page.js"
-    ],
-    "/treatments/skinbooster/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/treatments/skinbooster/page.js"
+      "static/chunks/app/treatments/doll-lips/page.js"
     ],
     "/treatments/hyaluronsaure/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/treatments/hyaluronsaure/page.js"
     ],
-    "/treatments/doll-lips/page": [
+    "/treatments/dripspas/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/treatments/doll-lips/page.js"
+      "static/chunks/app/treatments/dripspas/page.js"
+    ],
+    "/treatments/skinbooster/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/treatments/skinbooster/page.js"
     ]
   }
 }

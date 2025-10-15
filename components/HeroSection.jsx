@@ -66,9 +66,9 @@ const HeroSection = () => {
               className="hidden xl:flex justify-end"
             >
               <Image
-                src="/assets/home/skin-care-woman.png"
-                width={400}
-                height={300}
+                src="/assets/home/meso3.jpg"
+                width={600}
+                height={400}
                 alt="Skin Care Woman"
                 className="border-4 border-primary rounded-lg shadow-xl"
               />

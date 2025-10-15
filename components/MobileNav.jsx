@@ -15,8 +15,8 @@ const links = [
     name: "Über mich",
   },
   {
-    href: "/treatments/liposana-3",
-    name: "Liposana 3",
+    href: "/treatments/dripspas",
+    name: "Dripspas",
   },
   {
     href: "/treatments/pdo-faden",
