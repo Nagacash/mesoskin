@@ -16,7 +16,7 @@ const Dripspas = () => {
             className="min-h-screen pb-12 xl:pt-32"
         >
             {/* Hero Section */}
-            <section className="bg-accent-100 py-24 mt-32 mb-12">
+            <section className="bg-primary-100 py-24 mt-32 mb-12">
                 <div className="container mx-auto flex flex-col xl:flex-row items-center justify-between gap-8">
                     <div className="text-center xl:text-left xl:w-1/2 xl:flex-shrink-0">
                         <motion.h1
