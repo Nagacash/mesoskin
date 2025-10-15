@@ -13,12 +13,12 @@ const DollLipsPage = () => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { delay: 0.2, duration: 0.8 } }}
-      className="min-h-screen pb-24 xl:pt-32"
+      className="min-h-screen pb-24 overflow-x-hidden"
     >
       {/* Hero Section */}
-      <section className="bg-accent-100 py-16 mt-24 mb-12">
-        <div className="container mx-auto flex flex-col xl:flex-row items-center justify-between gap-8">
-          <div className="text-center xl:text-left xl:w-1/2">
+      <section className="bg-accent-100 py-16 mb-12">
+        <div className="container mx-auto flex flex-col xl:flex-row items-center justify-between gap-8 pt-40">
+          <div className="text-center xl:text-left xl:w-1/2 pt-12">
             <motion.h1
               onMouseEnter={mouseEnterHandler}
               onMouseLeave={mouseLeaveHandler}
@@ -37,20 +37,20 @@ const DollLipsPage = () => {
           <motion.div
             onMouseEnter={mouseEnterHandler}
             onMouseLeave={mouseLeaveHandler}
-            className="xl:w-1/2 flex justify-center"
+            className="xl:w-1/2 flex justify-center xl:ml-24"
           >
             <Image
               src="/assets/treatments/doll-lips.jpeg"
               width={500}
               height={350}
               alt="Doll Lips"
-              className="rounded-lg shadow-lg"
+              className="rounded-lg shadow-lg w-full h-auto object-cover"
             />
           </motion.div>
         </div>
       </section>
 
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto">
         {/* Vorteile Section */}
         <section className="pt-24 mb-12 pb-24">
           <motion.h2
@@ -78,7 +78,7 @@ const DollLipsPage = () => {
         </section>
 
         {/* Kein „Duckface-Effekt“ Section */}
-        <section className="mb-12 pb-24 bg-gray-50 p-8 rounded-lg shadow-md">
+        <section className="mb-12 pt-24 pb-24 px-12 bg-gray-50 rounded-lg shadow-md">
           <motion.h3
             onMouseEnter={mouseEnterHandler}
             onMouseLeave={mouseLeaveHandler}

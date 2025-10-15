@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useContext } from "react";
@@ -19,11 +20,11 @@ const SkinboosterPage = () => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { delay: 0.2, duration: 0.8 } }}
-      className="min-h-screen pb-12 pt-64"
+      className="min-h-screen pb-12 pt-32 xl:pt-32 overflow-x-hidden z-10"
     >
       {/* Hero Section */}
       <section className="bg-accent-100 py-16 mb-24">
-        <div className="container mx-auto flex flex-col xl:flex-row items-center justify-between gap-8">
+        <div className="container mx-auto flex flex-col xl:flex-row items-center justify-between gap-8 pt-12">
           <div className="text-center xl:text-left xl:w-1/2">
             <motion.h1
               onMouseEnter={mouseEnterHandler}
@@ -35,7 +36,7 @@ const SkinboosterPage = () => {
             <motion.p
               onMouseEnter={mouseEnterHandler}
               onMouseLeave={mouseLeaveHandler}
-              className="lead max-w-2xl mx-auto xl:mx-0 text-gray-700"
+              className="lead max-w-2xl mx-auto xl:mx-0 text-gray-700 mb-8"
             >
               Willkommen bei Mesoskin – Ihre Experten für Skinbooster
             </motion.p>
@@ -45,26 +46,26 @@ const SkinboosterPage = () => {
             animate={{ opacity: 1, y: 0, scale: 1, transition: { delay: 0.6, duration: 0.8 } }}
             onMouseEnter={mouseEnterHandler}
             onMouseLeave={mouseLeaveHandler}
-            className="xl:w-1/2 flex justify-center"
+            className="xl:w-1/2 flex justify-center xl:mt-12"
           >
             <Image
               src="/assets/treatments/girls3.png"
               width={500}
               height={350}
               alt="Skinbooster"
-              className="rounded-lg border-4 border-black"
+              className="rounded-lg border-4 border-black w-full h-auto object-cover"
             />
           </motion.div>
         </div>
       </section>
 
-      <div className="max-w-3xl mx-auto px-4">
+      <div className="max-w-3xl mx-auto z-0 px-4">
         <motion.section
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="pt-8 mb-24 text-center"
+          className="pt-8 mb-24 text-center px-4"
         >
           <motion.h2
             onMouseEnter={mouseEnterHandler}
@@ -82,9 +83,9 @@ const SkinboosterPage = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="pt-8 mb-24 bg-gray-50 p-8 rounded-lg shadow-md text-center"
+          className="pt-12 pb-12 mb-24 bg-gray-50 rounded-lg shadow-md text-center px-12"
         >
-          <ul className="space-y-2 text-lg text-gray-700 mb-6 text-center max-w-prose mx-auto">
+          <ul className="space-y-2 text-lg text-gray-700 mb-6 text-center">
             <motion.li onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler} className="pt-12 pb-12">
               <strong>Intensive Hydratation:</strong> Skinbooster dringen tief in die Haut ein und sorgen für eine langanhaltende Feuchtigkeitsversorgung.
             </motion.li>
@@ -102,7 +103,7 @@ const SkinboosterPage = () => {
           >
             In Frage kommen die Skinbooster vor allem für:
           </motion.p>
-          <ul className="flex flex-wrap justify-center gap-4 mb-6 text-center max-w-prose mx-auto">
+          <ul className="flex flex-wrap justify-center gap-4 mb-6 text-center">
             <motion.h3 onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler} className="h3 mb-2"><strong>Gesicht</strong></motion.h3>,
             <motion.h3 onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler} className="h3 mb-2"><strong>Hals</strong></motion.h3>,
             <motion.h3 onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler} className="h3 mb-2"><strong>Dekolleté</strong></motion.h3>,
@@ -116,7 +117,7 @@ const SkinboosterPage = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="pt-8 mb-24 text-center"
+          className="pt-8 mb-24 text-center px-4"
         >
           <motion.h2
             onMouseEnter={mouseEnterHandler}
@@ -134,16 +135,18 @@ const SkinboosterPage = () => {
           </motion.p>
         </motion.section>
 
-        <div className="text-center mb-24 flex justify-center items-center gap-4">
+        <div className="text-center mb-24 flex flex-col justify-center items-center">
           <button
             onMouseEnter={mouseEnterHandler}
             onMouseLeave={mouseLeaveHandler}
-            className="btn btn-lg bg-accent text-white hover:bg-accent-dark shadow-lg rounded-full px-8 py-4 transition-all duration-300 ease-in-out transform hover:scale-105 text-xl focus:outline-none focus:ring-4 focus:ring-accent-300"
+            className="btn btn-lg bg-accent text-white hover:bg-accent-dark shadow-lg rounded-full px-8 py-4 transition-all duration-300 ease-in-out transform hover:scale-105 text-xl focus:outline-none focus:ring-4 focus:ring-accent-300 w-full max-w-xs"
             onClick={handleContactClick}
           >
             Jetzt Termin buchen
           </button>
-          <FaqModal />
+          <div className="mt-4 w-full max-w-xs">
+            <FaqModal />
+          </div>
         </div>
 
         {/* Call to Action Section */}

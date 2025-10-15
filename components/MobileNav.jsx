@@ -1,5 +1,5 @@
 "use client";
-import { IoCloseOutline } from "react-icons/io5";
+import { IoCloseOutline, IoStarOutline } from "react-icons/io5";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -46,20 +46,23 @@ const MobileNav = ({ setMobileNav }) => {
       >
         <IoCloseOutline className="text-4xl" />
       </div>
-      <ul className="flex flex-col gap-10 text-white text-xl">
+      <div className="flex justify-center mb-8">
+        <IoStarOutline className="text-white text-5xl" />
+      </div>
+      <ul className="flex flex-col gap-10 text-white text-xl items-center pb-10">
         {links.map((link, index) => {
           return (
             <Link
               href={link.href}
               key={index}
-              className={`${pathname === link.href ? 'border-b-2 border-accent-DEFAULT' : 'hover:text-accent-DEFAULT'} uppercase max-w-max mx-auto transition-colors`}              onClick={() => setMobileNav(false)}
+                className={`max-w-xs ${pathname === link.href ? 'border-b-4 border-accent-100' : 'hover:text-accent-DEFAULT'}`}              onClick={() => setMobileNav(false)}
             >
               {link.name}
             </Link>
           );
         })}
       </ul>
-      <Socials containerStyles="text-white text-lg flex gap-6 justify-center" />
+      {/* <Socials containerStyles="text-white text-lg flex gap-6 justify-center" /> */}
     </nav>
   );
 };

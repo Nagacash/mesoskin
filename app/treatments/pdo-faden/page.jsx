@@ -13,11 +13,11 @@ const PdoFadenPage = () => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { delay: 0.2, duration: 0.8 } }}
-      className="min-h-screen pb-12 xl:pt-32"
+      className="min-h-screen pb-12 pt-48 xl:pt-48 overflow-x-hidden"
     >
       {/* Hero Section */}
-      <section className="bg-accent-100 py-16 mt-32 mb-12">
-        <div className="container mx-auto text-center">
+      <section className="bg-accent-100 py-16 mb-12">
+        <div className="container mx-auto text-center pt-12">
           <motion.h1
             onMouseEnter={mouseEnterHandler}
             onMouseLeave={mouseLeaveHandler}
@@ -37,9 +37,9 @@ const PdoFadenPage = () => {
 
       <PdoFadenImageGallery />
 
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto">
         {/* Eingesetzt werden die Fäden Section */}
-        <section className="mb-12 py-24 px-8 rounded-lg shadow-lg bg-white mt-12">
+        <section className="mb-24 py-32 px-12 rounded-lg shadow-lg bg-white mt-24">
           <motion.h2
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -58,7 +58,7 @@ const PdoFadenPage = () => {
             <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 0.7, duration: 0.8 }} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}><strong>Wangen</strong></motion.li>
             <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 0.8, duration: 0.8 }} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}><strong>Augenbrauen</strong></motion.li>
             <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 0.9, duration: 0.8 }} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}><strong>Nase</strong></motion.li>
-            <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 1.0, duration: 0.8 }} onMouseEnter={mouseEnterHandler} onmouseLeave={mouseLeaveHandler}><strong>Schlaffe Gesichtshaut</strong></motion.li>
+            <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 1.0, duration: 0.8 }} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}><strong>Schlaffe Gesichtshaut</strong></motion.li>
           </ul>
           <motion.p
             initial={{ opacity: 0, y: 50 }}

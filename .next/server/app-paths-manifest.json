@@ -1,8 +1,9 @@
 {
+  "/page": "app/page.js",
+  "/treatments/doll-lips/page": "app/treatments/doll-lips/page.js",
+  "/treatments/hyaluronsaure/page": "app/treatments/hyaluronsaure/page.js",
+  "/about/page": "app/about/page.js",
   "/treatments/dripspas/page": "app/treatments/dripspas/page.js",
   "/treatments/pdo-faden/page": "app/treatments/pdo-faden/page.js",
-  "/treatments/doll-lips/page": "app/treatments/doll-lips/page.js",
-  "/treatments/skinbooster/page": "app/treatments/skinbooster/page.js",
-  "/treatments/hyaluronsaure/page": "app/treatments/hyaluronsaure/page.js",
-  "/page": "app/page.js"
+  "/treatments/skinbooster/page": "app/treatments/skinbooster/page.js"
 }

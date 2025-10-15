@@ -11,8 +11,8 @@ const Form = ({
     <form className="flex flex-col gap-4">
       <input type="text" className="input" placeholder={fullNamePlaceholder} />
       <input type="text" className="input" placeholder={lastNamePlaceholder} />
-      <select className="input">
-        <option disabled selected>{interestPlaceholder}</option>
+      <select className="input" defaultValue="">
+        <option value="" disabled>{interestPlaceholder}</option>
         <option>Liposana 3</option>
       </select>
       <input type="text" className="input" placeholder={emailPlaceholder} />

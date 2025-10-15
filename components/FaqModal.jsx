@@ -40,7 +40,7 @@ const FaqModal = () => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <span className="bg-white border border-gray-300 text-gray-800 py-3 px-6 rounded-lg shadow-sm hover:bg-gray-100 transition-all duration-300 ease-in-out text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-gray-400 cursor-pointer">Häufige Fragen (FAQ)</span>
+        <span className="bg-white border border-gray-300 text-gray-800 py-3 px-6 rounded-lg shadow-sm hover:bg-gray-100 transition-all duration-300 ease-in-out text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-gray-400 cursor-pointer w-full max-w-xs text-wrap text-center">Häufige Fragen (FAQ)</span>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[800px] p-6">
         <DialogHeader>

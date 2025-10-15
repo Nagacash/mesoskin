@@ -8,9 +8,9 @@ const About = () => {
     <motion.section
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { delay: 2 } }}
-      className='min-h-screen overflow-x-hidden'
+      className='min-h-screen overflow-x-hidden z-10 pt-32 xl:pt-32'
     >
-      <div className='container mx-auto px-4 sm:px-6 lg:px-8 pt-56 pb-24'>
+      <div className='container mx-auto pt-56 pb-24'>
         <div className='text-center mb-24'>
           <h1 className='h1 mb-4'>Über mich</h1>
           <p className='lead max-w-2xl mx-auto'>
@@ -45,19 +45,15 @@ const About = () => {
               Jetzt Termin vereinbaren
             </button>
           </div>
-          <div className='flex-1 flex justify-center items-center gap-4'>
-            <div className='relative w-full h-96 transform -rotate-3 transition-transform duration-300 hover:rotate-0'>
-              <Image
-                src='/assets/about/anette.jpeg'
-                layout='fill'
-                objectFit='cover'
-                alt='Annette Fascher-Wendlandt'
-                className='rounded-lg shadow-lg'
-              />
-            </div>
-
-
-          </div>
+                    <div className='flex-1 flex justify-center items-center gap-4'>
+                      <Image
+                        src='/assets/about/anette.jpeg'
+                        width={500}
+                        height={350}
+                        alt='Annette Fascher-Wendlandt'
+                        className='rounded-lg shadow-lg w-full h-64 md:h-96 object-cover'
+                      />
+                    </div>
         </div>
 
         <div className='text-center max-w-3xl mx-auto mb-24'>

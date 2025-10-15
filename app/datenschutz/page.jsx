@@ -13,7 +13,7 @@ const DatenschutzPage = () => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { delay: 0.2, duration: 0.8 } }}
-      className="min-h-screen pb-12 xl:pt-32"
+      className="min-h-screen pb-12 pt-32 xl:pt-32"
     >
       {/* Hero Section */}
       <section className="bg-accent-100 py-16 mt-32 mb-12">
@@ -28,10 +28,10 @@ const DatenschutzPage = () => {
         </div>
       </section>
 
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto">
         <main className="min-h-screen container mx-auto py-12">
             <h1 className="h1 text-center mb-8">Datenschutz&shy;erkl&auml;rung</h1>
-            <div className="max-w-3xl mx-auto px-4">
+            <div className="max-w-3xl mx-auto">
                 <h2 className="h2 mb-4">1. Datenschutz auf einen Blick</h2>
                 <h3 className="h3 mb-2">Allgemeine Hinweise</h3>
                 <p className="mb-4">Die folgenden Hinweise geben einen einfachen &Uuml;berblick dar&uuml;ber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie pers&ouml;nlich identifiziert werden k&ouml;nnen. Ausf&uuml;hrliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgef&uuml;hrten Datenschutzerkl&auml;rung.</p>

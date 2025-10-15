@@ -44,7 +44,7 @@ const ProcessSection = () => {
         >
           So läuft die Behandlung ab
         </motion.h2>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-8">
           {processSteps.map((step, index) => (
             <motion.div
               key={index}
@@ -52,10 +52,10 @@ const ProcessSection = () => {
               animate={{ opacity: 1, y: 0, transition: { delay: index * 0.2 } }}
               onMouseEnter={mouseEnterHandler}
               onMouseLeave={mouseLeaveHandler}
-              className="text-center"
+              className="text-center py-10 px-6 rounded-lg shadow-md border border-gray-200"
             >
-              <div className="text-4xl text-accent mb-4">{step.step}</div>
-              <h3 className="h3 mb-2">{step.title}</h3>
+              <div className="text-5xl md:text-6xl text-accent mb-4">{step.step}</div>
+              <h3 className="text-2xl mb-4 text-wrap">{step.title}</h3>
               <p>{step.description}</p>
             </motion.div>
           ))}

@@ -15,13 +15,13 @@
     @apply font-primary;
   }
   .h1 {
-    @apply text-[72px] leading-[80px] xl:text-[96px] xl:leading-[100px];
+    @apply text-[48px] leading-[56px] xl:text-[96px] xl:leading-[100px];
   }
   .h2 {
-    @apply text-[54px] leading-[60px] xl:text-[64px] xl:leading-[72px];
+    @apply text-[36px] leading-[44px] xl:text-[64px] xl:leading-[72px];
   }
   .h3 {
-    @apply text-[42px] leading-[54px] xl:text-[48px] xl:leading-[60px];
+    @apply text-[28px] leading-[36px] xl:text-[48px] xl:leading-[60px];
   }
   .lead {
     @apply text-xl mb-10;
@@ -32,7 +32,9 @@
 }
 
 .btn {
-  @apply bg-accent min-w-[178px] rounded-tl-[30px] rounded-bl-[30px] rounded-tr-[4px] rounded-br-[24px] font-primary uppercase tracking-[1px] h-[58px] pl-8 pr-6 flex items-center justify-center text-white transition-colors hover:bg-accent/80;
+  @apply bg-accent rounded-tl-[30px] rounded-bl-[30px] rounded-tr-[4px] rounded-br-[24px] font-primary uppercase tracking-[1px] h-auto py-3 px-6 flex items-center justify-center text-white transition-colors hover:bg-accent/80 text-center w-full max-w-xs;
+  white-space: normal;
+  word-break: break-word;
 }
 
 .input {

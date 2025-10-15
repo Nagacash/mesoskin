@@ -28,7 +28,7 @@ const HeroSection = () => {
               y: 0,
               transition: { delay: 2, duration: 1, ease: "easeInOut" },
             }}
-            className="w-full text-center xl:text-left xl:w-[500px] pt-[150px]"
+            className="w-full text-center xl:text-left xl:w-[500px] pt-[200px] md:pt-[150px]"
           >
             <motion.h1
               onMouseEnter={mouseEnterHandler}
@@ -56,21 +56,21 @@ const HeroSection = () => {
               </motion.button>
             </div>
           </motion.div>
-          <div className="flex-1">
+          <div className="flex-1 pt-[200px] md:pt-[150px]">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 2.5, duration: 0.8, ease: "easeInOut" }}
               onMouseEnter={mouseEnterHandler}
               onMouseLeave={mouseLeaveHandler}
-              className="hidden xl:flex justify-end"
+              className="hidden xl:flex justify-end xl:ml-16"
             >
               <Image
-                src="/assets/home/meso3.jpg"
+                src="/assets/home/meso10.jpg"
                 width={600}
                 height={400}
                 alt="Skin Care Woman"
-                className="border-4 border-primary rounded-lg shadow-xl"
+                className="border-4 border-primary rounded-lg shadow-xl w-full h-auto object-cover"
               />
             </motion.div>
           </div>

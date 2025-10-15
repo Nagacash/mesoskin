@@ -29,8 +29,9 @@ const interTight = Inter_Tight({
 });
 
 export const metadata = {
-  title: "Mesoskin | Schönheit & Wohlbefinden",
-  description: "Moderne Landingpage für einen Schönheits- und Wellness-Service.",
+  title: "Mesoskin Hamburg | Ihr Experte für Schönheit & Wohlbefinden in Deutschland",
+  description: "Entdecken Sie bei Mesoskin Hamburg innovative Schönheits- und Wellness-Services in Deutschland. Wir bieten Dripspas, PDO Fäden, Doll Lips, Hyaluronsäure und Skinbooster für natürliche Ergebnisse und Ihr Wohlbefinden in Hamburg.",
+  keywords: ["naga codex", "maurice holda", "Annette Fascher-Wendlandt"],
 };
 
 export default function RootLayout({ children }) {

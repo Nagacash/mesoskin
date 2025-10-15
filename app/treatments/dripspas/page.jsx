@@ -13,23 +13,23 @@ const Dripspas = () => {
         <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { delay: 0.2, duration: 0.8 } }}
-            className="min-h-screen pb-12 xl:pt-32"
+            className="min-h-screen pb-12 pt-32 xl:pt-32 overflow-x-hidden"
         >
             {/* Hero Section */}
-            <section className="bg-primary-100 py-24 mt-32 mb-12">
+            <section className="bg-primary-100 py-24 mt-0 mb-12">
                 <div className="container mx-auto flex flex-col xl:flex-row items-center justify-between gap-8">
-                    <div className="text-center xl:text-left xl:w-1/2 xl:flex-shrink-0">
+                    <div className="text-center xl:text-left xl:w-1/2 xl:flex-shrink-0 pt-12">
                         <motion.h1
                             onMouseEnter={mouseEnterHandler}
                             onMouseLeave={mouseLeaveHandler}
-                            className="h1 mb-4 text-primary"
+                            className="h1 mb-4 text-primary py-4 px-8"
                         >
                             Infusionstherapie: Ihre Lösung für eine schnelle Genesung
                         </motion.h1>
                         <motion.p
                             onMouseEnter={mouseEnterHandler}
                             onMouseLeave={mouseLeaveHandler}
-                            className="lead max-w-2xl mx-auto xl:mx-0 text-gray-700"
+                            className="lead max-w-2xl mx-auto xl:mx-0 text-gray-700 px-8"
                         >
                             Entdecken Sie die Vorteile der Infusionstherapie – eine effektive Methode zur gezielten Zufuhr von Medikamenten, Vitaminen und Mineralstoffen direkt in die Blutbahn.
                         </motion.p>
@@ -41,9 +41,9 @@ const Dripspas = () => {
                         transition={{ delay: 0.3, duration: 0.8 }}
                         onMouseEnter={mouseEnterHandler}
                         onMouseLeave={mouseLeaveHandler}
-                        className="xl:w-1/2 flex justify-center xl:justify-end xl:-mr-16"
+                        className="xl:w-1/2 flex justify-center xl:justify-end"
                     >            <Image
-                            src="/assets/treatments/meso9.jpg"
+                            src="/assets/treatments/dripspas/meso6.jpg"
                             width={700}
                             height={550}
                             alt="Liposana 3"
@@ -53,7 +53,7 @@ const Dripspas = () => {
                 </div>
             </section>
 
-            <div className="container mx-auto px-4">
+            <div className="container mx-auto">
 
 
                 {/* Key Benefits Section */}
@@ -374,28 +374,52 @@ const Dripspas = () => {
                     >
                         Preise
                     </motion.h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        <div className="bg-white p-6 rounded-lg shadow-md text-center">
-                            <h3 className="text-xl font-semibold mb-2 text-primary font-bold">Erstbehandlung</h3>
-                            <p className="text-gray-700 mb-4">Inclusive Consulting</p>
-                            <p className="text-3xl font-bold text-accent mb-2">249 Euro</p>
-                            <p className="text-gray-500 text-sm">Behandlungsdauer: 2 Stunden</p>
-                        </div>
-                        <div className="bg-white p-6 rounded-lg shadow-md text-center">
-                            <h3 className="text-xl font-semibold mb-2 text-primary font-bold">Folgebehandlung</h3>
-                            <p className="text-gray-700 mb-4">Nach Erstsitzung</p>
-                            <p className="text-3xl font-bold text-accent mb-2">199 Euro</p>
-                        </div>
-                        <div className="bg-white p-6 rounded-lg shadow-md text-center">
-                            <h3 className="text-xl font-semibold mb-2 text-primary font-bold">6er Abo</h3>
-                            <p className="text-gray-700 mb-4">Paketpreis</p>
-                            <p className="text-3xl font-bold text-accent mb-2">999 Euro</p>
-                        </div>
-                        <div className="bg-white p-6 rounded-lg shadow-md text-center">
-                            <h3 className="text-xl font-semibold mb-2 text-primary font-bold">10er Abo</h3>
-                            <p className="text-gray-700 mb-4">Paketpreis</p>
-                            <p className="text-3xl font-bold text-accent mb-2">1650 Euro</p>
-                        </div>
+                    <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-12">
+                        <motion.div
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.3 }}
+                            transition={{ delay: 0.3, duration: 0.8 }}
+                            className="bg-white p-12 rounded-lg shadow-lg text-center w-full"
+                        >
+                            <h3 className="text-2xl font-extrabold mb-3 text-primary">Erstbehandlung</h3>
+                            <p className="text-lg text-gray-800 mb-6">Inclusive Consulting</p>
+                            <p className="text-4xl font-extrabold text-accent mb-3">249 Euro</p>
+                            <p className="text-base text-gray-600">Behandlungsdauer: 2 Stunden</p>
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.3 }}
+                            transition={{ delay: 0.4, duration: 0.8 }}
+                            className="bg-white p-12 rounded-lg shadow-lg text-center w-full"
+                        >
+                            <h3 className="text-2xl font-extrabold mb-3 text-primary">Folgebehandlung</h3>
+                            <p className="text-lg text-gray-800 mb-6">Nach Erstsitzung</p>
+                            <p className="text-4xl font-extrabold text-accent mb-3">199 Euro</p>
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.3 }}
+                            transition={{ delay: 0.5, duration: 0.8 }}
+                            className="bg-white p-12 rounded-lg shadow-lg text-center w-full"
+                        >
+                            <h3 className="text-2xl font-extrabold mb-3 text-primary">6er Abo</h3>
+                            <p className="text-lg text-gray-800 mb-6">Paketpreis</p>
+                            <p className="text-4xl font-extrabold text-accent mb-3">999 Euro</p>
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.3 }}
+                            transition={{ delay: 0.6, duration: 0.8 }}
+                            className="bg-white p-12 rounded-lg shadow-lg text-center w-full"
+                        >
+                            <h3 className="text-2xl font-extrabold mb-3 text-primary">10er Abo</h3>
+                            <p className="text-lg text-gray-800 mb-6">Paketpreis</p>
+                            <p className="text-4xl font-extrabold text-accent mb-3">1650 Euro</p>
+                        </motion.div>
                     </div>
                 </section>
 

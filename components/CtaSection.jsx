@@ -60,7 +60,7 @@ const CtaSection = () => {
             width={400}
             height={800}
             alt="Liposana 3 Machine"
-            className="rounded-lg shadow-xl border-4 border-primary grayscale"
+            className="rounded-lg shadow-xl border-4 border-primary grayscale w-full h-auto object-cover"
           />
         </motion.div>
       </div>

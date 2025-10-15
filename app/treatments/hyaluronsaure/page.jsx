@@ -14,12 +14,12 @@ const HyaluronsaurePage = () => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { delay: 0.2, duration: 0.8 } }}
-      className="min-h-screen pb-12 xl:pt-32"
+      className="min-h-screen pb-12 overflow-x-hidden"
     >
       {/* Hero Section */}
-      <section className="bg-accent-100 py-16 mt-32 mb-12">
-        <div className="container mx-auto flex flex-col xl:flex-row items-center justify-between gap-8">
-          <div className="text-center xl:text-left xl:w-1/2">
+      <section className="bg-accent-100 py-16 mb-12">
+        <div className="container mx-auto flex flex-col xl:flex-row items-center justify-between gap-8 pt-40">
+          <div className="text-center xl:text-left xl:w-1/2 pt-12">
             <motion.h1
               className="h1 mb-4 text-primary"
             >
@@ -35,20 +35,20 @@ const HyaluronsaurePage = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 2.5, duration: 0.8, ease: "easeInOut" }}
-            className="xl:w-1/2 flex justify-center xl:justify-end"
+            className="xl:w-1/2 flex justify-center xl:justify-end xl:ml-16"
           >
             <Image
               src="/assets/treatments/girls.jpeg"
               width={500}
               height={350}
               alt="Hyaluron-Unterspritzung"
-              className="rounded-lg shadow-xl border-4 border-primary"
+              className="rounded-lg shadow-xl border-4 border-primary w-full h-auto object-cover"
             />
           </motion.div>
         </div>
       </section>
 
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto">
         {/* Key Benefits Section */}
         <section className="mb-12">
           <motion.h2
@@ -56,7 +56,7 @@ const HyaluronsaurePage = () => {
           >
             Vorteile der Hyaluron-Unterspritzung
           </motion.h2>
-          <ul className="list-disc list-inside space-y-2 text-lg text-gray-700 mb-6 mx-auto w-fit">
+          <ul className="list-disc list-inside space-y-2 text-lg text-gray-700 mb-6">
             <motion.li>
               <strong>Sofortige Ergebnisse:</strong> Die Ergebnisse sind unmittelbar nach der Behandlung sichtbar, und Ihre Haut wirkt frischer und strahlender.
             </motion.li>
@@ -83,7 +83,7 @@ const HyaluronsaurePage = () => {
             >
               Behandlungsbereiche:
             </motion.p>
-            <ul className="space-y-2 text-lg text-gray-700 mb-6 mx-auto w-fit">
+            <ul className="space-y-2 text-lg text-gray-700 mb-6">
               <motion.li><strong>Nasolabialfalten</strong></motion.li>
               <motion.li><strong>Mundwinkel</strong></motion.li>
               <motion.li><strong>Kinnfalten</strong></motion.li>
@@ -95,28 +95,66 @@ const HyaluronsaurePage = () => {
         </section>
 
         {/* Natürlich: Hyaluronsäure Section */}
-        <section className="mb-12 bg-gray-50 p-8 rounded-lg shadow-md text-center">
-          <motion.h3
-            className="h3 mb-4 text-accent"
-          >
-            Natürlich: Hyaluronsäure
-          </motion.h3>
-          <motion.p
-            className="mb-6 text-lg text-gray-700 mx-auto w-fit"
-          >
-            Wichtig zu wissen ist, dass Hyaluronsäure eine im Körper natürlich vorkommende Verbindung ist. Sie findet sich zum Beispiel in den Knochen und in der Gelenkflüssigkeit, aber auch in der Haut. Sie eignet sich deshalb so gut zur Modellierung, weil die Moleküle der Hyaluronsäure sehr viel Wasser an sich binden können und damit Volumen entsteht.
-          </motion.p>
-          <motion.h3
-            className="h3 mb-4 text-accent"
-          >
-            Natürlich wirkende Effekte
-          </motion.h3>
-          <motion.p
-            className="text-lg text-gray-700 mx-auto w-fit"
-          >
-            In der Praxis werden die sogenannten Filler nach einer ausführlichen Beratung vorsichtig unter die Haut gespritzt, die sich dann anhebt und dabei glättet. Die Hyaluronsäure baut sich im Lauf einiger Monate wieder ab und muss dann erneuert werden. Die Kosten sind vor allem von der notwendigen Menge an Filler abhängig. Bei Mesoskin.Hamburg wird vor allem mit der schmerzfreien Technik der „stumpfen Nadel“ gearbeitet, weil sie zu sehr natürlich wirkenden Effekten führt.
-          </motion.p>
-        </section>
+<section className="container mx-auto py-12">
+      <h1 className="h2 mb-8 text-center">Hyaluronsäure</h1>
+      <div className="flex flex-col lg:flex-row gap-8">
+        <div className="lg:w-1/2 py-12">
+          <h2 className="h3 mb-4">Natürlich: Hyaluronsäure</h2>
+          <p className="mb-4">
+            Wichtig zu wissen ist, dass Hyaluronsäure eine im Körper natürlich
+            vorkommende Verbindung ist. Sie findet sich zum Beispiel in den
+            Knochen und in der Gelenkflüssigkeit, aber auch in der Haut. Sie
+            eignet sich deshalb so gut zur Modellierung, weil die Moleküle der
+            Hyaluronsäure sehr viel Wasser an sich binden können und damit
+            Volumen entsteht.
+          </p>
+          <h2 className="h3 mb-4">Natürlich wirkende Effekte</h2>
+          <p className="mb-4">
+            In der Praxis werden die sogenannten Filler nach einer ausführlichen
+            Beratung vorsichtig unter die Haut gespritzt, die sich dann anhebt
+            und dabei glättet. Die Hyaluronsäure baut sich im Lauf einiger
+            Monate wieder ab und muss dann erneuert werden. Die Kosten sind vor
+            allem von der notwendigen Menge an Filler abhängig. Bei
+            Mesoskin.Hamburg wird vor allem mit der schmerzfreien Technik der
+            „stumpfen Nadel“ gearbeitet, weil sie zu sehr natürlich wirkenden
+            Effekten führt.
+          </p>
+          <h2 className="h3 mb-4">Anwendungsbereiche</h2>
+          <ul className="list-disc list-inside mb-4">
+            <li>Lippen aufspritzen</li>
+            <li>Faltenunterspritzung</li>
+            <li>Gesichtsmodellierung</li>
+            <li>Nasenkorrektur ohne OP</li>
+            <li>Augenringe unterspritzen</li>
+            <li>Hände verjüngen</li>
+          </ul>
+          <h2 className="h3 mb-4">Vorteile</h2>
+          <ul className="list-disc list-inside mb-4">
+            <li>Sofort sichtbare Ergebnisse</li>
+            <li>Natürliches Aussehen</li>
+            <li>Biologisch abbaubar</li>
+            <li>Schonende Behandlung</li>
+            <li>Kurze Genesungszeit</li>
+          </ul>
+        </div>
+        <div className="lg:w-1/2">
+          <Image
+            src="/assets/treatments/meso5.jpg"
+            alt="Hyaluronsäure Behandlung"
+            width={600}
+            height={400}
+            className="rounded-lg shadow-lg mb-8 w-full h-auto object-cover"
+          />
+          <Image
+            src="/assets/treatments/girls2.jpg"
+            alt="Hyaluronsäure Vorher-Nachher"
+            width={600}
+            height={400}
+            className="rounded-lg shadow-lg w-full h-auto object-cover"
+          />
+        </div>
+      </div>
+    </section>
 
         {/* Call to Action Section */}
         <section className="text-center mb-12">

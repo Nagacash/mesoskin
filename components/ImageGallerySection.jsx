@@ -40,7 +40,7 @@ const ImageGallerySection = () => {
               width={500}
               height={350}
               alt="Spa Treatment 7"
-              className="rounded-lg shadow-lg w-full h-80 object-cover grayscale"
+              className="rounded-lg shadow-lg w-full h-64 md:h-80 object-cover grayscale"
             />
           </motion.div>
           <motion.div
@@ -56,7 +56,7 @@ const ImageGallerySection = () => {
               width={500}
               height={350}
               alt="Spa Treatment 2"
-              className="rounded-lg shadow-lg w-full h-80 object-cover grayscale"
+              className="rounded-lg shadow-lg w-full h-64 md:h-80 object-cover grayscale"
             />
           </motion.div>
           <motion.div
@@ -72,7 +72,7 @@ const ImageGallerySection = () => {
               width={500}
               height={350}
               alt="Spa Treatment 3"
-              className="rounded-lg shadow-lg w-full h-80 object-cover grayscale"
+              className="rounded-lg shadow-lg w-full h-64 md:h-80 object-cover grayscale"
             />
           </motion.div>
           <motion.div
@@ -88,7 +88,7 @@ const ImageGallerySection = () => {
               width={500}
               height={350}
               alt="Spa Treatment 4"
-              className="rounded-lg shadow-lg w-full h-80 object-cover grayscale"
+              className="rounded-lg shadow-lg w-full h-64 md:h-80 object-cover grayscale"
             />
           </motion.div>
           <motion.div
@@ -104,7 +104,7 @@ const ImageGallerySection = () => {
               width={500}
               height={350}
               alt="Spa Treatment 5"
-              className="rounded-lg shadow-lg w-full h-80 object-cover grayscale"
+              className="rounded-lg shadow-lg w-full h-64 md:h-80 object-cover grayscale"
             />
           </motion.div>
           <motion.div
@@ -120,7 +120,7 @@ const ImageGallerySection = () => {
               width={500}
               height={350}
               alt="Spa Treatment 6"
-              className="rounded-lg shadow-lg w-full h-80 object-cover grayscale"
+              className="rounded-lg shadow-lg w-full h-64 md:h-80 object-cover grayscale"
             />
           </motion.div>
         </div>

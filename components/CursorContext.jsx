@@ -3,7 +3,7 @@ import React, { useState, useEffect, createContext } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
 
-export const CursorContext = createContext();
+export const CursorContext = createContext(undefined);
 
 const CursorProvider = ({ children }) => {
   const [cursor, setCursor] = useState({ size: 30, background: "#473936" });
