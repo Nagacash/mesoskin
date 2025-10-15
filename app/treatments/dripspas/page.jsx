@@ -57,7 +57,7 @@ const Dripspas = () => {
 
 
                 {/* Key Benefits Section */}
-                <section className="mb-12 py-12">
+                <section className="mb-12 py-12 bg-accent-100 p-8 rounded-lg shadow-xl">
                     <motion.h2
                         onMouseEnter={mouseEnterHandler}
                         onMouseLeave={mouseLeaveHandler}

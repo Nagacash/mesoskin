@@ -21,7 +21,7 @@ const CtaSection = () => {
       className="py-24 xl:py-32"
     >
       <div className="container mx-auto text-center flex flex-col xl:flex-row items-center justify-center gap-8">
-        <div className="xl:w-1/2">
+        <div className="xl:w-1/2 bg-accent-100 p-8 rounded-lg shadow-xl">
           <motion.h2
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -53,14 +53,14 @@ const CtaSection = () => {
           transition={{ delay: 0.5, duration: 0.8 }}
           onMouseEnter={mouseEnterHandler}
           onMouseLeave={mouseLeaveHandler}
-          className="xl:w-1/2 flex justify-center"
+          className="xl:w-1/2 flex justify-center bg-white p-6 rounded-lg shadow-xl"
         >
           <Image
             src="/assets/treatments/meso8.jpg"
             width={400}
             height={800}
             alt="Liposana 3 Machine"
-            className="rounded-lg shadow-xl border-4 border-primary grayscale w-full h-auto object-cover"
+            className="rounded-lg shadow-xl grayscale w-full h-auto object-cover"
           />
         </motion.div>
       </div>

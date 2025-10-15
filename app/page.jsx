@@ -11,9 +11,10 @@ import BenefitsSection from '@/components/BenefitsSection';
 import CtaSection from '@/components/CtaSection';
 import Footer from '@/components/Footer';
 import HeroSection from '@/components/HeroSection';
+import PhilosophySection from '@/components/PhilosophySection';
 import ProcessSection from '@/components/ProcessSection';
 import FaqModal from '@/components/FaqModal';
-import ImageGallerySection from '@/components/ImageGallerySection';
+
 
 const Home = () => {
   const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
@@ -25,8 +26,9 @@ const Home = () => {
   return (
     <>
       <HeroSection />
+      <PhilosophySection />
       <BenefitsSection />
-      <ImageGallerySection />
+
       <ProcessSection />
       <CtaSection />
       <div className="text-center mb-24 flex flex-col md:flex-row justify-center items-center gap-4">

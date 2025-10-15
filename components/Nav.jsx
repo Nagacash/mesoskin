@@ -44,7 +44,7 @@ const Nav = () => {
             <Link
               href={link.href}
               key={index}
-              className={`${pathname === link.href ? 'border-b-2 border-accent-DEFAULT' : 'text-primary hover:text-accent-DEFAULT'} uppercase transition-colors`}            >
+              className={`${pathname === link.href ? 'border-b-2 border-accent-DEFAULT' : 'text-primary hover:text-accent-DEFAULT'} uppercase transition-colors whitespace-nowrap`}            >
               {link.name}
             </Link>
           );

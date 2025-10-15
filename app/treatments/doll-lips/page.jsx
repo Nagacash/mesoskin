@@ -78,7 +78,7 @@ const DollLipsPage = () => {
         </section>
 
         {/* Kein „Duckface-Effekt“ Section */}
-        <section className="mb-12 pt-24 pb-24 px-12 bg-gray-50 rounded-lg shadow-md">
+        <section className="mb-12 pt-24 pb-24 px-12 bg-accent-100 rounded-lg shadow-xl">
           <motion.h3
             onMouseEnter={mouseEnterHandler}
             onMouseLeave={mouseLeaveHandler}

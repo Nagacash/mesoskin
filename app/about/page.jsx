@@ -11,7 +11,7 @@ const About = () => {
       className='min-h-screen overflow-x-hidden z-10 pt-32 xl:pt-32'
     >
       <div className='container mx-auto pt-56 pb-24'>
-        <div className='text-center mb-24'>
+        <div className='text-center mb-24 bg-accent-100 p-8 rounded-lg shadow-md'>
           <h1 className='h1 mb-4'>Über mich</h1>
           <p className='lead max-w-2xl mx-auto'>
             Mesoskin Hamburg
@@ -45,13 +45,13 @@ const About = () => {
               Jetzt Termin vereinbaren
             </button>
           </div>
-                    <div className='flex-1 flex justify-center items-center gap-4'>
+                    <div className='flex-1 flex justify-center items-center gap-4 bg-white p-6 rounded-lg shadow-xl'>
                       <Image
-                        src='/assets/about/anette.jpeg'
+                        src='/assets/about/meso-annette.jpg'
                         width={500}
                         height={350}
                         alt='Annette Fascher-Wendlandt'
-                        className='rounded-lg shadow-lg w-full h-64 md:h-96 object-cover'
+                        className='rounded-lg shadow-2xl w-full h-[500px] md:h-[700px] object-cover'
                       />
                     </div>
         </div>

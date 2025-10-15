@@ -42,7 +42,7 @@ const ProcessSection = () => {
           onMouseLeave={mouseLeaveHandler}
           className="h2 mb-12 text-center"
         >
-          So läuft die Behandlung ab
+          So läuft die Behandlung ab →
         </motion.h2>
         <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-8">
           {processSteps.map((step, index) => (

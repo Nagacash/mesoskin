@@ -46,14 +46,14 @@ const SkinboosterPage = () => {
             animate={{ opacity: 1, y: 0, scale: 1, transition: { delay: 0.6, duration: 0.8 } }}
             onMouseEnter={mouseEnterHandler}
             onMouseLeave={mouseLeaveHandler}
-            className="xl:w-1/2 flex justify-center xl:mt-12"
+            className="xl:w-1/2 flex justify-center xl:mt-12 bg-white p-6 rounded-lg shadow-2xl"
           >
             <Image
               src="/assets/treatments/girls3.png"
               width={500}
               height={350}
               alt="Skinbooster"
-              className="rounded-lg border-4 border-black w-full h-auto object-cover"
+              className="rounded-lg w-full h-auto object-cover"
             />
           </motion.div>
         </div>
@@ -97,6 +97,10 @@ const SkinboosterPage = () => {
             </motion.li>
           </ul>
           <motion.p
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ delay: 1.3, duration: 0.8 }}
             onMouseEnter={mouseEnterHandler}
             onMouseLeave={mouseLeaveHandler}
             className="mb-4 text-lg text-gray-700"
@@ -104,10 +108,10 @@ const SkinboosterPage = () => {
             In Frage kommen die Skinbooster vor allem für:
           </motion.p>
           <ul className="flex flex-wrap justify-center gap-4 mb-6 text-center">
-            <motion.h3 onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler} className="h3 mb-2"><strong>Gesicht</strong></motion.h3>,
-            <motion.h3 onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler} className="h3 mb-2"><strong>Hals</strong></motion.h3>,
-            <motion.h3 onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler} className="h3 mb-2"><strong>Dekolleté</strong></motion.h3>,
-            <motion.h3 onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler} className="h3 mb-2"><strong>Hände</strong></motion.h3>
+            <motion.h3 initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 1.4, duration: 0.8 }} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler} className="h3 mb-2"><strong>Gesicht</strong></motion.h3>,
+            <motion.h3 initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 1.5, duration: 0.8 }} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler} className="h3 mb-2"><strong>Hals</strong></motion.h3>,
+            <motion.h3 initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 1.6, duration: 0.8 }} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler} className="h3 mb-2"><strong>Dekolleté</strong></motion.h3>,
+            <motion.h3 initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 1.7, duration: 0.8 }} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler} className="h3 mb-2"><strong>Hände</strong></motion.h3>
           </ul>
         </motion.section>
 
