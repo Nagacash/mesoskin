@@ -34,28 +34,11 @@ const Header = () => {
   }, []);
   return (
     <header className={`fixed top-0 left-0 z-[500] w-full bg-white overflow-x-hidden transition-all duration-300 ${scrolled ? 'backdrop-blur-md bg-white/30 pb-3 xl:pb-[25px]' : 'pb-6 xl:pb-[50px]'}`}>
-      <div className="bg-primary mb-6 xl:mb-[50px] xl:h-[50px] py-4 xl:py-0">
+      <div className="bg-primary mb-6 xl:mb-[20px] xl:h-[20px] py-1 xl:py-0 hidden md:block">
         <div className="container mx-auto h-full">
           <div className="flex items-center justify-between h-full">
 
-            <motion.div
-              onMouseEnter={mouseEnterHandler}
-              onMouseLeave={mouseLeaveHandler}
-              className="flex flex-col lg:flex-row items-center h-full gap-2 xl:gap-6 w-full justify-center xl:w-auto xl:justify-normal"
-            >
-              <div className="flex justify-center w-full">
-                <div className="grid grid-cols-[20px_1fr] gap-2 items-center text-white">
-                  <FaPhoneAlt className="w-5" />
-                  <span>017661639830</span>
-                </div>
-              </div>
-              <div className="flex justify-center w-full">
-                <div className="grid grid-cols-[20px_1fr] gap-2 items-center text-white">
-                  <IoMdMail className="w-5" />
-                  <span>kontakt@mesoskinhamburg.de</span>
-                </div>
-              </div>
-            </motion.div>
+
             <motion.div
               onMouseEnter={mouseEnterHandler}
               onMouseLeave={mouseLeaveHandler}
@@ -66,10 +49,11 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className="container mx-auto flex items-center justify-between px-4 py-0">
+      <div className="container mx-auto flex items-center justify-between px-4 pt-2 pb-0">
         <motion.div
           onMouseEnter={mouseEnterHandler}
           onMouseLeave={mouseLeaveHandler}
+          className="mx-auto xl:mx-0"
         >
           <Link href="/">
             <h1 className="text-2xl font-bold text-primary"><strong>MESOSKIN</strong> HAMBURG</h1>
@@ -84,7 +68,7 @@ const Header = () => {
         <motion.div
           initial={{ right: "-100%" }}
           animate={{ right: mobileNav ? 0 : "-100%" }}
-          className="fixed bg-primary top-0 bottom-0 right-0 w-full xl:hidden z-[999]"
+          className="fixed bg-primary top-0 bottom-0 right-0 w-full h-screen xl:hidden z-[999]"
         >
           <MobileNav setMobileNav={setMobileNav} />
         </motion.div>

@@ -52,7 +52,7 @@ const ProcessSection = () => {
               animate={{ opacity: 1, y: 0, transition: { delay: index * 0.2 } }}
               onMouseEnter={mouseEnterHandler}
               onMouseLeave={mouseLeaveHandler}
-              className="text-center py-10 px-6 rounded-lg shadow-md border border-gray-200"
+              className="text-center py-10 px-6 rounded-lg shadow-md border border-gray-200 bg-accent-100"
             >
               <div className="text-5xl md:text-6xl text-accent mb-4">{step.step}</div>
               <h3 className="text-2xl mb-4 text-wrap">{step.title}</h3>

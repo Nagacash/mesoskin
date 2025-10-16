@@ -16,7 +16,7 @@ const socials = [
   },
   {
     icon: <FaInstagram />,
-    href: "/",
+    href: "https://www.instagram.com/mesoskin.hamburg/",
   },
 ];
 

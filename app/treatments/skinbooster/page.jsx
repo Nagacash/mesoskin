@@ -79,7 +79,7 @@ const SkinboosterPage = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="pt-12 pb-12 mb-24 bg-gray-50 rounded-lg shadow-md text-center px-12"
+          className="pt-12 pb-12 mb-24 bg-accent-100 rounded-lg shadow-md text-center px-12"
         >
           <ul className="space-y-2 text-lg text-gray-700 mb-6 text-center">
             <motion.li onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler} className="pt-12 pb-12">

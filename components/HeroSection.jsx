@@ -17,11 +17,11 @@ const HeroSection = () => {
     <motion.section
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { delay: 2 } }}
-      className="min-h-screen flex items-center overflow-x-hidden pt-80"
+      className="min-h-screen flex items-center overflow-x-hidden pt-12"
     >
       <div className="container mx-auto">
                   <div className="flex flex-col xl:flex-row items-center h-full">
-                    <div className="w-full text-center xl:text-left xl:w-[500px] pt-24 md:pt-32 xl:pt-0">
+                    <div className="w-full text-center xl:text-left xl:w-[500px] pt-24 md:pt-32 xl:pt-0 pb-12">
                       <motion.div
                         initial={{ opacity: 0, y: -100 }}
                         animate={{
@@ -40,8 +40,8 @@ const HeroSection = () => {
                             <span className="font-bold">Natürliche Schönheit</span> <br /> beginnt hier
                           </motion.h1>
                         </div>
-                        <div className="mb-8 text-left">
-                          <h3 className="h3 mb-4">Qualifikationen:</h3>
+                        <div className="mb-8 text-left pt-12">
+                          <h3 className="h3 mb-4 text-center">Qualifikationen:</h3>
                           <ul className="list-disc list-inside text-primary text-lg">
                             <li><span className="font-semibold">Heilpraktikerin seit 1995:</span> Langjährige Erfahrung in der alternativen Medizin und Gesundheitsförderung.</li>
                             <li><span className="font-semibold">Zertifizierte psychologische Beraterin:</span> Weiterbildung in psychologischer Beratung und Coaching, um Klienten bei der Bewältigung von Lebensherausforderungen zu unterstützen.</li>
@@ -49,7 +49,7 @@ const HeroSection = () => {
                             <li><span className="font-semibold">Regelmäßige Fortbildungen:</span> Kontinuierliche Weiterbildung, um mein Wissen über aktuelle Trends und Entwicklungen im Gesundheitsbereich zu vertiefen.</li>
                           </ul>
                         </div>
-                        <h3 className="h3 mb-4">Annette Fascher</h3>
+                        <h3 className="h3 mb-4 pt-12">Annette Fascher</h3>
                         <div
                           onMouseEnter={mouseEnterHandler}
                           onMouseLeave={mouseLeaveHandler}

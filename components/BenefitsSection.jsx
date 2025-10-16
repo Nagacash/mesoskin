@@ -32,7 +32,7 @@ const BenefitsSection = () => {
     <motion.section
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { delay: 1 } }}
-      className="py-12 xl:py-24"
+      className="py-12 xl:py-24 bg-accent-100"
     >
       <div className="container mx-auto">
         <motion.h2

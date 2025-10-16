@@ -62,6 +62,10 @@ const PhilosophySection = () => {
 
   return (
     <motion.section
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ amount: 0 }}
+      transition={{ delay: 0.3, duration: 0.8 }}
       className="py-12 xl:py-24 bg-gray-50"
     >
       <div className="container mx-auto text-center">
@@ -76,7 +80,7 @@ const PhilosophySection = () => {
           transition={{ delay: 0.3, duration: 0.8 }}
           onMouseEnter={mouseEnterHandler}
           onMouseLeave={mouseLeaveHandler}
-          className="text-center mb-24"
+          className="text-center mb-24 bg-accent-100 p-8 rounded-lg shadow-md"
         >
           <h2 className="h2 mb-4">Entspannung und Wohlbefinden</h2>
           <p className="lead max-w-xl mx-auto mb-4">Entdecken Sie bei <strong>Mesoskin</strong> natürliche Schönheit und ganzheitliche Gesundheit. Unsere maßgeschneiderten Gesundheits- und Schönheitskonzepte fördern Ihr Wohlbefinden von innen und außen. Starten Sie Ihre Reise zu einem strahlenden Ich.</p>

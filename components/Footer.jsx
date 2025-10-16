@@ -21,7 +21,18 @@ const Footer = () => {
           <ul className="space-y-2">
             <li><a href="/" className="hover:text-accent transition-colors">Home</a></li>
             <li><a href="/about" className="hover:text-accent transition-colors">Über mich</a></li>
-            <li><a href="/contact" className="hover:text-accent transition-colors">Kontakt</a></li>
+            <li><a href="/treatments/dripspas" className="hover:text-accent transition-colors">Dripspas</a></li>
+            <li><a href="/treatments/pdo-faden" className="hover:text-accent transition-colors">PDO Fäden</a></li>
+          </ul>
+        </div>
+
+        {/* Behandlungen Links */}
+        <div className="text-left">
+          <h3 className="text-xl font-semibold mb-4">Behandlungen</h3>
+          <ul className="space-y-2">
+            <li><a href="/treatments/doll-lips" className="hover:text-accent transition-colors">Doll Lips</a></li>
+            <li><a href="/treatments/hyaluronsaure" className="hover:text-accent transition-colors">Hyaluronsäure</a></li>
+            <li><a href="/treatments/skinbooster" className="hover:text-accent transition-colors">Skinbooster</a></li>
             <li><a href="/impressum" className="hover:text-accent transition-colors">Impressum</a></li>
             <li><a href="/datenschutz" className="hover:text-accent transition-colors">Datenschutz</a></li>
           </ul>

@@ -20,9 +20,9 @@ const Dripspas = () => {
             className="min-h-screen pb-12 pt-32 xl:pt-32 overflow-x-hidden"
         >
             {/* Hero Section */}
-            <section className="bg-primary-100 py-24 mt-0 mb-12">
+            <section className="bg-primary-100 py-12 mt-0 mb-12">
                 <div className="container mx-auto flex flex-col xl:flex-row items-center justify-between gap-8">
-                    <div className="text-center xl:text-left xl:w-1/2 xl:flex-shrink-0 pt-12">
+                    <div className="text-center xl:text-left xl:w-1/2 xl:flex-shrink-0 pt-0">
                         <motion.h1
                             onMouseEnter={mouseEnterHandler}
                             onMouseLeave={mouseLeaveHandler}
@@ -258,7 +258,7 @@ const Dripspas = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, amount: 0.3 }}
                             transition={{ delay: 0.5, duration: 0.8 }}
-                            className="flex flex-col md:flex-row justify-center gap-4"
+                            className="flex flex-col md:flex-row justify-center gap-4 mx-auto"
                         >
                             <a
                                 href="https://g.page/mesoskinhamburg/review" // Placeholder for Google review link

@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Form from '@/components/Form';
+import TestimonialCarousel from '@/components/TestimonialCarousel';
 
 const About = () => {
   return (
@@ -10,7 +11,7 @@ const About = () => {
       animate={{ opacity: 1, transition: { delay: 2 } }}
       className='min-h-screen overflow-x-hidden z-10 pt-32 xl:pt-32'
     >
-      <div className='container mx-auto pt-56 pb-24'>
+      <div className='container mx-auto pt-8 pb-24'>
         <div className='text-center mb-24 bg-accent-100 p-8 rounded-lg shadow-md'>
           <h1 className='h1 mb-4'>Über mich</h1>
       <h1 className="h1 mb-4 text-primary"><strong>Mesoskin</strong> Hamburg</h1>
@@ -54,7 +55,7 @@ const About = () => {
                     </div>
         </div>
 
-        <div className='text-center max-w-3xl mx-auto mb-24'>
+        <div className='text-center max-w-3xl mx-auto mb-24 bg-accent-100 p-8 rounded-lg shadow-md'>
           <h2 className='h2 mb-6'>Maßgeschneidert</h2>
           <p className='text-lg mb-8'>
             Bei <strong>Mesoskin</strong> Hamburg steht immer das individuelle Angebot im Zentrum. Warum? Weil jeder Mensch und jede Haut anders ist. Oder anders formuliert: Der Mensch steht im Vordergrund. Entsprechend beginnt jede Behandlung mit einem ausführlichen Beratungsgespräch und einem individuelle Therapieplan. Eine umfassende Nachbetreuung steht ebenfalls „auf dem Programm“.
@@ -62,8 +63,10 @@ const About = () => {
 
         </div>
 
+        <TestimonialCarousel />
+
         <div className='max-w-3xl mx-auto'>
-          <div className='text-center mb-8'>
+          <div className='text-center mb-8 pb-12'>
             <h2 className='h2'>Termin vereinbaren</h2>
             <p className='mt-4 text-lg'>
               Sie möchten einen Termin vereinbaren? Füllen Sie das Kontaktformular aus und ich werde mich schnellsmöglich zurückmelden.

@@ -1,5 +1,7 @@
 "use client";
 import { IoCloseOutline, IoStarOutline } from "react-icons/io5";
+import { IoMdMail } from "react-icons/io";
+import { FaPhoneAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -39,7 +41,7 @@ const links = [
 const MobileNav = ({ setMobileNav }) => {
   const pathname = usePathname();
   return (
-    <nav className="relative flex flex-col justify-between h-full p-8">
+    <nav className="relative flex flex-col h-full p-8">
       <div
         className="cursor-pointer text-accent-DEFAULT"
         onClick={() => setMobileNav(false)}
@@ -47,7 +49,7 @@ const MobileNav = ({ setMobileNav }) => {
         <IoCloseOutline className="text-4xl" />
       </div>
       <div className="flex justify-center mb-8">
-        <IoStarOutline className="text-white text-5xl" />
+        <h2 className="text-white text-3xl font-bold">MENU</h2>
       </div>
       <ul className="flex flex-col gap-10 text-white text-xl items-center pb-10">
         {links.map((link, index) => {
@@ -62,6 +64,16 @@ const MobileNav = ({ setMobileNav }) => {
           );
         })}
       </ul>
+      <div className="flex flex-col items-end gap-2 text-white mt-auto">
+        <div className="grid grid-cols-[20px_1fr] gap-2 items-center">
+          <FaPhoneAlt className="w-5" />
+          <span>017661639830</span>
+        </div>
+        <div className="grid grid-cols-[20px_1fr] gap-2 items-center">
+          <IoMdMail className="w-5" />
+          <span>kontakt@mesoskinhamburg.de</span>
+        </div>
+      </div>
       {/* <Socials containerStyles="text-white text-lg flex gap-6 justify-center" /> */}
     </nav>
   );
