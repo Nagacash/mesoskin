@@ -1,13 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { X } from "lucide-react";
-import {
-  Dialog,
-  DialogClose,
-  DialogContent,
-  DialogTrigger,
-} from "@/components/ui/dialog";
 import { motion } from "framer-motion";
 import { useContext } from "react";
 import { CursorContext } from "@/components/CursorContext";
@@ -52,14 +45,13 @@ const Dripspas = () => {
                         transition={{ delay: 0.3, duration: 0.8 }}
                         onMouseEnter={mouseEnterHandler}
                         onMouseLeave={mouseLeaveHandler}
-                        className="xl:w-1/2 flex justify-center xl:justify-end"
-                    >            <Image
+                        className="xl:w-1/2 flex justify-center xl:justify-end">
+                    <Image
                             src="/assets/treatments/dripspas/meso6.jpg"
                             width={700}
                             height={550}
                             alt="Liposana 3"
                             className="rounded-lg shadow-lg"
-                            priority
                         />
                     </motion.div>
                 </div>
@@ -173,28 +165,13 @@ const Dripspas = () => {
                                 </div>
                                 
                                 <div className="flex justify-center my-8">
-                                <Dialog>
-                                    <DialogTrigger asChild>
-                                        <Image
-                                            src="/assets/in2.png"
-                                            width={1400}
-                                            height={800}
-                                            alt="Radiance Infusion"
-                                            className="rounded-lg shadow-xl p-4 cursor-pointer"
-                                        />
-                                    </DialogTrigger>
-                                    <DialogContent className="max-w-full max-h-full overflow-hidden p-0">
-                                        <Image
-                                            src="/assets/in2.png"
-                                            alt="Radiance Infusion"
-                                            layout="responsive"
-                                            className="object-contain w-full h-full"
-                                        />
-                                        <DialogClose className="absolute top-2 right-2 text-white z-50">
-                                            <X className="h-8 w-8" />
-                                        </DialogClose>
-                                    </DialogContent>
-                                </Dialog>
+                                    <Image
+                                        src="/assets/in2.png"
+                                        width={1400}
+                                        height={800}
+                                        alt="Radiance Infusion"
+                                        className="rounded-lg shadow-xl p-4"
+                                    />
                                 </div>
 
                                 <p className="text-lg text-gray-700 font-medium mb-4">
@@ -272,7 +249,7 @@ const Dripspas = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, amount: 0.3 }}
                             transition={{ delay: 0.4, duration: 0.8 }}
-                            className="lead max-w-2xl mx-auto mb-8 text-gray-900"
+                            className="lead max-w-2xl mx-auto mb-8 text-gray-900 pb-12 pt-12"
                         >
                             Schluss mit Erkältung oder Müdigkeit. Buche jetzt Deine Infusion und tanke neue Energie und Wohlbefinden – verabreicht von qualifiziertem Personal in deutscher Apothekenqualität.
                         </motion.p>
@@ -287,7 +264,7 @@ const Dripspas = () => {
                                 href="https://g.page/mesoskinhamburg/review" // Placeholder for Google review link
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="btn btn-lg bg-blue-500 text-white hover:bg-blue-600 shadow-lg rounded-full px-6 py-3 text-base md:px-8 md:py-4 md:text-lg transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-300 flex items-center justify-center gap-2"
+                                className="btn btn-lg bg-blue-500 text-white hover:bg-blue-600 shadow-lg rounded-full px-6 py-3 text-base md:px-8 md:py-4 md:text-lg transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-300 flex items-center justify-center gap-1"
                             >
                                 <FcGoogle className="text-xl" /> {/* Google logo */}
                                 <FaStar className="text-yellow-400" />
@@ -295,7 +272,7 @@ const Dripspas = () => {
                                 <FaStar className="text-yellow-400" />
                                 <FaStar className="text-yellow-400" />
                                 <FaStar className="text-yellow-400" />
-                                <span className="text-sm">Review</span>
+                                <span>Review</span>
                             </a>
                             <button
                                 onClick={() => router.push("/contact")}

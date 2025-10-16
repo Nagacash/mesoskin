@@ -53,7 +53,7 @@ const HeroSection = () => {
                         <div
                           onMouseEnter={mouseEnterHandler}
                           onMouseLeave={mouseLeaveHandler}
-                          className="lead max-w-xl mx-auto text-primary"
+                          className="lead max-w-xl mx-auto text-primary mb-12"
                         >
                           <motion.p>
                             Maßgeschneiderte Hautpflegelösungen für einen gesunden Teint, die

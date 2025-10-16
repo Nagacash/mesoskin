@@ -69,10 +69,8 @@ const PhilosophySection = () => {
       className="py-12 xl:py-24 bg-gray-50"
     >
       <div className="container mx-auto text-center">
-        <h2 className="h2 mb-6">Philosophie:</h2>
-        <p className="lead max-w-3xl mx-auto text-primary mb-12">
-          Ich glaube an einen integrativen Ansatz, der Körper, Geist und Seele miteinander verbindet. Meine Erfahrung als Heilpraktikerin und psychologische Beraterin erlaubt es mir, maßgeschneiderte Lösungen anzubieten, die auf die individuellen Bedürfnisse meiner Klienten abgestimmt sind. Gemeinsam arbeiten wir daran, sowohl körperliche als auch psychische Herausforderungen zu meistern und das volle Potenzial zu entfalten.
-        </p>
+
+
 
         {/* New section: Entspannung und Wohlbefinden */}
         <motion.div
@@ -82,7 +80,7 @@ const PhilosophySection = () => {
           transition={{ delay: 0.3, duration: 0.8 }}
           onMouseEnter={mouseEnterHandler}
           onMouseLeave={mouseLeaveHandler}
-          className="text-center mb-12"
+          className="text-center mb-24"
         >
           <h2 className="h2 mb-4">Entspannung und Wohlbefinden</h2>
           <p className="lead max-w-xl mx-auto mb-4">Entdecken Sie bei <strong>Mesoskin</strong> natürliche Schönheit und ganzheitliche Gesundheit. Unsere maßgeschneiderten Gesundheits- und Schönheitskonzepte fördern Ihr Wohlbefinden von innen und außen. Starten Sie Ihre Reise zu einem strahlenden Ich.</p>
@@ -113,7 +111,7 @@ const PhilosophySection = () => {
                   alt={item.alt}
                   width={500}
                   height={500}
-                  className="transition-transform duration-300 group-hover:scale-105 object-cover"
+                  className="transition-transform duration-300 group-hover:scale-105 object-cover grayscale"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <h3 className="text-white text-xl font-semibold text-center px-4">{item.title}</h3>
@@ -122,6 +120,10 @@ const PhilosophySection = () => {
             </motion.div>
           ))}
         </Masonry>
+        <h2 className="h2 mb-6 mt-12">Philosophie:</h2>
+        <p className="lead max-w-3xl mx-auto text-primary mb-24 mt-12">
+          Ich glaube an einen integrativen Ansatz, der Körper, Geist und Seele miteinander verbindet. Meine Erfahrung als Heilpraktikerin und psychologische Beraterin erlaubt es mir, maßgeschneiderte Lösungen anzubieten, die auf die individuellen Bedürfnisse meiner Klienten abgestimmt sind. Gemeinsam arbeiten wir daran, sowohl körperliche als auch psychische Herausforderungen zu meistern und das volle Potenzial zu entfalten.
+        </p>
       </div>
     </motion.section>
   );

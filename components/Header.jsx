@@ -49,7 +49,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className="container mx-auto flex items-center justify-between px-4">
+      <div className="container mx-auto flex items-center justify-between px-4 py-0">
         <motion.div
           onMouseEnter={mouseEnterHandler}
           onMouseLeave={mouseLeaveHandler}

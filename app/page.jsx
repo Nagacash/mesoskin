@@ -31,7 +31,7 @@ const Home = () => {
 
       <ProcessSection />
       <CtaSection />
-      <div className="text-center mb-24 flex flex-col md:flex-row justify-center items-center gap-4">
+      <div className="text-center mb-48 mt-12 py-12 flex flex-col md:flex-row justify-center items-center gap-4">
         <button
           onMouseEnter={mouseEnterHandler}
           onMouseLeave={mouseLeaveHandler}

@@ -140,14 +140,14 @@ const HyaluronsaurePage = () => {
             alt="Hyaluronsäure Behandlung"
             width={600}
             height={400}
-            className="rounded-lg shadow-lg mb-8 w-full h-auto object-cover"
+            className="rounded-lg shadow-lg mb-8 w-full h-auto object-cover grayscale"
           />
           <Image
             src="/assets/treatments/spa10.jpg"
             alt="Hyaluronsäure Vorher-Nachher"
             width={600}
             height={400}
-            className="rounded-lg shadow-lg w-full h-auto object-cover"
+            className="rounded-lg shadow-lg w-full h-auto object-cover grayscale"
           />
         </div>
       </div>
