@@ -33,13 +33,9 @@ const SkinboosterPage = () => {
             >
               Spannkraft, die großflächig wirkt – der Skinbooster
             </motion.h1>
-            <motion.p
-              onMouseEnter={mouseEnterHandler}
-              onMouseLeave={mouseLeaveHandler}
-              className="lead max-w-2xl mx-auto xl:mx-0 text-gray-700 mb-8"
-            >
-              Willkommen bei Mesoskin – Ihre Experten für Skinbooster
-            </motion.p>
+            <p className="text-lg text-gray-700 mb-6">
+              Willkommen bei <strong>Mesoskin</strong> – Ihre Experten für Skinbooster
+            </p>
           </div>
           <motion.div
             initial={{ opacity: 0, y: 50, scale: 0.9 }}
@@ -123,13 +119,9 @@ const SkinboosterPage = () => {
           transition={{ duration: 0.8 }}
           className="pt-8 mb-24 text-center px-4"
         >
-          <motion.h2
-            onMouseEnter={mouseEnterHandler}
-            onMouseLeave={mouseLeaveHandler}
-            className="h2 mb-6 text-accent"
-          >
-            Und jetzt auch bei mesoskin.hamburg: PROFHILO®!
-          </motion.h2>
+            <p className="text-lg text-gray-700 mb-6">
+              Und jetzt auch bei <strong>mesoskin</strong>.hamburg: PROFHILO®!
+            </p>
           <motion.p
             onMouseEnter={mouseEnterHandler}
             onMouseLeave={mouseLeaveHandler}

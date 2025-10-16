@@ -1,9 +1,9 @@
 {
   "pages": {
-    "/page": [
+    "/treatments/dripspas/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
+      "static/chunks/app/treatments/dripspas/page.js"
     ],
     "/layout": [
       "static/chunks/webpack.js",
@@ -16,30 +16,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/about/page.js"
     ],
-    "/treatments/dripspas/page": [
+    "/_not-found/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/treatments/dripspas/page.js"
-    ],
-    "/treatments/pdo-faden/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/treatments/pdo-faden/page.js"
-    ],
-    "/treatments/doll-lips/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/treatments/doll-lips/page.js"
-    ],
-    "/treatments/hyaluronsaure/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/treatments/hyaluronsaure/page.js"
-    ],
-    "/treatments/skinbooster/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/treatments/skinbooster/page.js"
+      "static/chunks/app/_not-found/page.js"
     ]
   }
 }

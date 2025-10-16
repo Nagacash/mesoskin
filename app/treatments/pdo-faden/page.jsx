@@ -1,5 +1,6 @@
 "use client";
 
+import Image from 'next/image';
 import { motion } from "framer-motion";
 import { useContext } from "react";
 import { CursorContext } from "@/components/CursorContext";
@@ -17,21 +18,52 @@ const PdoFadenPage = () => {
     >
       {/* Hero Section */}
       <section className="bg-accent-100 py-16 mb-12">
-        <div className="container mx-auto text-center pt-12">
-          <motion.h1
-            onMouseEnter={mouseEnterHandler}
-            onMouseLeave={mouseLeaveHandler}
-            className="h1 mb-4 text-primary"
+        <div className="container mx-auto flex flex-col xl:flex-row items-center justify-between gap-8">
+          <div className="text-center xl:text-left xl:w-1/2 pt-16">
+            <motion.h1
+              onMouseEnter={mouseEnterHandler}
+              onMouseLeave={mouseLeaveHandler}
+              className="h1 mb-4 text-primary"
+            >
+              PDO Fäden - Fadenlifting für viel natürlich wirkende Schönheit
+            </motion.h1>
+            <motion.p
+              onMouseEnter={mouseEnterHandler}
+              onMouseLeave={mouseLeaveHandler}
+              className="lead max-w-2xl mx-auto xl:mx-0 text-gray-700"
+            >
+              Das Fadenlifting setzt Fäden ein, die schon seit Jahrzehnten in der Chirurgie genutzt werden. Sie werden minimalinvasiv und schonend zur Straffung unter die Haut gezogen. Im Lauf von mehreren Monaten bis zu zwei Jahren werden sie auf biologischem Weg abgebaut und können danach wieder neu eingesetzt werden.
+            </motion.p>
+            <motion.p
+              onMouseEnter={mouseEnterHandler}
+              onMouseLeave={mouseLeaveHandler}
+              className="lead max-w-2xl mx-auto xl:mx-0 text-gray-700 mt-4"
+            >
+              Dazu bieten sie einen weiteren großen Vorteil: Die PDO Fäden regen die Hauteigene Kollagensynthese aus. Die Haut wird gestrafft und das Gewebe in die ursprüngliche Position angehoben.
+            </motion.p>
+            <motion.p
+              onMouseEnter={mouseEnterHandler}
+              onMouseLeave={mouseLeaveHandler}
+              className="lead max-w-2xl mx-auto xl:mx-0 text-gray-700 mt-4"
+            >
+              Das Ergebnis ist ein Lifting Effekt mit einem natürlichen Aussehen. Dieses biochemische Verfahren macht die Haut praller und straffer und das ganz ohne Skalpell.
+            </motion.p>
+          </div>
+          <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ delay: 0.4, duration: 0.8 }}
+              className="xl:w-1/2 flex justify-center"
           >
-            PDO Fäden - Fadenlifting für viel natürlich wirkende Schönheit
-          </motion.h1>
-          <motion.p
-            onMouseEnter={mouseEnterHandler}
-            onMouseLeave={mouseLeaveHandler}
-            className="lead max-w-2xl mx-auto text-gray-700"
-          >
-            Das Fadenlifting setzt Fäden ein, die schon seit Jahrzehnten in der Chirurgie genutzt werden. Sie werden minimalinvasiv und schonend zur Straffung unter die Haut gezogen. Im Lauf von mehreren Monaten bis zu zwei Jahren werden sie auf biologischem Weg abgebaut und können danach wieder neu eingesetzt werden. Dazu bieten sie einen weiteren großen Vorteil: Die PDO Fäden regen die Hauteigene Kollagensynthese aus. Die Haut wird gestrafft und das Gewebe in die ursprüngliche Position angehoben.Das Ergebnis ist ein Lifting Effekt mit einem natürlichen Aussehen. Dieses biochemische Verfahren macht die Haut praller und straffer und das ganz ohne Skalpell.
-          </motion.p>
+              <Image
+                  src="/assets/ing6.png"
+                  width={500}
+                  height={500}
+                  alt="PDO Fäden"
+                  className="rounded-lg shadow-xl"
+              />
+          </motion.div>
         </div>
       </section>
 
@@ -69,7 +101,7 @@ const PdoFadenPage = () => {
             onMouseLeave={mouseLeaveHandler}
             className="mb-6 text-lg text-gray-700"
           >
-            Der kleine Eingriff erfolgt ambulant bei Mesoskin.Hamburg und dauert zwischen einer halben und ganzen Stunde. Wichtig zu wissen: Die Behandlung ist so gut wie schmerzfrei, weil sie unter örtlicher Betäubung stattfindet.
+            Der kleine Eingriff erfolgt ambulant bei <strong>Mesoskin</strong>.Hamburg und dauert zwischen einer halben und ganzen Stunde. Wichtig zu wissen: Die Behandlung ist so gut wie schmerzfrei, weil sie unter örtlicher Betäubung stattfindet.
           </motion.p>
           <motion.p
             initial={{ opacity: 0, y: 50 }}

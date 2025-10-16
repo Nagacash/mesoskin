@@ -1,10 +1,20 @@
 {
   "compilerOptions": {
     "paths": {
-      "@/*": ["./*"]
+      "@/*": [
+        "./*"
+      ]
     },
-    "jsx": "react-jsx",
-    "allowJs": true,
-    "checkJs": true
+    "jsx": "preserve",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "moduleResolution": "node",
+    "types": [
+      "react",
+      "react-dom"
+    ]
   }
 }

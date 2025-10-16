@@ -26,13 +26,9 @@ const DollLipsPage = () => {
             >
               Doll Lips: Lippenaufbau mit der Doll Lip-Technik
             </motion.h1>
-            <motion.p
-              onMouseEnter={mouseEnterHandler}
-              onMouseLeave={mouseLeaveHandler}
-              className="lead max-w-2xl mx-auto xl:mx-0 text-gray-700"
-            >
-              Willkommen bei Mesoskin, Ihren Experten für DOLL Lips Technik! Wenn Sie sich vollere, sinnlichere Lippen wünschen, sind Sie bei uns genau richtig. Unsere spezialisierte Behandlung kombiniert modernste Methoden mit hochwertiger Hyaluronsäure, um Ihnen ein natürliches und harmonisches Ergebnis zu bieten.
-            </motion.p>
+            <p className="text-lg text-gray-700 mb-6">
+              Willkommen bei <strong>Mesoskin</strong>, Ihren Experten für DOLL Lips Technik! Wenn Sie sich vollere, sinnlichere Lippen wünschen, sind Sie bei uns genau richtig. Unsere spezialisierte Behandlung kombiniert modernste Methoden mit hochwertiger Hyaluronsäure, um Ihnen ein natürliches und harmonisches Ergebnis zu bieten.
+            </p>
           </div>
           <motion.div
             onMouseEnter={mouseEnterHandler}
@@ -60,13 +56,9 @@ const DollLipsPage = () => {
           >
             Vorteile der DOLL Lips Technik
           </motion.h2>
-          <motion.p
-            onMouseEnter={mouseEnterHandler}
-            onMouseLeave={mouseLeaveHandler}
-            className="mb-6 text-lg text-gray-700"
-          >
-            DOLL Lips Technik ist nicht nur effektiv, sondern auch individuell anpassbar. Unser erfahrenes Team von Mesoskin sorgt dafür, dass Ihre Lippen perfekt konturiert und voluminisiert werden, ganz nach Ihren persönlichen Wünschen.
-          </motion.p>
+            <p className="text-lg text-gray-700 mb-6">
+              DOLL Lips Technik ist nicht nur effektiv, sondern auch individuell anpassbar. Unser erfahrenes Team von <strong>Mesoskin</strong> sorgt dafür, dass Ihre Lippen perfekt konturiert und voluminisiert werden, ganz nach Ihren persönlichen Wünschen.
+            </p>
           <ul className="list-disc list-inside space-y-2 text-lg text-gray-700 ml-4">
             <motion.li onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>
               <strong>Natürliches Ergebnis:</strong> Vollere Lippen ohne übertriebenen Effekt.

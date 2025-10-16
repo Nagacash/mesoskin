@@ -55,7 +55,7 @@ const Footer = () => {
           onMouseEnter={mouseEnterHandler}
           onMouseLeave={mouseLeaveHandler}
         >
-          &copy; 2025 Mesoskin. Alle Rechte vorbehalten.
+          &copy; 2025 <strong>Mesoskin</strong>. Alle Rechte vorbehalten.
         </motion.p>
       </div>
     </motion.footer>

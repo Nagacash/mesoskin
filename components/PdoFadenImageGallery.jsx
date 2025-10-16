@@ -68,7 +68,7 @@ const PdoFadenImageGallery = () => {
             onMouseLeave={mouseLeaveHandler}
           >
             <Image
-              src="/assets/treatments/pdo-faden/spa10.jpg"
+              src="/assets/ing6.png"
               width={500}
               height={350}
               alt="PDO Faden Treatment 3"

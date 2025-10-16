@@ -85,6 +85,7 @@ const PhilosophySection = () => {
           className="text-center mb-12"
         >
           <h2 className="h2 mb-4">Entspannung und Wohlbefinden</h2>
+          <p className="lead max-w-xl mx-auto mb-4">Entdecken Sie bei <strong>Mesoskin</strong> natürliche Schönheit und ganzheitliche Gesundheit. Unsere maßgeschneiderten Gesundheits- und Schönheitskonzepte fördern Ihr Wohlbefinden von innen und außen. Starten Sie Ihre Reise zu einem strahlenden Ich.</p>
           <p className="lead max-w-xl mx-auto">
             Tauchen Sie ein in eine Welt der Ruhe und Erholung. Unsere Behandlungen sind darauf ausgelegt, Körper und Geist in Einklang zu bringen und Ihnen ein Gefühl tiefer Entspannung zu schenken.
           </p>
@@ -112,9 +113,7 @@ const PhilosophySection = () => {
                   alt={item.alt}
                   width={500}
                   height={500}
-                  layout="responsive"
-                  objectFit="cover"
-                  className="transition-transform duration-300 group-hover:scale-105"
+                  className="transition-transform duration-300 group-hover:scale-105 object-cover"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <h3 className="text-white text-xl font-semibold text-center px-4">{item.title}</h3>

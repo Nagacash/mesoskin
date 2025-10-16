@@ -55,7 +55,7 @@ const Header = () => {
           onMouseLeave={mouseLeaveHandler}
         >
           <Link href="/">
-            <h1 className="text-2xl font-bold text-primary">MESOSKIN HAMBURG</h1>
+            <h1 className="text-2xl font-bold text-primary"><strong>MESOSKIN</strong> HAMBURG</h1>
           </Link>
         </motion.div>
         <div

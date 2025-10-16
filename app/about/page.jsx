@@ -13,9 +13,7 @@ const About = () => {
       <div className='container mx-auto pt-56 pb-24'>
         <div className='text-center mb-24 bg-accent-100 p-8 rounded-lg shadow-md'>
           <h1 className='h1 mb-4'>Über mich</h1>
-          <p className='lead max-w-2xl mx-auto'>
-            Mesoskin Hamburg
-          </p>
+      <h1 className="h1 mb-4 text-primary"><strong>Mesoskin</strong> Hamburg</h1>
           <p className='max-w-2xl mx-auto'>
             Willkommen in der Welt der natürlichen Schönheit!
           </p>
@@ -37,9 +35,9 @@ const About = () => {
               <p className='font-serif italic text-xl'>
                 Schönheit, die bleibt – seit 30 Jahren, natürlich und echt.
               </p>
-              <p>
-                Mit Mesoskin Hamburg steht Annette Fascher-Wendlandt in Hamburg-Wandsbek für einen exklusiven Ort, der ganz der sanften und gesunden Behandlung der Haut gewidmet ist – mit authentischen Ergebnissen. Faltenbehandlung, Gesichtsformung und Hautverjüngung sind hier wichtige Stichworte. Zu den Schwerpunkten ihrer Arbeit zählt im Bereich der Ästhetik die Doll Lip-Technik. Für diese spezielle Technik wurde sie in Moskau und London ausgebildet. Dazu bietet Annette Fascher-Wendlandt begleitende und ergänzende Maßnahmen wie Kraft und Gesundheit spendende Infusionen an.
-              </p>
+            <p className="lead max-w-2xl mx-auto text-gray-700 mb-8">
+              Mit <strong>Mesoskin</strong> Hamburg steht Annette Fascher-Wendlandt in Hamburg-Wandsbek für einen exklusiven Ort, der ganz der sanften und gesunden Behandlung der Haut gewidmet ist – mit authentischen Ergebnissen. Faltenbehandlung, Gesichtsformung und Hautverjüngung sind hier wichtige Stichworte. Zu den Schwerpunkten ihrer Arbeit zählt im Bereich der Ästhetik die Doll Lip-Technik. Für diese spezielle Technik wurde sie in Moskau und London ausgebildet. Dazu bietet Annette Fascher-Wendlandt begleitende und ergänzende Maßnahmen wie Kraft und Gesundheit spendende Infusionen an.
+            </p>
             </div>
             <button className='btn btn-lg block mx-auto mt-8'>
               Jetzt Termin vereinbaren
@@ -59,7 +57,7 @@ const About = () => {
         <div className='text-center max-w-3xl mx-auto mb-24'>
           <h2 className='h2 mb-6'>Maßgeschneidert</h2>
           <p className='text-lg mb-8'>
-            Bei Mesoskin Hamburg steht immer das individuelle Angebot im Zentrum. Warum? Weil jeder Mensch und jede Haut anders ist. Oder anders formuliert: Der Mensch steht im Vordergrund. Entsprechend beginnt jede Behandlung mit einem ausführlichen Beratungsgespräch und einem individuelle Therapieplan. Eine umfassende Nachbetreuung steht ebenfalls „auf dem Programm“.
+            Bei <strong>Mesoskin</strong> Hamburg steht immer das individuelle Angebot im Zentrum. Warum? Weil jeder Mensch und jede Haut anders ist. Oder anders formuliert: Der Mensch steht im Vordergrund. Entsprechend beginnt jede Behandlung mit einem ausführlichen Beratungsgespräch und einem individuelle Therapieplan. Eine umfassende Nachbetreuung steht ebenfalls „auf dem Programm“.
           </p>
 
         </div>

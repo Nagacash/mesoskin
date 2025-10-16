@@ -35,14 +35,14 @@ const HyaluronsaurePage = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 2.5, duration: 0.8, ease: "easeInOut" }}
-            className="xl:w-1/2 flex justify-center xl:justify-end xl:ml-16"
+            className="xl:w-1/2 flex justify-center xl:justify-end xl:ml-16 bg-white p-6 rounded-lg shadow-xl"
           >
             <Image
               src="/assets/treatments/girls.jpeg"
               width={500}
               height={350}
               alt="Hyaluron-Unterspritzung"
-              className="rounded-lg shadow-xl border-4 border-primary w-full h-auto object-cover"
+              className="rounded-lg shadow-xl w-full h-auto object-cover"
             />
           </motion.div>
         </div>
@@ -79,17 +79,21 @@ const HyaluronsaurePage = () => {
             className="text-center"
           >
             <motion.p
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ delay: 0.5, duration: 0.8 }}
               className="mb-4 text-2xl text-gray-700 text-center"
             >
               Behandlungsbereiche:
             </motion.p>
             <ul className="space-y-2 text-lg text-gray-700 mb-6">
-              <motion.li><strong>Nasolabialfalten</strong></motion.li>
-              <motion.li><strong>Mundwinkel</strong></motion.li>
-              <motion.li><strong>Kinnfalten</strong></motion.li>
-              <motion.li><strong>Tränenrinnen</strong></motion.li>
-              <motion.li><strong>Hohlwangen</strong></motion.li>
-              <motion.li><strong>Lippenfalten und Lippenkonturen</strong></motion.li>
+              <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 0.6, duration: 0.8 }}><strong>Nasolabialfalten</strong></motion.li>
+              <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 0.7, duration: 0.8 }}><strong>Mundwinkel</strong></motion.li>
+              <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 0.8, duration: 0.8 }}><strong>Kinnfalten</strong></motion.li>
+              <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 0.9, duration: 0.8 }}><strong>Tränenrinnen</strong></motion.li>
+              <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 1.0, duration: 0.8 }}><strong>Hohlwangen</strong></motion.li>
+              <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 1.1, duration: 0.8 }}><strong>Lippenfalten und Lippenkonturen</strong></motion.li>
             </ul>
           </motion.div>
         </section>
@@ -97,7 +101,7 @@ const HyaluronsaurePage = () => {
         {/* Natürlich: Hyaluronsäure Section */}
 <section className="container mx-auto py-12">
       <h1 className="h2 mb-8 text-center">Hyaluronsäure</h1>
-      <div className="flex flex-col lg:flex-row gap-8">
+      <div className="flex flex-col lg:flex-row gap-x-24 gap-y-8">
         <div className="lg:w-1/2 py-12">
           <h2 className="h3 mb-4">Natürlich: Hyaluronsäure</h2>
           <p className="mb-4">
@@ -109,32 +113,25 @@ const HyaluronsaurePage = () => {
             Volumen entsteht.
           </p>
           <h2 className="h3 mb-4">Natürlich wirkende Effekte</h2>
-          <p className="mb-4">
-            In der Praxis werden die sogenannten Filler nach einer ausführlichen
-            Beratung vorsichtig unter die Haut gespritzt, die sich dann anhebt
-            und dabei glättet. Die Hyaluronsäure baut sich im Lauf einiger
-            Monate wieder ab und muss dann erneuert werden. Die Kosten sind vor
-            allem von der notwendigen Menge an Filler abhängig. Bei
-            Mesoskin.Hamburg wird vor allem mit der schmerzfreien Technik der
-            „stumpfen Nadel“ gearbeitet, weil sie zu sehr natürlich wirkenden
-            Effekten führt.
-          </p>
-          <h2 className="h3 mb-4">Anwendungsbereiche</h2>
+            <p className="text-lg text-gray-700 mb-6">
+              <strong>Mesoskin</strong>.Hamburg wird vor allem mit der schmerzfreien Technik der
+            </p>
+          <motion.h2 initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 0.3, duration: 0.8 }} className="h3 mb-4">Anwendungsbereiche</motion.h2>
           <ul className="list-disc list-inside mb-4">
-            <li>Lippen aufspritzen</li>
-            <li>Faltenunterspritzung</li>
-            <li>Gesichtsmodellierung</li>
-            <li>Nasenkorrektur ohne OP</li>
-            <li>Augenringe unterspritzen</li>
-            <li>Hände verjüngen</li>
+            <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 0.4, duration: 0.8 }}>Lippen aufspritzen</motion.li>
+            <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 0.5, duration: 0.8 }}>Faltenunterspritzung</motion.li>
+            <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 0.6, duration: 0.8 }}>Gesichtsmodellierung</motion.li>
+            <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 0.7, duration: 0.8 }}>Nasenkorrektur ohne OP</motion.li>
+            <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 0.8, duration: 0.8 }}>Augenringe unterspritzen</motion.li>
+            <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 0.9, duration: 0.8 }}>Hände verjüngen</motion.li>
           </ul>
-          <h2 className="h3 mb-4">Vorteile</h2>
+          <motion.h2 initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 1.0, duration: 0.8 }} className="h3 mb-4">Vorteile</motion.h2>
           <ul className="list-disc list-inside mb-4">
-            <li>Sofort sichtbare Ergebnisse</li>
-            <li>Natürliches Aussehen</li>
-            <li>Biologisch abbaubar</li>
-            <li>Schonende Behandlung</li>
-            <li>Kurze Genesungszeit</li>
+            <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 1.1, duration: 0.8 }}>Sofort sichtbare Ergebnisse</motion.li>
+            <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 1.2, duration: 0.8 }}>Natürliches Aussehen</motion.li>
+            <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 1.3, duration: 0.8 }}>Biologisch abbaubar</motion.li>
+            <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 1.4, duration: 0.8 }}>Schonende Behandlung</motion.li>
+            <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 1.5, duration: 0.8 }}>Kurze Genesungszeit</motion.li>
           </ul>
         </div>
         <div className="lg:w-1/2">
@@ -146,7 +143,7 @@ const HyaluronsaurePage = () => {
             className="rounded-lg shadow-lg mb-8 w-full h-auto object-cover"
           />
           <Image
-            src="/assets/treatments/girls2.jpg"
+            src="/assets/treatments/spa10.jpg"
             alt="Hyaluronsäure Vorher-Nachher"
             width={600}
             height={400}

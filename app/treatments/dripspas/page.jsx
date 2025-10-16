@@ -1,10 +1,21 @@
 "use client";
 
 import Image from "next/image";
+import { X } from "lucide-react";
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import { motion } from "framer-motion";
 import { useContext } from "react";
 import { CursorContext } from "@/components/CursorContext";
 import CtaSection from "@/components/CtaSection";
+import InfusionSection from "@/components/InfusionSection";
+import CollapsibleSection from "@/components/CollapsibleSection";
+import { FaStar } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
 
 const Dripspas = () => {
     const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
@@ -48,6 +59,7 @@ const Dripspas = () => {
                             height={550}
                             alt="Liposana 3"
                             className="rounded-lg shadow-lg"
+                            priority
                         />
                     </motion.div>
                 </div>
@@ -88,282 +100,220 @@ const Dripspas = () => {
                             </ul>
                         </motion.li>
                     </ul>
-                </section>
-
-
-                <section className="pt-24 mb-12 bg-gray-50 p-12 rounded-lg shadow-md">
-                    <motion.h3
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, amount: 0.3 }}
-                        transition={{ delay: 0.3, duration: 0.8 }}
-                        onMouseEnter={mouseEnterHandler}
-                        onMouseLeave={mouseLeaveHandler}
-                        className="h3 mb-4 text-accent"
-                    >
-                    </motion.h3>
-                    <motion.p
+                    <motion.div
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, amount: 0.3 }}
                         transition={{ delay: 0.4, duration: 0.8 }}
-                        onMouseEnter={mouseEnterHandler}
-                        onMouseLeave={mouseLeaveHandler}
-                        className="mb-6 text-lg text-gray-700"
+                        className="flex justify-center mt-8"
                     >
-                    </motion.p>
-                    <motion.p
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, amount: 0.3 }}
-                        transition={{ delay: 0.5, duration: 0.8 }}
-                        onMouseEnter={mouseEnterHandler}
-                        onMouseLeave={mouseLeaveHandler}
-                        className="mb-6 text-lg text-gray-700"
-                    >
-                        Hartnäckige Problemzonen, die sich trotz Sport und Ernährung einfach nicht verbessern lassen? Die ausgeklügelte Technologie aus der Schweiz, sorgt für einen gezielten Fettabbau und strafft die Körperkonturen mit Langzeiteffekt.
-                    </motion.p>
+                        <Image
+                            src="/assets/ing5.png"
+                            width={500}
+                            height={300}
+                            alt="Vorteile der Infusionstherapie"
+                            className="rounded-lg shadow-xl p-8"
+                        />
+                    </motion.div>
+                </section>
+                <InfusionSection />
 
-                    <motion.h3
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, amount: 0.3 }}
-                        transition={{ delay: 0.6, duration: 0.8 }}
-                        onMouseEnter={mouseEnterHandler}
-                        onMouseLeave={mouseLeaveHandler}
-                        className="h3 mb-4 text-accent"
-                    >
-                        Ablauf der Infusionstherapie.
-                        
+                {/* Restyled Section */}
+                <section className="py-12">
+                    <div className="space-y-12">
 
+                        {/* Ablauf Section */}
+                        <div className="bg-white p-8 rounded-lg shadow-lg">
+                            <CollapsibleSection title="Ablauf der Infusionstherapie" titleClassName="h2 text-gray-900">
+                                <p className="text-lg text-gray-700 mb-6">
+                                    Hartnäckige Problemzonen, die sich trotz Sport und Ernährung einfach nicht verbessern lassen? Die ausgeklügelte Technologie aus der Schweiz, sorgt für einen gezielten Fettabbau und strafft die Körperkonturen mit Langzeiteffekt.
+                                </p>
+                                <p className="text-lg text-gray-700 mb-6">
+                                    Zunächst erfolgt eine <strong>Stressmessung (HRV)</strong>, um Ihre individuelle Situation zu beurteilen. Anschließend wird die Therapie in entspannter Atmosphäre durchgeführt.
+                                </p>
+                                <div className="border-t pt-4 mt-6">
+                                    <h3 className="h3 mb-3 text-primary">Fazit</h3>
+                                    <p className="text-lg text-gray-700 mb-4">
+                                        Erleben Sie, wie schnell Sie sich wieder <strong>vital und gesund</strong> fühlen können.
+                                    </p>
+                                    <p className="text-blue-600 hover:text-blue-800 transition-colors duration-300 cursor-pointer font-semibold">
+                                        <a href="mailto:kontakt@mesoskinhamburg.de">
+                                            Kontaktieren Sie uns für eine individuelle Beratung zur Infusionstherapie!
+                                        </a>
+                                    </p>
+                                </div>
+                            </CollapsibleSection>
+                        </div>
 
-                    </motion.h3>
-                    
-                    <div className="section-content">
-    <div className="text-lg text-gray-700 mb-6 mt-8">
-        <motion.p
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ delay: 0.7, duration: 0.8 }}
-            className="py-2"
-        >
-            Zunächst erfolgt eine **Stressmessung (HRV)**, um Ihre individuelle Situation zu beurteilen. Anschließend wird die Therapie in entspannter Atmosphäre durchgeführt.
-        </motion.p>
-    </div>
+                        {/* BasenBalance-Infusion Section */}
+                        <div className="bg-gray-50 p-8 rounded-lg shadow-lg">
+                            <CollapsibleSection title="BasenBalance-Infusion" titleClassName="text-gray-900 h2">
+                                <p className="text-xl text-gray-700 mb-6">
+                                    Entgiften und regenerieren Sie Ihren Körper mit unserer BasenBalance-Infusion!
+                                </p>
+                                <p className="text-lg text-gray-700 mb-8">
+                                    In der heutigen schnelllebigen Welt sind wir ständig Umweltgiften, ungesunder Ernährung und Stress ausgesetzt, die unseren Säure-Basen-Haushalt aus dem Gleichgewicht bringen können. Bei <strong>Body&amp;Mind</strong> bieten wir Ihnen die BasenBalance-Infusion an, eine innovative Gesundheitsbehandlung, die speziell entwickelt wurde, um Ihren Körper zu entgiften und ein gesundes, alkalisches Milieu zu fördern.
+                                </p>
 
-    <div className="text-xl font-semibold text-gray-800 border-t pt-4 mt-6">
-        <motion.p
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ delay: 0.9, duration: 0.8 }}
-            onMouseEnter={mouseEnterHandler}
-            onMouseLeave={mouseLeaveHandler}
-            className="mb-3"
-        >
-            <span className="font-bold uppercase tracking-wider text-base block mb-1">Fazit</span>
-            Erleben Sie, wie schnell Sie sich wieder **vital und gesund** fühlen können.
-        </motion.p>
-        <motion.p
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ delay: 1.1, duration: 0.8 }}
-            onMouseEnter={mouseEnterHandler}
-            onMouseLeave={mouseLeaveHandler}
-            className="text-blue-600 hover:text-blue-800 transition-colors duration-300 cursor-pointer text-base font-medium"
-        >
-            Kontaktieren Sie uns für eine individuelle Beratung zur Infusionstherapie!
-        </motion.p>
-    </div>
-</div>
+                                <div className="grid md:grid-cols-2 gap-8 mb-8">
+                                    <div className="bg-white p-6 rounded-lg shadow-md">
+                                        <h3 className="h3 mb-3 text-primary">Was sind Baseninfusionen?</h3>
+                                        <p className="text-gray-700">
+                                            Baseninfusionen sind hochwirksame Flüssigkeitsbehandlungen, die wichtige Mineralien und Nährstoffe enthalten, um den pH-Wert Ihres Körpers zu regulieren. Diese Infusionen helfen nicht nur bei der Entgiftung, sondern unterstützen auch die Zellregeneration und das allgemeine Wohlbefinden.
+                                        </p>
+                                    </div>
+                                    <div className="bg-white p-6 rounded-lg shadow-md">
+                                        <h3 className="h3 mb-3 text-primary">Warum BasenBalance-Infusion?</h3>
+                                        <ul className="list-disc list-inside space-y-2 text-gray-700">
+                                            <li><strong>Entgiftung:</strong> Entfernen Sie schädliche Säuren und Toxine aus Ihrem Körper.</li>
+                                            <li><strong>Vitalität:</strong> Steigern Sie Ihre Energie und Lebensqualität durch einen ausgeglichenen Säure-Basen-Haushalt.</li>
+                                            <li><strong>Wohlbefinden:</strong> Fördern Sie ein Gefühl der inneren Ruhe und Ausgeglichenheit.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div className="flex justify-center my-8">
+                                <Dialog>
+                                    <DialogTrigger asChild>
+                                        <Image
+                                            src="/assets/in2.png"
+                                            width={1400}
+                                            height={800}
+                                            alt="Radiance Infusion"
+                                            className="rounded-lg shadow-xl p-4 cursor-pointer"
+                                        />
+                                    </DialogTrigger>
+                                    <DialogContent className="max-w-full max-h-full overflow-hidden p-0">
+                                        <Image
+                                            src="/assets/in2.png"
+                                            alt="Radiance Infusion"
+                                            layout="responsive"
+                                            className="object-contain w-full h-full"
+                                        />
+                                        <DialogClose className="absolute top-2 right-2 text-white z-50">
+                                            <X className="h-8 w-8" />
+                                        </DialogClose>
+                                    </DialogContent>
+                                </Dialog>
+                                </div>
 
-<div className="infusion-section-2 mt-12 pt-8 border-t border-gray-200">
-    <motion.h2
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.5 }}
-        transition={{ duration: 0.6 }}
-        className="text-3xl font-bold text-gray-900 mb-2"
-    >
-        BasenBalance-Infusion
-    </motion.h2>
+                                <p className="text-lg text-gray-700 font-medium mb-4">
+                                    Erleben Sie die Vorteile der BasenBalance-Infusion und tun Sie Ihrem Körper etwas Gutes! Lassen Sie uns gemeinsam den Weg zu mehr Gesundheit und Vitalität gehen.
+                                </p>
+                                <p className="italic text-base text-gray-500 text-center">
+                                    Schönheit und Gesundheit, die bleibt – seit 30 Jahren, natürlich und echt.
+                                </p>
+                            </CollapsibleSection>
+                        </div>
 
-    <motion.p
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.5 }}
-        transition={{ delay: 0.2, duration: 0.6 }}
-        className="text-xl text-green-600 mb-6"
-    >
-        Entgiften und regenerieren Sie Ihren Körper mit unserer BasenBalance-Infusion!
-    </motion.p>
+                        {/* Radiance Infusion Section */}
+                        <div className="bg-white p-8 rounded-lg shadow-lg">
+                            <CollapsibleSection title="Radiance Infusion – Strahlende Haut und glänzendes Haar" titleClassName="h2 text-gray-900">
+                                <p className="text-xl text-gray-700 mb-8">
+                                    Entdecken Sie die Radiance Infusion – Ihre Lösung für gesunde Haut und glänzendes Haar! Diese innovative Infusion kombiniert hochwertige Inhaltsstoffe, die speziell entwickelt wurden, um Ihre natürliche Schönheit zu fördern.
+                                </p>
 
-    <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true, amount: 0.5 }}
-        transition={{ delay: 0.4, duration: 0.8 }}
-        className="text-lg text-gray-700 mb-8 space-y-4"
-    >
-        <p>
-            In der heutigen schnelllebigen Welt sind wir ständig Umweltgiften, ungesunder Ernährung und Stress ausgesetzt, die unseren Säure-Basen-Haushalt aus dem Gleichgewicht bringen können. Bei **Body&amp;Mind** bieten wir Ihnen die BasenBalance-Infusion an, eine innovative Gesundheitsbehandlung, die speziell entwickelt wurde, um Ihren Körper zu entgiften und ein gesundes, alkalisches Milieu zu fördern.
-        </p>
-    </motion.div>
+                                <div className="grid md:grid-cols-2 gap-8 mb-8">
+                                    <div className="bg-gray-50 p-6 rounded-lg shadow-inner">
+                                        <h3 className="h3 mb-4 text-accent">Vorteile der Radiance Infusion:</h3>
+                                        <ul className="list-disc list-inside space-y-3 text-gray-700">
+                                            <li><strong>Strahlende Hautpflege:</strong> Verbessert das Hautbild und sorgt für einen frischen Teint.</li>
+                                            <li><strong>Gesundes Haar:</strong> Unterstützt die Haarstruktur und verleiht strahlenden Glanz.</li>
+                                            <li><strong>Intensive Feuchtigkeitsversorgung:</strong> Versorgt trockene Haut und Haare mit essenziellen Nährstoffen.</li>
+                                        </ul>
+                                    </div>
+                                    <div className="bg-gray-50 p-6 rounded-lg shadow-inner">
+                                        <h3 className="h3 mb-4 text-accent">Schlüsselwirkstoffe:</h3>
+                                        <ul className="list-disc list-inside space-y-3 text-gray-700">
+                                            <li><strong>N-Acetyl-L-Cystein (300 mg):</strong> Schützt die Haut vor Umwelteinflüssen und stärkt die Hautbarriere.</li>
+                                            <li><strong>D-Panthenol (100 mg):</strong> Bietet intensive Feuchtigkeit und unterstützt die Hautheilung.</li>
+                                            <li><strong>Pyridoxin-HCl (Vitamin B6, 100 mg):</strong> Fördert den Zellstoffwechsel und verbessert das Hautbild.</li>
+                                            <li><strong>Zink-D-Gluconat-Trihydrat (69,7 mg):</strong> Reguliert die Talgproduktion und wirkt entzündungshemmend.</li>
+                                            <li><strong>D-Biotin (5 mg):</strong> Unterstützt gesundes Haarwachstum und erhält die Hautelastizität.</li>
+                                        </ul>
+                                    </div>
+                                </div>
 
-    <motion.div
-        initial={{ opacity: 0, x: -50 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, amount: 0.4 }}
-        transition={{ delay: 0.6, duration: 0.7 }}
-        className="mb-8 p-6 bg-gray-50 rounded-lg"
-    >
-        <h3 className="text-2xl font-semibold text-gray-800 mb-3">
-            Was sind Baseninfusionen?
-        </h3>
-        <p className="text-lg text-gray-700">
-            Baseninfusionen sind hochwirksame Flüssigkeitsbehandlungen, die wichtige Mineralien und Nährstoffe enthalten, um den pH-Wert Ihres Körpers zu regulieren. Diese Infusionen helfen nicht nur bei der Entgiftung, sondern unterstützen auch die Zellregeneration und das allgemeine Wohlbefinden.
-        </p>
-    </motion.div>
+                                <div className="flex justify-center my-8">
+                                    <Image
+                                        src="/assets/ing4.png"
+                                        width={500}
+                                        height={300}
+                                        alt="Schlüsselwirkstoffe"
+                                        className="border-4 border-white rounded-lg shadow-xl p-8"
+                                    />
+                                </div>
 
-    <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ delay: 0.8, duration: 0.8 }}
-    >
-        <h3 className="text-2xl font-semibold text-gray-800 mb-4">
-            Warum BasenBalance-Infusion?
-        </h3>
-        <ul className="list-disc list-inside space-y-3 text-lg text-gray-700 ml-4 mb-8">
-            <motion.li onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler} className="py-1">
-                <strong>Entgiftung:</strong> Entfernen Sie schädliche Säuren und Toxine aus Ihrem Körper.
-            </motion.li>
-            <motion.li onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler} className="py-1">
-                <strong>Vitalität:</strong> Steigern Sie Ihre Energie und Lebensqualität durch einen ausgeglichenen Säure-Basen-Haushalt.
-            </motion.li>
-            <motion.li onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler} className="py-1">
-                <strong>Wohlbefinden:</strong> Fördern Sie ein Gefühl der inneren Ruhe und Ausgeglichenheit.
-            </motion.li>
-        </ul>
-    </motion.div>
+                                <p className="text-lg text-gray-700 font-medium mb-3">
+                                    Gönnen Sie sich die Pflege, die Sie verdienen! Erleben Sie die transformative Wirkung der Radiance Infusion – für gesunde Haut und glänzendes Haar.
+                                </p>
+                                <p className="text-blue-600 hover:text-blue-800 transition-colors duration-300 cursor-pointer font-semibold">
+                                    Kontaktieren Sie uns für weitere Informationen!
+                                </p>
+                            </CollapsibleSection>
+                        </div>
 
-    <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ delay: 1.0, duration: 0.7 }}
-        className="text-lg text-gray-700 mt-6"
-    >
-        <p className="mb-4 font-medium">
-            Erleben Sie die Vorteile der BasenBalance-Infusion und tun Sie Ihrem Körper etwas Gutes! Lassen Sie uns gemeinsam den Weg zu mehr Gesundheit und Vitalität gehen.
-        </p>
-        <p className="italic text-base text-gray-500">
-            Schönheit und Gesundheit, die bleibt – seit 30 Jahren, natürlich und echt.
-        </p>
-    </motion.div>
-
-
-    <section className="mb-12 py-12">
-    <motion.h2
-        onMouseEnter={mouseEnterHandler}
-        onMouseLeave={mouseLeaveHandler}
-        className="text-3xl font-bold text-gray-900 mb-2 mt-8"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ amount: 0.5 }}
-        transition={{ duration: 0.6 }}
-    >
-        Radiance Infusion – Strahlende Haut und glänzendes Haar
-    </motion.h2>
-
-    <motion.p
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true, amount: 0.5 }}
-        transition={{ delay: 0.2, duration: 0.8 }}
-        className="text-lg text-gray-700 mb-8"
-    >
-        Entdecken Sie die Radiance Infusion – Ihre Lösung für gesunde Haut und glänzendes Haar! Diese innovative Infusion kombiniert hochwertige Inhaltsstoffe, die speziell entwickelt wurden, um Ihre natürliche Schönheit zu fördern.
-    </motion.p>
-
-    <motion.h3
-        onMouseEnter={mouseEnterHandler}
-        onMouseLeave={mouseLeaveHandler}
-        className="text-2xl font-semibold text-gray-800 mb-4 mt-6"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ amount: 0.5 }}
-        transition={{ delay: 0.4, duration: 0.7 }}
-    >
-        Vorteile der Radiance Infusion:
-    </motion.h3>
-    <ul className="list-disc list-inside space-y-4 text-lg text-gray-700 ml-4 mb-10">
-        <motion.li onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler} className="py-2" initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 0.6, duration: 0.5 }}>
-            <strong>Strahlende Hautpflege:</strong> Verbessert das Hautbild und sorgt für einen frischen Teint.
-        </motion.li>
-        <motion.li onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler} className="py-2" initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 0.7, duration: 0.5 }}>
-            <strong>Gesundes Haar:</strong> Unterstützt die Haarstruktur und verleiht strahlenden Glanz.
-        </motion.li>
-        <motion.li onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler} className="py-2" initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 0.8, duration: 0.5 }}>
-            <strong>Intensive Feuchtigkeitsversorgung:</strong> Versorgt trockene Haut und Haare mit essenziellen Nährstoffen.
-        </motion.li>
-    </ul>
-
-    <motion.h3
-        onMouseEnter={mouseEnterHandler}
-        onMouseLeave={mouseLeaveHandler}
-        className="text-2xl font-semibold text-gray-800 mb-4 mt-8 border-t pt-4"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ amount: 0.5 }}
-        transition={{ delay: 0.9, duration: 0.7 }}
-    >
-        Schlüsselwirkstoffe:
-    </motion.h3>
-    <ul className="list-disc list-inside space-y-4 text-lg text-gray-700 ml-4 mb-10">
-        <motion.li onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler} className="py-2" initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 1.0, duration: 0.5 }}>
-            <strong>N-Acetyl-L-Cystein (300 mg):</strong> Schützt die Haut vor Umwelteinflüssen und stärkt die Hautbarriere.
-        </motion.li>
-        <motion.li onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler} className="py-2" initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 1.1, duration: 0.5 }}>
-            <strong>D-Panthenol (100 mg):</strong> Bietet intensive Feuchtigkeit und unterstützt die Hautheilung.
-        </motion.li>
-        <motion.li onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler} className="py-2" initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 1.2, duration: 0.5 }}>
-            <strong>Pyridoxin-HCl (Vitamin B6, 100 mg):</strong> Fördert den Zellstoffwechsel und verbessert das Hautbild.
-        </motion.li>
-        <motion.li onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler} className="py-2" initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 1.3, duration: 0.5 }}>
-            <strong>Zink-D-Gluconat-Trihydrat (69,7 mg):</strong> Reguliert die Talgproduktion und wirkt entzündungshemmend.
-        </motion.li>
-        <motion.li onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler} className="py-2" initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 1.4, duration: 0.5 }}>
-            <strong>D-Biotin (5 mg):</strong> Unterstützt gesundes Haarwachstum und erhält die Hautelastizität.
-        </motion.li>
-    </ul>
-
-    <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ delay: 1.5, duration: 0.7 }}
-        className="text-lg text-gray-700 mt-8 p-4 bg-yellow-50 rounded-lg border-l-4 border-yellow-400"
-    >
-        <p className="mb-3 font-medium">
-            Gönnen Sie sich die Pflege, die Sie verdienen! Erleben Sie die transformative Wirkung der Radiance Infusion – für gesunde Haut und glänzendes Haar.
-        </p>
-        <p className="text-blue-600 hover:text-blue-800 transition-colors duration-300 cursor-pointer font-semibold">
-            Kontaktieren Sie uns für weitere Informationen!
-        </p>
-    </motion.div>
-
-    <div className="hidden">Infusion 5:</div>
-</section>
-
-
-    <div className="hidden">Infusion 2.</div>
-</div>
+                    </div>
                 </section>
 
-
+                {/* New CTA Section */}
+                <section className="py-12 xl:py-24 bg-primary-100 text-white text-center">
+                    <div className="container mx-auto">
+                                                    <motion.h2
+                                                        initial={{ opacity: 0, y: 50 }}
+                                                        whileInView={{ opacity: 1, y: 0 }}
+                                                        viewport={{ once: true, amount: 0.3 }}
+                                                        transition={{ delay: 0.3, duration: 0.8 }}
+                                                        className="h2 mb-4 text-gray-900"
+                                                    >
+                                                        Transformiere Deine Gesundheit durch maßgeschneiderte Infusionen.
+                                                    </motion.h2>                        <motion.p
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.3 }}
+                            transition={{ delay: 0.4, duration: 0.8 }}
+                            className="lead max-w-2xl mx-auto mb-8 text-gray-900"
+                        >
+                            Schluss mit Erkältung oder Müdigkeit. Buche Deine Infusion und tanke neue Energie und Wohlbefinden – verabreicht von qualifiziertem Personal in deutscher Apothekenqualität.
+                        </motion.p>
+                        <motion.div
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.3 }}
+                            transition={{ delay: 0.5, duration: 0.8 }}
+                            className="flex flex-col md:flex-row justify-center gap-4"
+                        >
+                            <a
+                                href="https://g.page/mesoskinhamburg/review" // Placeholder for Google review link
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="btn btn-lg bg-blue-500 text-white hover:bg-blue-600 shadow-lg rounded-full px-6 py-3 text-base md:px-8 md:py-4 md:text-lg transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-300 flex items-center justify-center gap-2"
+                            >
+                                <FcGoogle className="text-xl" /> {/* Google logo */}
+                                <FaStar className="text-yellow-400" />
+                                <FaStar className="text-yellow-400" />
+                                <FaStar className="text-yellow-400" />
+                                <FaStar className="text-yellow-400" />
+                                <FaStar className="text-yellow-400" />
+                                <span className="text-sm">Review</span>
+                            </a>
+                            <button
+                                onClick={() => router.push("/contact")}
+                                className="btn btn-lg bg-accent text-white hover:bg-accent-dark shadow-lg rounded-full px-6 py-3 text-lg md:px-8 md:py-4 md:text-xl transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-accent-300"
+                            >
+                                Behandlung buchen
+                            </button>
+                            <a
+                                href="https://wa.me/4917661639830"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="btn btn-lg bg-green-500 text-white hover:bg-green-600 shadow-lg rounded-full px-6 py-3 text-lg md:px-8 md:py-4 md:text-xl transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-green-300"
+                            >
+                                Auf WhatsApp chatten
+                            </a>
+                        </motion.div>
+                    </div>
+                </section>
 
                 {/* Preise Section */}
                 <section className="pt-24 mb-12">
@@ -435,4 +385,3 @@ const Dripspas = () => {
 };
 
 export default Dripspas;
-
