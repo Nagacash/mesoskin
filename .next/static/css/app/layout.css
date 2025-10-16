@@ -990,6 +990,9 @@ video {
 .overflow-x-hidden {
   overflow-x: hidden;
 }
+.overscroll-y-none {
+  overscroll-behavior-y: none;
+}
 .whitespace-nowrap {
   white-space: nowrap;
 }

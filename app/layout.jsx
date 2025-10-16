@@ -38,7 +38,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="de" className="h-screen">
       <body
-        className={`${marcellus.variable} ${montserrat.variable} ${interTight.variable} overflow-x-hidden`}
+        className={`${marcellus.variable} ${montserrat.variable} ${interTight.variable} overflow-x-hidden overscroll-y-none`}
       >
         <CursorProvider>
           <Transition />
