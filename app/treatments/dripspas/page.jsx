@@ -274,7 +274,7 @@ const Dripspas = () => {
                             transition={{ delay: 0.4, duration: 0.8 }}
                             className="lead max-w-2xl mx-auto mb-8 text-gray-900"
                         >
-                            Schluss mit Erkältung oder Müdigkeit. Buche Deine Infusion und tanke neue Energie und Wohlbefinden – verabreicht von qualifiziertem Personal in deutscher Apothekenqualität.
+                            Schluss mit Erkältung oder Müdigkeit. Buche jetzt Deine Infusion und tanke neue Energie und Wohlbefinden – verabreicht von qualifiziertem Personal in deutscher Apothekenqualität.
                         </motion.p>
                         <motion.div
                             initial={{ opacity: 0, y: 50 }}
