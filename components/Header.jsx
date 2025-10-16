@@ -1,5 +1,5 @@
 "use client";
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { CursorContext } from "./CursorContext";
 
 import { motion } from "framer-motion";
@@ -15,8 +15,25 @@ import { IoMdMail } from "react-icons/io";
 const Header = () => {
   const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
   const [mobileNav, setMobileNav] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) { // Adjust scroll threshold as needed
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <header className="pb-6 xl:pb-[50px] fixed top-0 left-0 z-[500] w-full bg-white overflow-x-hidden">
+    <header className={`fixed top-0 left-0 z-[500] w-full bg-white overflow-x-hidden transition-all duration-300 ${scrolled ? 'backdrop-blur-md bg-white/30 pb-3 xl:pb-[25px]' : 'pb-6 xl:pb-[50px]'}`}>
       <div className="bg-primary mb-6 xl:mb-[50px] xl:h-[50px] py-4 xl:py-0">
         <div className="container mx-auto h-full">
           <div className="flex items-center justify-between h-full">

@@ -720,6 +720,9 @@ video {
 .mt-0 {
   margin-top: 0px;
 }
+.mt-12 {
+  margin-top: 3rem;
+}
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -732,17 +735,11 @@ video {
 .mt-4 {
   margin-top: 1rem;
 }
-.mt-48 {
-  margin-top: 12rem;
-}
 .mt-6 {
   margin-top: 1.5rem;
 }
 .mt-8 {
   margin-top: 2rem;
-}
-.mt-12 {
-  margin-top: 3rem;
 }
 .block {
   display: block;
@@ -1112,6 +1109,9 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
+.bg-white\/30 {
+  background-color: rgb(255 255 255 / 0.3);
+}
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
 }
@@ -1210,6 +1210,9 @@ video {
 .pb-24 {
   padding-bottom: 6rem;
 }
+.pb-3 {
+  padding-bottom: 0.75rem;
+}
 .pb-4 {
   padding-bottom: 1rem;
 }
@@ -1278,10 +1281,6 @@ video {
 }
 .text-5xl {
   font-size: 3rem;
-  line-height: 1;
-}
-.text-7xl {
-  font-size: 4.5rem;
   line-height: 1;
 }
 .text-\[15px\] {
@@ -1426,6 +1425,11 @@ video {
 .grayscale {
   --tw-grayscale: grayscale(100%);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.backdrop-blur-md {
+  --tw-backdrop-blur: blur(12px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 .transition {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
@@ -2047,6 +2051,10 @@ video {
 
   .xl\:pb-0 {
     padding-bottom: 0px;
+  }
+
+  .xl\:pb-\[25px\] {
+    padding-bottom: 25px;
   }
 
   .xl\:pb-\[50px\] {
