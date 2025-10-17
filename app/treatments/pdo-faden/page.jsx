@@ -14,7 +14,7 @@ const PdoFadenPage = () => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { delay: 0.2, duration: 0.8 } }}
-      className="min-h-screen pb-12 pt-48 xl:pt-48 overflow-x-hidden"
+      className="min-h-screen pb-12 pt-0 xl:pt-0 overflow-x-hidden"
     >
       {/* Hero Section */}
       <section className="bg-accent-100 py-16 mb-12">
@@ -23,7 +23,7 @@ const PdoFadenPage = () => {
             <motion.h1
               onMouseEnter={mouseEnterHandler}
               onMouseLeave={mouseLeaveHandler}
-              className="h1 mb-4 text-primary"
+              className="h1 mb-4 mt-32 text-primary"
             >
               PDO Fäden - Fadenlifting für viel natürlich wirkende Schönheit
             </motion.h1>
