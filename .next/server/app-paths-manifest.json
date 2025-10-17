@@ -1,17 +1,17 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
   "/datenschutz/page": "app/datenschutz/page.js",
-  "/contact/page": "app/contact/page.js",
   "/impressum/page": "app/impressum/page.js",
   "/page": "app/page.js",
-  "/treatments/drip-spa-infusionen/page": "app/treatments/drip-spa-infusionen/page.js",
-  "/treatments/hyaluronsaure/page": "app/treatments/hyaluronsaure/page.js",
-  "/treatments/doll-lips/page": "app/treatments/doll-lips/page.js",
-  "/treatments/liposana-3/page": "app/treatments/liposana-3/page.js",
   "/about/page": "app/about/page.js",
-  "/treatments/pdo-faden/page": "app/treatments/pdo-faden/page.js",
+  "/treatments/drip-spa-infusionen/page": "app/treatments/drip-spa-infusionen/page.js",
   "/treatments/dripspas/page": "app/treatments/dripspas/page.js",
+  "/treatments/doll-lips/page": "app/treatments/doll-lips/page.js",
+  "/treatments/notox/page": "app/treatments/notox/page.js",
+  "/treatments/hyaluronsaure/page": "app/treatments/hyaluronsaure/page.js",
+  "/treatments/pdo-faden/page": "app/treatments/pdo-faden/page.js",
   "/treatments/skinbooster/page": "app/treatments/skinbooster/page.js",
+  "/treatments/liposana-3/page": "app/treatments/liposana-3/page.js",
   "/treatments/page": "app/treatments/page.js",
-  "/treatments/notox/page": "app/treatments/notox/page.js"
+  "/contact/page": "app/contact/page.js"
 }
