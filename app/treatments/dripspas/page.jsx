@@ -47,7 +47,7 @@ const Dripspas = () => {
                         onMouseLeave={mouseLeaveHandler}
                         className="xl:w-1/2 flex justify-center xl:justify-end">
                     <Image
-                            src="/assets/treatments/dripspas/meso6.jpg"
+                            src="/assets/new4.jpg"
                             width={700}
                             height={550}
                             alt="Liposana 3"
@@ -110,6 +110,8 @@ const Dripspas = () => {
                 </section>
                 <InfusionSection />
 
+
+
                 {/* Restyled Section */}
                 <section className="py-12">
                     <div className="space-y-12">
@@ -118,20 +120,12 @@ const Dripspas = () => {
                         <div className="bg-white p-8 rounded-lg shadow-lg">
                             <CollapsibleSection title="Ablauf der Infusionstherapie" titleClassName="h2 text-gray-900">
                                 <p className="text-lg text-gray-700 mb-6">
-                                    Hartnäckige Problemzonen, die sich trotz Sport und Ernährung einfach nicht verbessern lassen? Die ausgeklügelte Technologie aus der Schweiz, sorgt für einen gezielten Fettabbau und strafft die Körperkonturen mit Langzeiteffekt.
-                                </p>
-                                <p className="text-lg text-gray-700 mb-6">
-                                    Zunächst erfolgt eine <strong>Stressmessung (HRV)</strong>, um Ihre individuelle Situation zu beurteilen. Anschließend wird die Therapie in entspannter Atmosphäre durchgeführt.
+                                    Zunächst erfolgt eine Stressmessung (HRV), um Ihre individuelle Situation zu beurteilen. Anschließend wird die Therapie in entspannter Atmosphäre durchgeführt.
                                 </p>
                                 <div className="border-t pt-4 mt-6">
                                     <h3 className="h3 mb-3 text-primary">Fazit</h3>
                                     <p className="text-lg text-gray-700 mb-4">
-                                        Erleben Sie, wie schnell Sie sich wieder <strong>vital und gesund</strong> fühlen können.
-                                    </p>
-                                    <p className="text-blue-600 hover:text-blue-800 transition-colors duration-300 cursor-pointer font-semibold">
-                                        <a href="mailto:kontakt@mesoskinhamburg.de">
-                                            Kontaktieren Sie uns für eine individuelle Beratung zur Infusionstherapie!
-                                        </a>
+                                        Erleben Sie, wie schnell Sie sich wieder vital und gesund fühlen können. Kontaktieren Sie uns für eine individuelle Beratung zur Infusionstherapie!
                                     </p>
                                 </div>
                             </CollapsibleSection>
@@ -144,36 +138,18 @@ const Dripspas = () => {
                                     Entgiften und regenerieren Sie Ihren Körper mit unserer BasenBalance-Infusion!
                                 </p>
                                 <p className="text-lg text-gray-700 mb-8">
-                                    In der heutigen schnelllebigen Welt sind wir ständig Umweltgiften, ungesunder Ernährung und Stress ausgesetzt, die unseren Säure-Basen-Haushalt aus dem Gleichgewicht bringen können. Bei <strong>Body&amp;Mind</strong> bieten wir Ihnen die BasenBalance-Infusion an, eine innovative Gesundheitsbehandlung, die speziell entwickelt wurde, um Ihren Körper zu entgiften und ein gesundes, alkalisches Milieu zu fördern.
+                                    In der heutigen schnelllebigen Welt sind wir ständig Umweltgiften, ungesunder Ernährung und Stress ausgesetzt, die unseren Säure-Basen-Haushalt aus dem Gleichgewicht bringen können. Bei Body&Mind  bieten wir Ihnen die BasenBalance-Infusion an, eine innovative Gesundheitsbehandlung, die speziell entwickelt wurde, um Ihren Körper zu entgiften und ein gesundes, alkalisches Milieu zu fördern.
                                 </p>
-
-                                <div className="grid md:grid-cols-2 gap-8 mb-8">
-                                    <div className="bg-white p-6 rounded-lg shadow-md">
-                                        <h3 className="h3 mb-3 text-primary">Was sind Baseninfusionen?</h3>
-                                        <p className="text-gray-700">
-                                            Baseninfusionen sind hochwirksame Flüssigkeitsbehandlungen, die wichtige Mineralien und Nährstoffe enthalten, um den pH-Wert Ihres Körpers zu regulieren. Diese Infusionen helfen nicht nur bei der Entgiftung, sondern unterstützen auch die Zellregeneration und das allgemeine Wohlbefinden.
-                                        </p>
-                                    </div>
-                                    <div className="bg-white p-6 rounded-lg shadow-md">
-                                        <h3 className="h3 mb-3 text-primary">Warum BasenBalance-Infusion?</h3>
-                                        <ul className="list-disc list-inside space-y-2 text-gray-700">
-                                            <li><strong>Entgiftung:</strong> Entfernen Sie schädliche Säuren und Toxine aus Ihrem Körper.</li>
-                                            <li><strong>Vitalität:</strong> Steigern Sie Ihre Energie und Lebensqualität durch einen ausgeglichenen Säure-Basen-Haushalt.</li>
-                                            <li><strong>Wohlbefinden:</strong> Fördern Sie ein Gefühl der inneren Ruhe und Ausgeglichenheit.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                
-                                <div className="flex justify-center my-8">
-                                    <Image
-                                        src="/assets/in2.png"
-                                        width={1400}
-                                        height={800}
-                                        alt="Radiance Infusion"
-                                        className="rounded-lg shadow-xl p-4"
-                                    />
-                                </div>
-
+                                <h3 className="h3 mb-3 text-primary">Was sind Baseninfusionen?</h3>
+                                <p className="text-gray-700 mb-6">
+                                    Baseninfusionen sind hochwirksame Flüssigkeitsbehandlungen, die wichtige Mineralien und Nährstoffe enthalten, um den pH-Wert Ihres Körpers zu regulieren. Diese Infusionen helfen nicht nur bei der Entgiftung, sondern unterstützen auch die Zellregeneration und das allgemeine Wohlbefinden.
+                                </p>
+                                <h3 className="h3 mb-3 text-primary">Warum BasenBalance-Infusion?</h3>
+                                <ul className="list-disc list-inside space-y-2 text-gray-700">
+                                    <li><strong>Entgiftung:</strong> Entfernen Sie schädliche Säuren und Toxine aus Ihrem Körper.</li>
+                                    <li><strong>Vitalität:</strong> Steigern Sie Ihre Energie und Lebensqualität durch einen ausgeglichenen Säure-Basen-Haushalt.</li>
+                                    <li><strong>Wohlbefinden:</strong> Fördern Sie ein Gefühl der inneren Ruhe und Ausgeglichenheit.</li>
+                                </ul>
                                 <p className="text-lg text-gray-700 font-medium mb-4">
                                     Erleben Sie die Vorteile der BasenBalance-Infusion und tun Sie Ihrem Körper etwas Gutes! Lassen Sie uns gemeinsam den Weg zu mehr Gesundheit und Vitalität gehen.
                                 </p>
@@ -189,43 +165,222 @@ const Dripspas = () => {
                                 <p className="text-xl text-gray-700 mb-8">
                                     Entdecken Sie die Radiance Infusion – Ihre Lösung für gesunde Haut und glänzendes Haar! Diese innovative Infusion kombiniert hochwertige Inhaltsstoffe, die speziell entwickelt wurden, um Ihre natürliche Schönheit zu fördern.
                                 </p>
-
-                                <div className="grid md:grid-cols-2 gap-8 mb-8">
-                                    <div className="bg-gray-50 p-6 rounded-lg shadow-inner">
-                                        <h3 className="h3 mb-4 text-accent">Vorteile der Radiance Infusion:</h3>
-                                        <ul className="list-disc list-inside space-y-3 text-gray-700">
-                                            <li><strong>Strahlende Hautpflege:</strong> Verbessert das Hautbild und sorgt für einen frischen Teint.</li>
-                                            <li><strong>Gesundes Haar:</strong> Unterstützt die Haarstruktur und verleiht strahlenden Glanz.</li>
-                                            <li><strong>Intensive Feuchtigkeitsversorgung:</strong> Versorgt trockene Haut und Haare mit essenziellen Nährstoffen.</li>
-                                        </ul>
-                                    </div>
-                                    <div className="bg-gray-50 p-6 rounded-lg shadow-inner">
-                                        <h3 className="h3 mb-4 text-accent">Schlüsselwirkstoffe:</h3>
-                                        <ul className="list-disc list-inside space-y-3 text-gray-700">
-                                            <li><strong>N-Acetyl-L-Cystein (300 mg):</strong> Schützt die Haut vor Umwelteinflüssen und stärkt die Hautbarriere.</li>
-                                            <li><strong>D-Panthenol (100 mg):</strong> Bietet intensive Feuchtigkeit und unterstützt die Hautheilung.</li>
-                                            <li><strong>Pyridoxin-HCl (Vitamin B6, 100 mg):</strong> Fördert den Zellstoffwechsel und verbessert das Hautbild.</li>
-                                            <li><strong>Zink-D-Gluconat-Trihydrat (69,7 mg):</strong> Reguliert die Talgproduktion und wirkt entzündungshemmend.</li>
-                                            <li><strong>D-Biotin (5 mg):</strong> Unterstützt gesundes Haarwachstum und erhält die Hautelastizität.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div className="flex justify-center my-8">
-                                    <Image
-                                        src="/assets/ing4.png"
-                                        width={500}
-                                        height={300}
-                                        alt="Schlüsselwirkstoffe"
-                                        className="border-4 border-white rounded-lg shadow-xl p-8"
-                                    />
-                                </div>
-
+                                <h3 className="h3 mb-4 text-accent">Vorteile der Radiance Infusion:</h3>
+                                <ul className="list-disc list-inside space-y-3 text-gray-700">
+                                    <li><strong>Strahlende Hautpflege:</strong> Verbessert das Hautbild und sorgt für einen frischen Teint.</li>
+                                    <li><strong>Gesundes Haar:</strong> Unterstützt die Haarstruktur und verleiht strahlenden Glanz.</li>
+                                    <li><strong>Intensive Feuchtigkeitsversorgung:</strong> Versorgt trockene Haut und Haare mit essenziellen Nährstoffen.</li>
+                                </ul>
+                                <h3 className="h3 mb-4 text-accent">Schlüsselwirkstoffe:</h3>
+                                <ul className="list-disc list-inside space-y-3 text-gray-700">
+                                    <li><strong>N-Acetyl-L-Cystein (300 mg):</strong> Schützt die Haut vor Umwelteinflüssen und stärkt die Hautbarriere.</li>
+                                    <li><strong>D-Panthenol (100 mg):</strong> Bietet intensive Feuchtigkeit und unterstützt die Hautheilung.</li>
+                                    <li><strong>Pyridoxin-HCl (Vitamin B6, 100 mg):</strong> Fördert den Zellstoffwechsel und verbessert das Hautbild.</li>
+                                    <li><strong>Zink-D-Gluconat-Trihydrat (69,7 mg):</strong> Reguliert die Talgproduktion und wirkt entzündungshemmend.</li>
+                                    <li><strong>D-Biotin (5 mg):</strong> Unterstützt gesundes Haarwachstum und erhält die Hautelastizität.</li>
+                                </ul>
                                 <p className="text-lg text-gray-700 font-medium mb-3">
-                                    Gönnen Sie sich die Pflege, die Sie verdienen! Erleben Sie die transformative Wirkung der Radiance Infusion – für gesunde Haut und glänzendes Haar.
+                                    Gönnen Sie sich die Pflege, die Sie verdienen! Erleben Sie die transformative Wirkung der Radiance Infusion – für gesunde Haut und glänzendes Haar. Kontaktieren Sie uns für weitere Informationen!
+                                </p>
+                            </CollapsibleSection>
+                        </div>
+
+                        {/* Mitochondrien Vitalitäts-Boost Section */}
+                        <div className="bg-gray-50 p-8 rounded-lg shadow-lg">
+                            <CollapsibleSection title="Mitochondrien Vitalitäts-Boost – Ihre Quelle für nachhaltige Energie und Wohlbefinden" titleClassName="text-gray-900 h2">
+                                <p className="text-lg text-gray-700 mb-6">
+                                    Entdecken Sie die Mitochondrien Vitalitäts-Boost-Infusion in unserer Privatpraxis. Diese innovative Behandlung ist darauf ausgelegt, Ihre Zellleistung zu maximieren und Ihnen einen kraftvollen Energieschub zu verleihen.
+                                </p>
+                                <h3 className="h3 mb-3 text-primary">Was ist die Mitochondrien Vitalitäts-Boost-Infusion?</h3>
+                                <p className="text-lg text-gray-700 mb-8">
+                                    Unsere Mitochondrien Vitalitäts-Boost-Infusion kombiniert hochwertige Inhaltsstoffe, die speziell entwickelt wurden, um die Funktion Ihrer Mitochondrien – den Kraftwerken Ihrer Zellen – zu optimieren. Durch die gezielte Förderung der ATP-Produktion unterstützen wir Ihre körperliche und geistige Leistungsfähigkeit.
+                                </p>
+                                <h3 className="h3 mb-3 text-primary">Starke Inhaltsstoffe für Ihre Gesundheit:</h3>
+                                <ul className="list-disc list-inside space-y-2 text-gray-700">
+                                    <li><strong>Aminosäuren:</strong> L-Arginin, L-Lysin, L-Carnitin und L-Glutathion zur Stärkung der Zellfunktion und des Immunsystems.</li>
+                                    <li><strong>Vitamine:</strong> B2, B3, B5, B6, B7, B9, B12 und Vitamin C für eine optimale Nährstoffversorgung und Unterstützung des Stoffwechsels.</li>
+                                    <li><strong>Mineralien:</strong> Calcium, Kalium, Magnesium, Selen und Zink zur Förderung einer gesunden Zellfunktion und Immunabwehr.</li>
+                                    <li><strong>Weitere:</strong> Taurin, N-Acetyl-L-Cystein und Alpha-Liponsäure für Entgiftung und antioxidativen Schutz.</li>
+                                </ul>
+                                <h3 className="h3 mb-3 text-primary">Vorteile der Mitochondrien Vitalitäts-Boost-Infusion:</h3>
+                                <ul className="list-disc list-inside space-y-2 text-gray-700">
+                                    <li><strong>Optimierung der Zellleistung:</strong> Verbessern Sie Ihre mitochondriale Atmung und die ATP-Bildung für mehr Energie.</li>
+                                    <li><strong>Effektive Entgiftung:</strong> Unterstützen Sie die Schwermetalldetoxifikation und schützen Sie sich vor freien Radikalen.</li>
+                                    <li><strong>Steigerung der Leistungsfähigkeit:</strong> Erleben Sie schnelle Regeneration, gesteigerte Vitalität und reduzierte Stresssymptome.</li>
+                                </ul>
+                                <h3 className="h3 mb-3 text-primary">Positive Erfahrungen unserer Patienten:</h3>
+                                <p className="text-lg text-gray-700 mb-8">
+                                    Zahlreiche Patienten berichten von Verbesserungen bei Allergien, Mangelzuständen, Bluthochdruck und chronischen Schmerzen. Die Mitochondrien Vitalitäts-Boost-Infusion fördert außerdem die Regeneration nach Erkrankungen und steigert das allgemeine Wohlbefinden.
+                                </p>
+                                <p className="text-lg text-gray-700 font-medium mb-4">
+                                    Gönnen Sie sich den Vitalitäts-Boost, den Sie verdienen! Erleben Sie, wie die Mitochondrien Vitalitäts-Boost-Infusion Ihr Energielevel und Ihre Lebensqualität nachhaltig steigern kann.
                                 </p>
                                 <p className="text-blue-600 hover:text-blue-800 transition-colors duration-300 cursor-pointer font-semibold">
-                                    Kontaktieren Sie uns für weitere Informationen!
+                                    Vereinbaren Sie noch heute einen Termin in unseren Räumen in der RothenbaumChaussee in Hamburg.Starten Sie Ihre Reise zu mehr Energie und Gesundheit!
+                                </p>
+                            </CollapsibleSection>
+                        </div>
+
+                        {/* B Energy Infusion Section */}
+                        <div className="bg-white p-8 rounded-lg shadow-lg">
+                            <CollapsibleSection title="B Energy Infusion – Ihre Quelle für Vitalität!" titleClassName="h2 text-gray-900">
+                                <p className="text-lg text-gray-700 mb-6">
+                                    Erleben Sie einen Energie-Boost mit unserer B Energy Infusion! Diese leistungsstarke Mischung aus essenziellen B-Vitaminen steigert Ihre körperliche und geistige Leistungsfähigkeit.
+                                </p>
+                                <h3 className="h3 mb-3 text-primary">Vorteile der B Energy Infusion:</h3>
+                                <ul className="list-disc list-inside space-y-2 text-gray-700">
+                                    <li><strong>Energie und Vitalität:</strong> Wandelt Nährstoffe in Energie um und bekämpft Müdigkeit.</li>
+                                    <li><strong>Stressbewältigung:</strong> Unterstützt das Nervensystem und fördert emotionale Balance.</li>
+                                    <li><strong>Kognitive Unterstützung:</strong> Stärkt Konzentration und Gedächtnisleistung.</li>
+                                    <li><strong>Stimmungsaufhellung:</strong> Verbessert Ihre mentale Gesundheit durch Neurotransmitterproduktion.</li>
+                                    <li><strong>Haut- und Haarpflege:</strong> Fördert die Zellregeneration für gesunde Haut und Haare.</li>
+                                    <li><strong>Immunsystemstärkung:</strong> Hilft, Krankheiten abzuwehren und die Abwehrkräfte zu unterstützen.</li>
+                                    <li><strong>Herzgesundheit:</strong> Reguliert Homocystein und unterstützt ein gesundes Herz-Kreislaufsystem.</li>
+                                </ul>
+                                <p className="text-lg text-gray-700 font-medium mb-4">
+                                    Gönnen Sie sich den Energie-Kick, den Sie verdienen! Kontaktieren Sie uns, um mehr über die B Energy Infusion zu erfahren und Ihre Vitalität zu steigern!
+                                </p>
+                            </CollapsibleSection>
+                        </div>
+
+                        {/* Gluta C Cholin Infusion Section */}
+                        <div className="bg-gray-50 p-8 rounded-lg shadow-lg">
+                            <CollapsibleSection title="Gluta C Cholin Infusion" titleClassName="text-gray-900 h2">
+                                <p className="text-xl text-gray-700 mb-6">
+                                    Entgiftende Infusion mit Glutathion, Vitamin C und Cholin
+                                </p>
+                                <p className="text-lg text-gray-700 mb-8">
+                                    Entfalten Sie Ihr volles Potenzial mit unserer einzigartigen Infusion!
+                                </p>
+                                <p className="text-lg text-gray-700 mb-8">
+                                    Unsere hochwertige Infusion kombiniert die kraftvollen Inhaltsstoffe Glutathion, Vitamin C und Cholin, um Ihre Gesundheit auf ein neues Level zu heben. Diese synergistische Formel bietet eine Vielzahl von Vorteilen, die Ihr Wohlbefinden nachhaltig fördern.
+                                </p>
+                                <h3 className="h3 mb-3 text-primary">Anwendungsgebiete der Infusion</h3>
+                                <ol className="list-decimal list-inside space-y-2 text-gray-700">
+                                    <li><strong>Entgiftung:</strong><br/>Stärken Sie die natürlichen Entgiftungsprozesse Ihres Körpers. Glutathion wirkt als starkes Antioxidans, das freie Radikale neutralisiert und toxische Substanzen ausleitet.</li>
+                                    <li><strong>Immunsystemstärkung:</strong><br/>Unterstützen Sie Ihre Immunabwehr mit der antioxidativen Kraft von Vitamin C und Glutathion. Schützen Sie sich effektiv gegen Krankheiten und Infektionen.</li>
+                                    <li><strong>Energie- und Leistungssteigerung:</strong><br/>Erleben Sie einen Energieschub! Cholin verbessert die Gehirnfunktion und steigert Ihre körperliche Ausdauer, sodass Sie den Alltag mit neuer Vitalität meistern können.</li>
+                                    <li><strong>Hautgesundheit:</strong><br/>Erhalten Sie eine strahlende Haut! Vitamin C fördert die Kollagenproduktion und verbessert die Hautelastizität, während es Anzeichen der Hautalterung reduziert.</li>
+                                    <li><strong>Lebergesundheit:</strong><br/>Unterstützen Sie Ihre Leber mit der regenerativen Kraft von Glutathion und Cholin. Fördern Sie einen gesunden Fettstoffwechsel und eine optimale Leberfunktion.</li>
+                                    <li><strong>Kognitive Unterstützung:</strong><br/>Verbessern Sie Ihre Konzentration und Gedächtnisleistung. Cholin ist entscheidend für die Gehirnfunktion und kann neurodegenerativen Erkrankungen entgegenwirken.</li>
+                                    <li><strong>Stimmungsverbesserung:</strong><br/>Steigern Sie Ihr emotionales Wohlbefinden. Die Kombination aus Glutathion, Vitamin C und Cholin kann Ihre Stimmung positiv beeinflussen und Stress abbauen.</li>
+                                </ol>
+                                <h3 className="h3 mb-3 text-primary">Warum unsere Infusion?</h3>
+                                <p className="text-lg text-gray-700 mb-8">
+                                    Unsere Infusion mit Glutathion, Vitamin C und Cholin ist die perfekte Wahl für alle, die ihre Gesundheit aktiv unterstützen möchten. Ideal für Sportler, Berufstätige und alle, die sich eine natürliche Vitalitätssteigerung wünschen.
+                                </p>
+                                <p className="text-lg text-gray-700 font-medium mb-4">
+                                    Erleben Sie die Vorteile einer entgiftenden Infusion und bringen Sie Körper und Geist in Einklang. Kontaktieren Sie uns noch heute, um mehr über diese transformative Behandlung zu erfahren!
+                                </p>
+                            </CollapsibleSection>
+                        </div>
+
+                        {/* Vitamin C-Infusion Section */}
+                        <div className="bg-white p-8 rounded-lg shadow-lg">
+                            <CollapsibleSection title="Vitamin C-Infusion – Energie und Immunstärkung in einer Sitzung" titleClassName="h2 text-gray-900">
+                                <p className="text-lg text-gray-700 mb-6">
+                                    Entdecken Sie die Kraft der Vitamin C-Infusion in unserer Privatpraxis am Bült! Diese hochdosierte Behandlung liefert Vitamin C direkt in Ihren Blutkreislauf und bietet zahlreiche gesundheitliche Vorteile.
+                                </p>
+                                <h3 className="h3 mb-3 text-primary">Ihre Vorteile auf einen Blick:</h3>
+                                <ul className="list-disc list-inside space-y-2 text-gray-700">
+                                    <li><strong>Stärkt das Immunsystem:</strong> Schützt vor Erkältungen und Infektionen.</li>
+                                    <li><strong>Antioxidative Wirkung:</strong> Reduziert oxidative Stressbelastungen.</li>
+                                    <li><strong>Verbessert die Hautgesundheit:</strong> Unterstützt die Kollagenproduktion für einen strahlenden Teint.</li>
+                                    <li><strong>Energieboost:</strong> Spürbare Vitalitätssteigerung und schnelle Regeneration.</li>
+                                </ul>
+                                <h3 className="h3 mb-3 text-primary">Ideal für:</h3>
+                                <ul className="list-disc list-inside space-y-2 text-gray-700">
+                                    <li>Personen in der Genesung von Krankheiten oder Operationen.</li>
+                                    <li>Menschen mit erhöhtem Stress oder chronischer Erschöpfung.</li>
+                                    <li>Alle, die ihre Gesundheit proaktiv stärken möchten.</li>
+                                </ul>
+                                <p className="text-lg text-gray-700 font-medium mb-4">
+                                    Erleben Sie die transformative Wirkung der Vitamin C-Infusion! Vereinbaren Sie noch einen Termin.
+                                </p>
+                            </CollapsibleSection>
+                        </div>
+
+                        {/* ImmunVitalis Section */}
+                        <div className="bg-gray-50 p-8 rounded-lg shadow-lg">
+                            <CollapsibleSection title="ImmunVitalis" titleClassName="text-gray-900 h2">
+                                <p className="text-xl text-gray-700 mb-6">
+                                    Stärken Sie Ihr Immunsystem mit ImmunVitalis!
+                                </p>
+                                <p className="text-lg text-gray-700 mb-8">
+                                    Unser Immun-Infusions-Set kombiniert 12.000 mg L-Ascorbinsäure mit einer kraftvollen Mischung aus Aminosäuren und Vitaminen, um Ihre Gesundheit zu maximieren.
+                                </p>
+                                <h3 className="h3 mb-3 text-primary">Highlights:</h3>
+                                <ul className="list-disc list-inside space-y-2 text-gray-700">
+                                    <li><strong>L-Ascorbinsäure (12.000 mg):</strong> Stärkt das Immunsystem und wirkt antioxidativ.</li>
+                                    <li><strong>Taurin (1.200 mg) & L-Arginin (1.000 mg):</strong> Fördern Regeneration und Durchblutung.</li>
+                                    <li><strong>Essentielle Vitamine:</strong> Unterstützen den Energiestoffwechsel und die Abwehr.</li>
+                                </ul>
+                                <p className="text-lg text-gray-700 font-medium mb-4">
+                                    Revitalisieren Sie Ihren Körper!
+                                </p>
+                                <p className="text-lg text-gray-700 mb-8">
+                                    Infusion mit 3.000 mg S-Acetyl-Glutathion entgiftet und schützt Ihre Zellen.
+                                </p>
+                                <h3 className="h3 mb-3 text-primary">Vorteile:</h3>
+                                <ul className="list-disc list-inside space-y-2 text-gray-700">
+                                    <li><strong>S-Acetyl-Glutathion (3.000 mg):</strong> Stärkt die Entgiftungsprozesse und wirkt als starkes Antioxidans.</li>
+                                </ul>
+                                <p className="text-lg text-gray-700 font-medium mb-4">
+                                    Gönnen Sie sich die Energie und Vitalität, die Sie verdienen! Starten Sie jetzt Ihre Gesundheitsreise mit ImmunVitalis.
+                                </p>
+                            </CollapsibleSection>
+                        </div>
+
+                        {/* C-Vital-Drip Section */}
+                        <div className="bg-white p-8 rounded-lg shadow-lg">
+                            <CollapsibleSection title="C-Vital-Drip" titleClassName="h2 text-gray-900">
+                                <p className="text-xl text-gray-700 mb-6">
+                                    Hochdosiertes Vitamin C für Ihre Gesundheit.
+                                </p>
+                            </CollapsibleSection>
+                        </div>
+
+                        {/* StressRelief Elixier Section */}
+                        <div className="bg-gray-50 p-8 rounded-lg shadow-lg">
+                            <CollapsibleSection title="StressRelief Elixier – Ihre Lösung für Stressbewältigung und vegetative Balance" titleClassName="text-gray-900 h2">
+                                <p className="text-lg text-gray-700 mb-6">
+                                    Fühlen Sie sich oft gestresst oder aus dem Gleichgewicht? Mit dem StressRelief Elixier bringen Sie Körper und Geist in Einklang. Unsere innovative Infusion kombiniert sorgfältig ausgewählte Inhaltsstoffe, die speziell zur Unterstützung Ihres Nervensystems entwickelt wurden.
+                                </p>
+                                <h3 className="h3 mb-3 text-primary">Stressbewältigung leicht gemacht</h3>
+                                <p className="text-lg text-gray-700 mb-8">
+                                    In der hektischen Welt von heute ist es wichtiger denn je, das innere Gleichgewicht zu finden. Das StressRelief Elixier hilft Ihnen, Stress abzubauen und die vegetative Balance wiederherzustellen. Erleben Sie, wie Sie mit neuer Energie den Herausforderungen des Alltags begegnen!
+                                </p>
+                                <h3 className="h3 mb-3 text-primary">Die Vorteile auf einen Blick:</h3>
+                                <ul className="list-disc list-inside space-y-2 text-gray-700">
+                                    <li><strong>Stressreduktion:</strong> Fördert Entspannung und innere Ruhe.</li>
+                                    <li><strong>Vegetative Ausgleichung:</strong> Stabilisiert das vegetative Nervensystem für mehr Gelassenheit.</li>
+                                    <li><strong>Energie und Vitalität:</strong> Unterstützt körperliche und geistige Leistungsfähigkeit.</li>
+                                    <li><strong>Optimale Nährstoffversorgung:</strong> Liefert essentielle Aminosäuren und Antioxidantien für Ihr Wohlbefinden.</li>
+                                </ul>
+                                <h3 className="h3 mb-3 text-primary">Wirkstoffe, die wirken:</h3>
+                                <ul className="list-disc list-inside space-y-2 text-gray-700">
+                                    <li><strong>Cholin:</strong> Fördert die Gehirnfunktion und verbessert die kognitive Klarheit – ideal für mentale Höchstleistungen.</li>
+                                    <li><strong>L-Glutathion:</strong> Ein starkes Antioxidans, das Entgiftungsprozesse unterstützt und Ihre Zellen vor oxidativem Stress schützt.</li>
+                                    <li><strong>Cystein:</strong> Stärkt die Glutathionsynthese und hilft, schädliche Substanzen aus dem Körper zu eliminieren.</li>
+                                    <li><strong>Kalium:</strong> Essenziell für die Regulierung des Elektrolythaushalts und die Unterstützung von Muskeln und Nerven.</li>
+                                </ul>
+                                <p className="text-lg text-gray-700 font-medium mb-4">
+                                    Starten Sie Ihre Reise zu mehr Wohlbefinden!
+                                </p>
+                                <p className="text-lg text-gray-700 mb-8">
+                                    Das StressRelief Elixier ist die perfekte Lösung für alle, die aktiv gegen Stress ankämpfen und ihr vegetatives Gleichgewicht fördern möchten. Gönnen Sie sich die Unterstützung, die Sie verdienen, und erleben Sie, wie sich Ihr Körper und Geist revitalisieren.
+                                </p>
+                                <p className="text-blue-600 hover:text-blue-800 transition-colors duration-300 cursor-pointer font-semibold">
+                                    Kontaktieren Sie uns noch heute, um mehr über das StressRelief Elixier zu erfahren und den ersten Schritt zu einem stressfreieren Leben zu machen!
+                                </p>
+                            </CollapsibleSection>
+                        </div>
+
+                        {/* Haare & Haut Section */}
+                        <div className="bg-white p-8 rounded-lg shadow-lg">
+                            <CollapsibleSection title="Haare & Haut" titleClassName="h2 text-gray-900">
+                                <p className="text-xl text-gray-700 mb-6">
+                                    Für gesundes Haar und strahlende Haut.
                                 </p>
                             </CollapsibleSection>
                         </div>
@@ -309,10 +464,9 @@ const Dripspas = () => {
                             transition={{ delay: 0.3, duration: 0.8 }}
                             className="bg-white p-12 rounded-lg shadow-lg text-center w-full"
                         >
-                            <h3 className="text-2xl font-extrabold mb-3 text-primary">Erstbehandlung</h3>
-                            <p className="text-lg text-gray-800 mb-6">Inclusive Consulting</p>
-                            <p className="text-4xl font-extrabold text-accent mb-3">249 Euro</p>
-                            <p className="text-base text-gray-600">Behandlungsdauer: 2 Stunden</p>
+                            <h3 className="text-2xl font-extrabold mb-3 text-primary">Mitochondrien Vitalitäts-Boost</h3>
+                            <p className="text-lg text-gray-800 mb-6">Ihre Quelle für nachhaltige Energie und Wohlbefinden</p>
+                            <p className="text-4xl font-black text-accent mb-3">Ab 199€ - 249€</p>
                         </motion.div>
                         <motion.div
                             initial={{ opacity: 0, y: 50 }}
@@ -321,9 +475,9 @@ const Dripspas = () => {
                             transition={{ delay: 0.4, duration: 0.8 }}
                             className="bg-white p-12 rounded-lg shadow-lg text-center w-full"
                         >
-                            <h3 className="text-2xl font-extrabold mb-3 text-primary">Folgebehandlung</h3>
-                            <p className="text-lg text-gray-800 mb-6">Nach Erstsitzung</p>
-                            <p className="text-4xl font-extrabold text-accent mb-3">199 Euro</p>
+                            <h3 className="text-2xl font-extrabold mb-3 text-primary">BasenBalance-Infusion</h3>
+                            <p className="text-lg text-gray-800 mb-6">Entgiften und regenerieren Sie Ihren Körper mit unserer BasenBalance-Infusion!</p>
+                            <p className="text-4xl font-black text-accent mb-3">Ab 179€ - 220€</p>
                         </motion.div>
                         <motion.div
                             initial={{ opacity: 0, y: 50 }}
@@ -332,9 +486,9 @@ const Dripspas = () => {
                             transition={{ delay: 0.5, duration: 0.8 }}
                             className="bg-white p-12 rounded-lg shadow-lg text-center w-full"
                         >
-                            <h3 className="text-2xl font-extrabold mb-3 text-primary">6er Abo</h3>
-                            <p className="text-lg text-gray-800 mb-6">Paketpreis</p>
-                            <p className="text-4xl font-extrabold text-accent mb-3">999 Euro</p>
+                            <h3 className="text-2xl font-extrabold mb-3 text-primary">ImmunVitalis</h3>
+                            <p className="text-lg text-gray-800 mb-6">Stärken Sie Ihr Immunsystem mit ImmunVitalis!</p>
+                            <p className="text-4xl font-black text-accent mb-3">Ab 179€ - 279€</p>
                         </motion.div>
                         <motion.div
                             initial={{ opacity: 0, y: 50 }}
@@ -343,9 +497,64 @@ const Dripspas = () => {
                             transition={{ delay: 0.6, duration: 0.8 }}
                             className="bg-white p-12 rounded-lg shadow-lg text-center w-full"
                         >
-                            <h3 className="text-2xl font-extrabold mb-3 text-primary">10er Abo</h3>
-                            <p className="text-lg text-gray-800 mb-6">Paketpreis</p>
-                            <p className="text-4xl font-extrabold text-accent mb-3">1650 Euro</p>
+                            <h3 className="text-2xl font-extrabold mb-3 text-primary">C-Vital-Drip</h3>
+                            <p className="text-lg text-gray-800 mb-6">Hochdosiertes Vitamin C für Ihre Gesundheit</p>
+                            <p className="text-4xl font-black text-accent mb-3">Ab 149€ - 189€</p>
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.3 }}
+                            transition={{ delay: 0.7, duration: 0.8 }}
+                            className="bg-white p-12 rounded-lg shadow-lg text-center w-full"
+                        >
+                            <h3 className="text-2xl font-extrabold mb-3 text-primary">B Energy Infusion</h3>
+                            <p className="text-lg text-gray-800 mb-6">Ihre Quelle für Vitalität!</p>
+                            <p className="text-4xl font-black text-accent mb-3">Ab 179€ - 199€</p>
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.3 }}
+                            transition={{ delay: 0.8, duration: 0.8 }}
+                            className="bg-white p-12 rounded-lg shadow-lg text-center w-full"
+                        >
+                            <h3 className="text-2xl font-extrabold mb-3 text-primary">Gluta C Cholin Infusion</h3>
+                            <p className="text-lg text-gray-800 mb-6">Entgiftende Infusion mit Glutathion, Vitamin C und Cholin</p>
+                            <p className="text-4xl font-black text-accent mb-3">Ab 179€</p>
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.3 }}
+                            transition={{ delay: 0.9, duration: 0.8 }}
+                            className="bg-white p-12 rounded-lg shadow-lg text-center w-full"
+                        >
+                            <h3 className="text-2xl font-extrabold mb-3 text-primary">StressRelief Elixier</h3>
+                            <p className="text-lg text-gray-800 mb-6">Ihre Lösung für Stressbewältigung und vegetative Balance</p>
+                            <p className="text-4xl font-black text-accent mb-3">Ab 179€</p>
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.3 }}
+                            transition={{ delay: 1.0, duration: 0.8 }}
+                            className="bg-white p-12 rounded-lg shadow-lg text-center w-full"
+                        >
+                            <h3 className="text-2xl font-extrabold mb-3 text-primary">Radiance Infusion</h3>
+                            <p className="text-lg text-gray-800 mb-6">Strahlende Haut und glänzendes Haar</p>
+                            <p className="text-4xl font-black text-accent mb-3">Ab 179€</p>
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.3 }}
+                            transition={{ delay: 1.1, duration: 0.8 }}
+                            className="bg-white p-12 rounded-lg shadow-lg text-center w-full"
+                        >
+                            <h3 className="text-2xl font-extrabold mb-3 text-primary">Vitamin C-Infusion</h3>
+                            <p className="text-lg text-gray-800 mb-6">Energie und Immunstärkung in einer Sitzung</p>
+                            <p className="text-4xl font-black text-accent mb-3">Ab 149€ - 189€</p>
                         </motion.div>
                     </div>
                 </section>

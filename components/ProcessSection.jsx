@@ -13,12 +13,12 @@ const processSteps = [
   {
     step: 2,
     title: "Vorbereitung",
-    description: "Ihre Haut wird sanft gereinigt und auf die Behandlung vorbereitet.",
+    description: "Ausführliche Anamnese – Wir unterstützen Sie dabei, Ihre medizinische Vorgeschichte strukturiert und vollständig zu erfassen, um eine bestmögliche Behandlung zu gewährleisten.",
   },
   {
     step: 3,
     title: "Behandlung",
-    description: "Die Behandlung wird mit modernsten Geräten und hochwertigen Produkten durchgeführt.",
+    description: "Anti-Aging & Infusionstherapie für neue Energie und jugendliche Frische. Erleben Sie revitalisierende Infusionen, die Körper, Geist und Haut von innen erneuern – für ein strahlendes und gesundes Erscheinungsbild.",
   },
   {
     step: 4,

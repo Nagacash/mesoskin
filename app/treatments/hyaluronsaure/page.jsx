@@ -121,8 +121,7 @@ const HyaluronsaurePage = () => {
             <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 0.4, duration: 0.8 }}>Lippen aufspritzen</motion.li>
             <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 0.5, duration: 0.8 }}>Faltenunterspritzung</motion.li>
             <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 0.6, duration: 0.8 }}>Gesichtsmodellierung</motion.li>
-            <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 0.7, duration: 0.8 }}>Nasenkorrektur ohne OP</motion.li>
-            <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 0.8, duration: 0.8 }}>Augenringe unterspritzen</motion.li>
+
             <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 0.9, duration: 0.8 }}>Hände verjüngen</motion.li>
           </ul>
           <motion.h2 initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 1.0, duration: 0.8 }} className="h3 mb-4">Vorteile</motion.h2>
@@ -136,19 +135,13 @@ const HyaluronsaurePage = () => {
         </div>
         <div className="lg:w-1/2">
           <Image
-            src="/assets/treatments/meso5.jpg"
+            src="/assets/new8.jpg"
             alt="Hyaluronsäure Behandlung"
             width={600}
             height={400}
-            className="rounded-lg shadow-lg mb-8 w-full h-auto object-cover grayscale"
+            className="rounded-lg shadow-lg mb-8 mt-16 w-full h-auto object-cover grayscale"
           />
-          <Image
-            src="/assets/treatments/spa10.jpg"
-            alt="Hyaluronsäure Vorher-Nachher"
-            width={600}
-            height={400}
-            className="rounded-lg shadow-lg w-full h-auto object-cover grayscale"
-          />
+
         </div>
       </div>
     </section>

@@ -53,8 +53,11 @@ const ImpressumPage = () => {
           <p className="mb-2 text-lg text-gray-700">
             <strong>Berufsbezeichnung:</strong> Heilpraktiker/in
           </p>
-          <p className="mb-6 text-lg text-gray-700">
+          <p className="mb-2 text-lg text-gray-700">
             <strong>Land in dem die Berufsbezeichnung verliehen wurde:</strong> Deutschland
+          </p>
+          <p className="mb-6 text-lg text-gray-700">
+            <strong>Steuernummer:</strong> 43/058/02935
           </p>
         </div>
       </main>

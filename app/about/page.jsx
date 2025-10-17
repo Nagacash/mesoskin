@@ -11,7 +11,7 @@ const About = () => {
       animate={{ opacity: 1, transition: { delay: 2 } }}
       className='min-h-screen overflow-x-hidden z-10 pt-32 xl:pt-32'
     >
-      <div className='container mx-auto pt-8 pb-24'>
+      <div className='container mx-auto pt-40 pb-24'>
         <div className='text-center mb-24 bg-accent-100 p-8 rounded-lg shadow-md'>
           <h1 className='h1 mb-4'>Über mich</h1>
       <h1 className="h1 mb-4 text-primary"><strong>Mesoskin</strong> Hamburg</h1>
@@ -61,6 +61,24 @@ const About = () => {
             Bei <strong>Mesoskin</strong> Hamburg steht immer das individuelle Angebot im Zentrum. Warum? Weil jeder Mensch und jede Haut anders ist. Oder anders formuliert: Der Mensch steht im Vordergrund. Entsprechend beginnt jede Behandlung mit einem ausführlichen Beratungsgespräch und einem individuelle Therapieplan. Eine umfassende Nachbetreuung steht ebenfalls „auf dem Programm“.
           </p>
 
+        </div>
+
+        <div className='text-center max-w-3xl mx-auto mb-24 bg-accent-100 p-8 rounded-lg shadow-md'>
+          <h2 className='h2 mb-6'>Qualifikationen</h2>
+          <ul className='text-lg text-left list-disc list-inside'>
+            <li className='mb-4'>
+              <strong>Heilpraktikerin seit 1995:</strong> Langjährige Erfahrung in der alternativen Medizin und Gesundheitsförderung.
+            </li>
+            <li className='mb-4'>
+              <strong>Zertifizierte psychologische Beraterin:</strong> Weiterbildung in psychologischer Beratung und Coaching, um Klienten bei der Bewältigung von Lebensherausforderungen zu unterstützen.
+            </li>
+            <li className='mb-4'>
+              <strong>Spezialisiert auf Vitamininfusionen:</strong> Expertise in der Anwendung von Vitamininfusionen zur Förderung von Energie, Immunsystem und Entgiftung.
+            </li>
+            <li className='mb-4'>
+              <strong>Regelmäßige Fortbildungen:</strong> Kontinuierliche Weiterbildung, um mein Wissen über aktuelle Trends und Entwicklungen im Gesundheitsbereich zu vertiefen.
+            </li>
+          </ul>
         </div>
 
         <TestimonialCarousel />

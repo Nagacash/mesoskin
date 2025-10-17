@@ -75,54 +75,7 @@ const PdoFadenImageGallery = () => {
               className="rounded-lg shadow-lg w-full h-80 object-cover grayscale"
             />
           </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ delay: 0.8, duration: 0.8 }}
-            onMouseEnter={mouseEnterHandler}
-            onMouseLeave={mouseLeaveHandler}
-          >
-            <Image
-              src="/assets/treatments/pdo-faden/spa12.jpg"
-              width={500}
-              height={350}
-              alt="PDO Faden Treatment 4"
-              className="rounded-lg shadow-lg w-full h-80 object-cover grayscale"
-            />
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ delay: 0.9, duration: 0.8 }}
-            onMouseEnter={mouseEnterHandler}
-            onMouseLeave={mouseLeaveHandler}
-          >
-            <Image
-              src="/assets/treatments/pdo-faden/anette.jpg"
-              width={500}
-              height={350}
-              alt="PDO Faden Treatment 5"
-              className="rounded-lg shadow-lg w-full h-80 object-cover grayscale"
-            />
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ delay: 1.0, duration: 0.8 }}
-            onMouseEnter={mouseEnterHandler}
-            onMouseLeave={mouseLeaveHandler}
-          >
-            <Image
-              src="/assets/treatments/pdo-faden/spa13.jpg"
-              width={500}
-              height={350}
-              alt="PDO Faden Treatment 6"
-              className="rounded-lg shadow-lg w-full h-80 object-cover grayscale"
-            />
-          </motion.div>
+
         </div>
       </div>
     </section>

@@ -12,8 +12,8 @@ const benefits = [
     description: "Unsere Behandlungen fördern die natürliche Ausstrahlung Ihrer Haut.",
   },
   {
-    title: "Tiefenreinigung",
-    description: "Wir reinigen Ihre Haut porentief und entfernen Unreinheiten.",
+    title: "Gesundheitspflege",
+    description: "Kompetente Pflege und medizinische Betreuung mit Herz und Fachwissen",
   },
   {
     title: "Anti-Aging",

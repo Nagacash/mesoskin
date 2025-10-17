@@ -44,9 +44,11 @@ const Footer = () => {
         <div className="text-center">
           <h3 className="text-xl font-semibold mb-4">Kontakt</h3>
           <ul className="space-y-2 mx-auto w-fit">
+            <li className="flex items-center gap-2">Body & Mind by Natalie Zimmermann</li>
+            <li className="flex items-center gap-2">Physiotherapie</li>
             <li className="flex items-center gap-2"><Mail size={18} className="text-accent" /> E-Mail: <a href="mailto:kontakt@mesoskinhamburg.de" className="hover:text-accent transition-colors">kontakt@mesoskinhamburg.de</a></li>
-            <li className="flex items-center gap-2"><Phone size={18} className="text-accent" /> Telefon: <a href="tel:017661639830" className="hover:text-accent transition-colors">017661639830</a></li>
-            <li className="flex items-center gap-2"><MapPin size={18} className="text-accent" /> Adresse: Osterstraße 92, 20259 Hamburg</li>
+            <li className="flex items-center gap-2"><Phone size={18} className="text-accent" /> Telefon: <a href="tel:+494023491990" className="hover:text-accent transition-colors">+49 40 23491990</a></li>
+            <li className="flex items-center gap-2"><MapPin size={24} className="text-accent" /> Adresse: <a href="https://maps.apple.com/place?map=explore&place-id=IAB8A0CAEED0E2BF3&address=Rothenbaumchaussee+156%2C+20149+Hamburg%2C+Germany&coordinate=53.5784825%2C9.9893272&name=Body+%26+Mind+by+Natalie+Zimmermann&_provider=9902" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">Rothenbaumchaussee 156, 20149 Hamburg, Deutschland</a></li>
           </ul>
         </div>
       </div>

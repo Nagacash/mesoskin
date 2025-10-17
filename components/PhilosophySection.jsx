@@ -8,7 +8,7 @@ import { CursorContext } from "./CursorContext";
 const galleryItems = [
   {
     id: 1,
-    src: "/assets/home/spa7.jpg",
+    src: "/assets/ing7.png",
     alt: "Spa Treatment 7",
     title: "Entspannung Pur",
     link: "#",
@@ -22,14 +22,14 @@ const galleryItems = [
   },
   {
     id: 3,
-    src: "/assets/home/spa3.jpg",
+    src: "/assets/new5.jpg",
     alt: "Spa Treatment 3",
     title: "Harmonie für die Haut",
     link: "#",
   },
   {
     id: 4,
-    src: "/assets/home/spa4.jpg",
+    src: "/assets/new6.jpg",
     alt: "Spa Treatment 4",
     title: "Revitalisierende Pflege",
     link: "#",
@@ -112,6 +112,7 @@ const PhilosophySection = () => {
                   width={500}
                   height={500}
                   className="transition-transform duration-300 group-hover:scale-105 object-cover grayscale"
+                  priority
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <h3 className="text-white text-xl font-semibold text-center px-4">{item.title}</h3>

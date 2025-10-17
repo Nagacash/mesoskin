@@ -17,7 +17,7 @@ const HeroSection = () => {
     <motion.section
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { delay: 2 } }}
-      className="min-h-screen flex items-center overflow-x-hidden pt-12"
+      className="min-h-screen flex items-center overflow-x-hidden pt-60"
     >
       <div className="container mx-auto">
                   <div className="flex flex-col xl:flex-row items-center h-full">
@@ -37,17 +37,20 @@ const HeroSection = () => {
                           <motion.h1
                             className="h1"
                           >
-                            <span className="font-bold">Natürliche Schönheit</span> <br /> beginnt hier
+                            <span className="font-bold">Natürliche Schönheit und Gesundheit</span> <br /> beginnt hier
                           </motion.h1>
                         </div>
                         <div className="mb-8 text-left pt-12">
-                          <h3 className="h3 mb-4 text-center">Qualifikationen:</h3>
-                          <ul className="list-disc list-inside text-primary text-lg">
-                            <li><span className="font-semibold">Heilpraktikerin seit 1995:</span> Langjährige Erfahrung in der alternativen Medizin und Gesundheitsförderung.</li>
-                            <li><span className="font-semibold">Zertifizierte psychologische Beraterin:</span> Weiterbildung in psychologischer Beratung und Coaching, um Klienten bei der Bewältigung von Lebensherausforderungen zu unterstützen.</li>
-                            <li><span className="font-semibold">Spezialisiert auf Vitamininfusionen:</span> Expertise in der Anwendung von Vitamininfusionen zur Förderung von Energie, Immunsystem und Entgiftung.</li>
-                            <li><span className="font-semibold">Regelmäßige Fortbildungen:</span> Kontinuierliche Weiterbildung, um mein Wissen über aktuelle Trends und Entwicklungen im Gesundheitsbereich zu vertiefen.</li>
-                          </ul>
+                          <h2 className="h2 mb-4 text-center">Willkommen bei Mesoskin</h2>
+                          <p className="lead max-w-xl mx-auto text-primary mb-4">
+                            Willkommen bei Mesoskin in der Welt der natürlichen Schönheit und Gesundheitspflege!
+                          </p>
+                          <p className="lead max-w-xl mx-auto text-primary mb-4">
+                            Treten Sie ein in eine Oase der Ruhe und Regeneration, wo wissenschaftliche Expertise auf die heilende Kraft der Natur trifft. Bei Mesoskin verstehen wir Schönheit nicht als kurzlebigen Trend, sondern als das strahlende äußere Zeichen innerer Balance und optimaler Gesundheit. Wir sind Ihr Partner auf dem Weg zu einem vitaleren Ich, bei dem Ihre Hautpflege und Ihr Wohlbefinden ganzheitlich betrachtet werden.
+                          </p>
+                          <p className="lead max-w-xl mx-auto text-primary mb-4">
+                            Ich lade Sie ein, sich mit mir auf eine transformative Reise zu begeben, die Ihre Gesundheit, Ihr Wohlbefinden und Ihre natürliche Schönheit in den Mittelpunkt stellt. Vergessen Sie standardisierte Lösungen – hier bei Mesoskin dreht sich alles um Sie: Ihre individuellen Bedürfnisse, Ihre einzigartige Hautgeschichte und Ihre persönlichen Ziele. Entdecken Sie unser sorgfältig kuratiertes Spektrum an fortschrittlichen, minimal-invasiven Behandlungen und ganzheitlichen Pflegekonzepten, die darauf abzielen, Ihre natürliche Ausstrahlung nachhaltig zu stärken. Lassen Sie uns gemeinsam Ihr volles Potenzial an Schönheit und Vitalität entfalten. Ihre Reise zu langanhaltender, natürlicher Schönheit beginnt jetzt.
+                          </p>
                         </div>
                         <h3 className="h3 mb-4 pt-12">Annette Fascher</h3>
                         <div
