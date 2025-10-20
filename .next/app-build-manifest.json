@@ -16,10 +16,30 @@
       "static/chunks/main-app.js",
       "static/chunks/app/treatments/hypoxie-training/page.js"
     ],
-    "/_not-found/page": [
+    "/treatments/dripspas/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/_not-found/page.js"
+      "static/chunks/app/treatments/dripspas/page.js"
+    ],
+    "/treatments/skinbooster/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/treatments/skinbooster/page.js"
+    ],
+    "/about/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/about/page.js"
+    ],
+    "/treatments/pdo-faden/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/treatments/pdo-faden/page.js"
+    ],
+    "/treatments/doll-lips/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/treatments/doll-lips/page.js"
     ]
   }
 }

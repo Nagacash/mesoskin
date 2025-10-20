@@ -30,15 +30,12 @@ const HeroSection = () => {
                           transition: { delay: 2, duration: 1, ease: "easeInOut" },
                         }}
                       >
-                        <div className="bg-accent-100 p-2 rounded-lg mb-8"
-                            onMouseEnter={mouseEnterHandler}
-                            onMouseLeave={mouseLeaveHandler}
-                        > {/* Added div with pink background and padding */}
-                          <motion.h1
-                            className="h1"
+                        <div className="bg-accent-100 px-4 py-2 rounded-lg mb-8 mx-auto max-w-max">
+                          <motion.h2
+                            className="h2"
                           >
                             <span className="font-bold">Natürliche Schönheit und Gesundheit</span> <br /> beginnt hier
-                          </motion.h1>
+                          </motion.h2>
                         </div>
                         <div className="mb-8 text-left pt-12">
                           <h2 className="h2 mb-4 text-center">Willkommen bei Mesoskin</h2>
