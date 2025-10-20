@@ -111,23 +111,124 @@ const SkinboosterPage = () => {
           </ul>
         </motion.section>
 
-        {/* PROFHILO Section */}
         <motion.section
-          initial={{ opacity: 0, x: 100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8 }}
           className="pt-8 mb-24 text-center px-4"
         >
-            <p className="text-lg text-gray-700 mb-6">
-              Und jetzt auch bei <strong>mesoskin</strong>.hamburg: PROFHILO®!
-            </p>
-          <motion.p
+          <motion.h2
             onMouseEnter={mouseEnterHandler}
             onMouseLeave={mouseLeaveHandler}
-            className="mb-6 text-lg text-gray-700 text-center max-w-prose mx-auto"
+            className="h2 mb-6 text-accent font-bold"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
           >
-            PROFHILO® gehört zu den ganz neuen und besonders vielversprechenden Anti-Aging-Verfahren. Durch die BAP-Injektionstechnik – kurz für Bio Aesthetic Points – verteilt sich der Wirkstoff breit im Gewebe und wirkt auf der gesamten Gesichtshaut. So strahlt Ihr gesamtes Gesicht durch das feuchtigkeitsbindende PROFHILO®.
+            Entdecken Sie die Kraft der Polynukleotide für Ihre Haut!
+          </motion.h2>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+            className="text-lg text-gray-700 mb-6"
+          >
+            Polynukleotide sind natürliche Moleküle, die aus den Bausteinen von DNA und RNA bestehen. In der ästhetischen Medizin werden sie als innovative injizierbare Gels eingesetzt, um die Hautregeneration zu fördern und ein jugendlicheres Aussehen zu erzielen.
+          </motion.p>
+
+          <motion.h3
+            onMouseEnter={mouseEnterHandler}
+            onMouseLeave={mouseLeaveHandler}
+            className="h3 mb-4 text-primary font-semibold"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6, duration: 0.8 }}
+          >
+            Wie wirken Polynukleotide?
+          </motion.h3>
+
+          <motion.ul
+            className="text-lg text-gray-700 mb-6 list-disc list-inside"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8, duration: 0.8 }}
+          >
+            <li>
+              <strong>Stimulierung der Haut:</strong> Sie aktivieren die Produktion von Kollagen und Elastin, verbessern die Hautstruktur und Elastizität.
+            </li>
+            <li>
+              <strong>Feuchtigkeit und Schutz:</strong> Polynukleotide binden Feuchtigkeit und schützen die Haut vor schädlichen Umwelteinflüssen.
+            </li>
+          </motion.ul>
+
+          <motion.h3
+            onMouseEnter={mouseEnterHandler}
+            onMouseLeave={mouseLeaveHandler}
+            className="h3 mb-4 text-primary font-semibold"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.0, duration: 0.8 }}
+          >
+            Vielseitige Anwendungen:
+          </motion.h3>
+
+          <motion.ol
+            className="text-lg text-gray-700 mb-6 list-decimal list-inside"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.2, duration: 0.8 }}
+          >
+            <li>
+              <strong>Hautverjüngung:</strong> Für einen strahlenden, frischen Teint.
+            </li>
+            <li>
+              <strong>Pigmentstörungen:</strong> Mildern Sie unschöne Flecken.
+            </li>
+            <li>
+              <strong>Dunkle Augenringe:</strong> Reduzieren Sie Schatten unter den Augen.
+            </li>
+          </motion.ol>
+
+          <motion.h3
+            onMouseEnter={mouseEnterHandler}
+            onMouseLeave={mouseLeaveHandler}
+            className="h3 mb-4 text-primary font-semibold"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.4, duration: 0.8 }}
+          >
+            Verträglichkeit:
+          </motion.h3>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.6, duration: 0.8 }}
+            className="text-lg text-gray-700 mb-6"
+          >
+            Die Behandlung ist gut verträglich. Mögliche leichte Reaktionen wie Rötungen oder Schwellungen klingen schnell ab.
+          </motion.p>
+
+          <motion.h3
+            onMouseEnter={mouseEnterHandler}
+            onMouseLeave={mouseLeaveHandler}
+            className="h3 mb-4 text-primary font-semibold"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.8, duration: 0.8 }}
+          >
+            Fazit:
+          </motion.h3>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 2.0, duration: 0.8 }}
+            className="text-lg text-gray-700 mb-6"
+          >
+            Erleben Sie die transformative Wirkung von Polynukleotiden und bringen Sie Ihre Haut zum Strahlen!
           </motion.p>
         </motion.section>
 

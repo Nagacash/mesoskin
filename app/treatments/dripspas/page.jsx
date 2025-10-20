@@ -47,7 +47,7 @@ const Dripspas = () => {
                         onMouseLeave={mouseLeaveHandler}
                         className="xl:w-1/2 flex justify-center xl:justify-end">
                     <Image
-                            src="/assets/new4.jpg"
+                            src="/assets/vitamin1.png"
                             width={700}
                             height={550}
                             alt="Liposana 3"

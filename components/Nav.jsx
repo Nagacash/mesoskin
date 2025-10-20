@@ -32,6 +32,10 @@ const links = [
     href: "/treatments/skinbooster",
     name: "Skinbooster",
   },
+  {
+    href: "/treatments/hypoxie-training",
+    name: "Hypoxie-Training",
+  },
 ];
 
 const Nav = () => {
