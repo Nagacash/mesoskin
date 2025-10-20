@@ -13,11 +13,26 @@ const About = () => {
     >
       <div className='container mx-auto pt-40 pb-24'>
         <div className='text-center mb-24 bg-accent-100 p-8 rounded-lg shadow-md'>
-          <h1 className='h1 mb-4'>Über mich</h1>
-      <h1 className="h1 mb-4 text-primary"><strong>Mesoskin</strong> Hamburg</h1>
-          <p className='max-w-2xl mx-auto'>
+          <motion.h1
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ delay: 0.3, duration: 0.8 }}
+            className='h1 mb-4'>Über mich</motion.h1>
+          <motion.h1
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
+            className="h1 mb-4 text-primary"><strong>Mesoskin</strong> Hamburg</motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ delay: 0.7, duration: 0.8 }}
+            className='max-w-2xl mx-auto'>
             Willkommen in der Welt der natürlichen Schönheit!
-          </p>
+          </motion.p>
         </div>
 
         <div className='flex flex-col xl:flex-row items-center justify-between gap-16 mb-24'>
@@ -56,10 +71,20 @@ const About = () => {
         </div>
 
         <div className='text-center max-w-3xl mx-auto mb-24 bg-accent-100 p-8 rounded-lg shadow-md'>
-          <h2 className='h2 mb-6'>Maßgeschneidert</h2>
-          <p className='text-lg mb-8'>
+          <motion.h2
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ delay: 0.3, duration: 0.8 }}
+            className='h2 mb-6'>Maßgeschneidert</motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
+            className='text-lg mb-8'>
             Bei <strong>Mesoskin</strong> Hamburg steht immer das individuelle Angebot im Zentrum. Warum? Weil jeder Mensch und jede Haut anders ist. Oder anders formuliert: Der Mensch steht im Vordergrund. Entsprechend beginnt jede Behandlung mit einem ausführlichen Beratungsgespräch und einem individuelle Therapieplan. Eine umfassende Nachbetreuung steht ebenfalls „auf dem Programm“.
-          </p>
+          </motion.p>
 
         </div>
 

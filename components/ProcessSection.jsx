@@ -38,6 +38,10 @@ const ProcessSection = () => {
     >
       <div className="container mx-auto">
         <motion.h2
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ delay: 0.3, duration: 0.8 }}
           onMouseEnter={mouseEnterHandler}
           onMouseLeave={mouseLeaveHandler}
           className="h2 mb-12 text-center"

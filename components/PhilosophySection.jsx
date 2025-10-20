@@ -121,9 +121,14 @@ const PhilosophySection = () => {
           ))}
         </Masonry>
         <h2 className="h2 mb-6 mt-12">Philosophie:</h2>
-        <p className="lead max-w-3xl mx-auto text-primary mb-24 mt-12">
+        <motion.p
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ delay: 0.3, duration: 0.8 }}
+          className="lead max-w-3xl mx-auto text-primary mb-24 mt-12">
           Ich glaube an einen integrativen Ansatz, der Körper, Geist und Seele miteinander verbindet. Meine Erfahrung als Heilpraktikerin und psychologische Beraterin erlaubt es mir, maßgeschneiderte Lösungen anzubieten, die auf die individuellen Bedürfnisse meiner Klienten abgestimmt sind. Gemeinsam arbeiten wir daran, sowohl körperliche als auch psychische Herausforderungen zu meistern und das volle Potenzial zu entfalten.
-        </p>
+        </motion.p>
       </div>
     </motion.section>
   );

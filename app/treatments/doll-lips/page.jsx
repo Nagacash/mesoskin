@@ -50,20 +50,41 @@ const DollLipsPage = () => {
         {/* Vorteile Section */}
         <section className="pt-24 mb-12 pb-24">
           <motion.h2
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ delay: 0.3, duration: 0.8 }}
             onMouseEnter={mouseEnterHandler}
             onMouseLeave={mouseLeaveHandler}
             className="h2 mb-6 text-accent"
           >
             Vorteile der DOLL Lips Technik
           </motion.h2>
-            <p className="text-lg text-gray-700 mb-6">
+            <motion.p
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ delay: 0.5, duration: 0.8 }}
+              onMouseEnter={mouseEnterHandler}
+              onMouseLeave={mouseLeaveHandler}
+              className="text-lg text-gray-700 mb-6">
               DOLL Lips Technik ist nicht nur effektiv, sondern auch individuell anpassbar. Unser erfahrenes Team von <strong>Mesoskin</strong> sorgt dafür, dass Ihre Lippen perfekt konturiert und voluminisiert werden, ganz nach Ihren persönlichen Wünschen.
-            </p>
+            </motion.p>
           <ul className="list-disc list-inside space-y-2 text-lg text-gray-700 ml-4">
-            <motion.li onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>
+            <motion.li
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ delay: 0.7, duration: 0.8 }}
+              onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>
               <strong>Natürliches Ergebnis:</strong> Vollere Lippen ohne übertriebenen Effekt.
             </motion.li>
-            <motion.li onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>
+            <motion.li
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ delay: 0.9, duration: 0.8 }}
+              onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>
               <strong>Schnelle Erholung:</strong> Minimale Ausfallzeiten ermöglichen es Ihnen, schnell wieder in Ihren Alltag zurückzukehren.
             </motion.li>
           </ul>
