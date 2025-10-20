@@ -1,29 +1,25 @@
 # Mesoskin
 
-My personal web application project showcases a modern approach to beauty salon management using React, Next.js, TailwindCSS, and Framer Motion technologies.
+My web application project showcases a modern approach to beauty salon using React, Next.js, TailwindCSS, and Framer Motion technologies.
 
-With four main pages, starting with the Home page featuring a video modal for displaying YouTube content, users can explore the salon's atmosphere virtually. The About page succinctly describes the salon’s services and ethos, while the Treatments page details various procedures offered. On the Contact page, users find salon contact information and a convenient form for inquiries.
 
-This project not only demonstrates my frontend development skills but also highlights my ability to create intuitive user experiences tailored for the beauty industry.
 
 ## Tech Stack
 
 React | Next.js | TailwindCSS | Framer Motion
 
-## Demo
+## Page
 
-LIVE: [Mesoskin](https://hrs-mesoskin.netlify.app/)
+LIVE: [Mesoskin](https://www.mesoskin-hamburg.com/)
 
-## Screenshot
 
-<img src="/public/assets/hrs-mesoskin.netlify.app_ (1)-full.jpg" width="800">
+
 
 ## Author
 
-### Hubert Śleszyński
+### Maurice Holda
 
-Portfolio: https://hrs-dev.netlify.app/
+Portfolio: cyber-sec-nagacodex.vercel.app/
 
-Linkedin: https://www.linkedin.com/in/hubertsleszynski/
+Linkedin: http://linkedin.com/in/maurice-holda/
 
-Github: https://github.com/HubertSleszynski
