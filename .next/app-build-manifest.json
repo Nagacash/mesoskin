@@ -1,45 +1,185 @@
 {
   "pages": {
-    "/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
+    "/_not-found/page": [
+      "static/chunks/webpack-58d0eb9701e2c1e2.js",
+      "static/chunks/67cfe1a8-f5ee48cd212fc0f1.js",
+      "static/chunks/221-404182f503a6158f.js",
+      "static/chunks/main-app-137a4b5c86f8053a.js",
+      "static/chunks/app/_not-found/page-7a37618bb4972821.js"
     ],
     "/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/layout.css",
-      "static/chunks/app/layout.js"
-    ],
-    "/treatments/hypoxie-training/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/treatments/hypoxie-training/page.js"
-    ],
-    "/treatments/dripspas/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/treatments/dripspas/page.js"
-    ],
-    "/treatments/skinbooster/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/treatments/skinbooster/page.js"
+      "static/chunks/webpack-58d0eb9701e2c1e2.js",
+      "static/chunks/67cfe1a8-f5ee48cd212fc0f1.js",
+      "static/chunks/221-404182f503a6158f.js",
+      "static/chunks/main-app-137a4b5c86f8053a.js",
+      "static/css/dbfced3870396920.css",
+      "static/css/e1e62b4e0edf0913.css",
+      "static/chunks/ca9a4ea3-843f6299b35c6da2.js",
+      "static/chunks/499ed38a-b3f5c7532b548575.js",
+      "static/chunks/94fe57b7-25ac959d92082a94.js",
+      "static/chunks/9e4386a5-8e12f27775ce157e.js",
+      "static/chunks/870-6148c065dfb7011a.js",
+      "static/chunks/578-7fc715865a81db73.js",
+      "static/chunks/687-831d21584f92f3fb.js",
+      "static/chunks/31-d13fad1c581a42ef.js",
+      "static/chunks/698-5ed9345da3bbae80.js",
+      "static/chunks/app/layout-2f29307f05e1e58b.js"
     ],
     "/about/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/about/page.js"
+      "static/chunks/webpack-58d0eb9701e2c1e2.js",
+      "static/chunks/67cfe1a8-f5ee48cd212fc0f1.js",
+      "static/chunks/221-404182f503a6158f.js",
+      "static/chunks/main-app-137a4b5c86f8053a.js",
+      "static/chunks/ca9a4ea3-843f6299b35c6da2.js",
+      "static/chunks/870-6148c065dfb7011a.js",
+      "static/chunks/687-831d21584f92f3fb.js",
+      "static/chunks/592-a4dc155f8844d249.js",
+      "static/chunks/app/about/page-9da6bdee6e5a48ee.js"
+    ],
+    "/impressum/page": [
+      "static/chunks/webpack-58d0eb9701e2c1e2.js",
+      "static/chunks/67cfe1a8-f5ee48cd212fc0f1.js",
+      "static/chunks/221-404182f503a6158f.js",
+      "static/chunks/main-app-137a4b5c86f8053a.js",
+      "static/chunks/ca9a4ea3-843f6299b35c6da2.js",
+      "static/chunks/870-6148c065dfb7011a.js",
+      "static/chunks/578-7fc715865a81db73.js",
+      "static/chunks/app/impressum/page-dc81f40b0bee9088.js"
+    ],
+    "/datenschutz/page": [
+      "static/chunks/webpack-58d0eb9701e2c1e2.js",
+      "static/chunks/67cfe1a8-f5ee48cd212fc0f1.js",
+      "static/chunks/221-404182f503a6158f.js",
+      "static/chunks/main-app-137a4b5c86f8053a.js",
+      "static/chunks/ca9a4ea3-843f6299b35c6da2.js",
+      "static/chunks/870-6148c065dfb7011a.js",
+      "static/chunks/578-7fc715865a81db73.js",
+      "static/chunks/app/datenschutz/page-2bf6da34bca5d6d4.js"
+    ],
+    "/treatments/drip-spa-infusionen/page": [
+      "static/chunks/webpack-58d0eb9701e2c1e2.js",
+      "static/chunks/67cfe1a8-f5ee48cd212fc0f1.js",
+      "static/chunks/221-404182f503a6158f.js",
+      "static/chunks/main-app-137a4b5c86f8053a.js",
+      "static/chunks/870-6148c065dfb7011a.js",
+      "static/chunks/578-7fc715865a81db73.js",
+      "static/chunks/app/treatments/drip-spa-infusionen/page-e8c9754a087946f1.js"
+    ],
+    "/contact/page": [
+      "static/chunks/webpack-58d0eb9701e2c1e2.js",
+      "static/chunks/67cfe1a8-f5ee48cd212fc0f1.js",
+      "static/chunks/221-404182f503a6158f.js",
+      "static/chunks/main-app-137a4b5c86f8053a.js",
+      "static/chunks/870-6148c065dfb7011a.js",
+      "static/chunks/578-7fc715865a81db73.js",
+      "static/chunks/687-831d21584f92f3fb.js",
+      "static/chunks/app/contact/page-f0ebb8e124979a28.js"
+    ],
+    "/page": [
+      "static/chunks/webpack-58d0eb9701e2c1e2.js",
+      "static/chunks/67cfe1a8-f5ee48cd212fc0f1.js",
+      "static/chunks/221-404182f503a6158f.js",
+      "static/chunks/main-app-137a4b5c86f8053a.js",
+      "static/chunks/ca9a4ea3-843f6299b35c6da2.js",
+      "static/chunks/870-6148c065dfb7011a.js",
+      "static/chunks/578-7fc715865a81db73.js",
+      "static/chunks/687-831d21584f92f3fb.js",
+      "static/chunks/177-01cea2d5cc968c2a.js",
+      "static/chunks/823-490e6dbbed1da1b2.js",
+      "static/chunks/app/page-540be52689d39f2e.js"
+    ],
+    "/treatments/hyaluronsaure/page": [
+      "static/chunks/webpack-58d0eb9701e2c1e2.js",
+      "static/chunks/67cfe1a8-f5ee48cd212fc0f1.js",
+      "static/chunks/221-404182f503a6158f.js",
+      "static/chunks/main-app-137a4b5c86f8053a.js",
+      "static/chunks/870-6148c065dfb7011a.js",
+      "static/chunks/578-7fc715865a81db73.js",
+      "static/chunks/687-831d21584f92f3fb.js",
+      "static/chunks/app/treatments/hyaluronsaure/page-04b87f74f1412734.js"
+    ],
+    "/treatments/liposana-3/page": [
+      "static/chunks/webpack-58d0eb9701e2c1e2.js",
+      "static/chunks/67cfe1a8-f5ee48cd212fc0f1.js",
+      "static/chunks/221-404182f503a6158f.js",
+      "static/chunks/main-app-137a4b5c86f8053a.js",
+      "static/chunks/870-6148c065dfb7011a.js",
+      "static/chunks/578-7fc715865a81db73.js",
+      "static/chunks/687-831d21584f92f3fb.js",
+      "static/chunks/app/treatments/liposana-3/page-046b4c4f3612c473.js"
+    ],
+    "/treatments/notox/page": [
+      "static/chunks/webpack-58d0eb9701e2c1e2.js",
+      "static/chunks/67cfe1a8-f5ee48cd212fc0f1.js",
+      "static/chunks/221-404182f503a6158f.js",
+      "static/chunks/main-app-137a4b5c86f8053a.js",
+      "static/chunks/870-6148c065dfb7011a.js",
+      "static/chunks/578-7fc715865a81db73.js",
+      "static/chunks/app/treatments/notox/page-b4b6511f5ff91550.js"
+    ],
+    "/treatments/page": [
+      "static/chunks/webpack-58d0eb9701e2c1e2.js",
+      "static/chunks/67cfe1a8-f5ee48cd212fc0f1.js",
+      "static/chunks/221-404182f503a6158f.js",
+      "static/chunks/main-app-137a4b5c86f8053a.js",
+      "static/chunks/870-6148c065dfb7011a.js",
+      "static/chunks/578-7fc715865a81db73.js",
+      "static/chunks/687-831d21584f92f3fb.js",
+      "static/chunks/app/treatments/page-21068d9f5fb27650.js"
     ],
     "/treatments/pdo-faden/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/treatments/pdo-faden/page.js"
+      "static/chunks/webpack-58d0eb9701e2c1e2.js",
+      "static/chunks/67cfe1a8-f5ee48cd212fc0f1.js",
+      "static/chunks/221-404182f503a6158f.js",
+      "static/chunks/main-app-137a4b5c86f8053a.js",
+      "static/chunks/870-6148c065dfb7011a.js",
+      "static/chunks/578-7fc715865a81db73.js",
+      "static/chunks/687-831d21584f92f3fb.js",
+      "static/chunks/app/treatments/pdo-faden/page-b5759c4cb11a36d1.js"
     ],
     "/treatments/doll-lips/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/treatments/doll-lips/page.js"
+      "static/chunks/webpack-58d0eb9701e2c1e2.js",
+      "static/chunks/67cfe1a8-f5ee48cd212fc0f1.js",
+      "static/chunks/221-404182f503a6158f.js",
+      "static/chunks/main-app-137a4b5c86f8053a.js",
+      "static/chunks/870-6148c065dfb7011a.js",
+      "static/chunks/578-7fc715865a81db73.js",
+      "static/chunks/687-831d21584f92f3fb.js",
+      "static/chunks/app/treatments/doll-lips/page-bcb4ba92bf0f395c.js"
+    ],
+    "/treatments/skinbooster/page": [
+      "static/chunks/webpack-58d0eb9701e2c1e2.js",
+      "static/chunks/67cfe1a8-f5ee48cd212fc0f1.js",
+      "static/chunks/221-404182f503a6158f.js",
+      "static/chunks/main-app-137a4b5c86f8053a.js",
+      "static/chunks/870-6148c065dfb7011a.js",
+      "static/chunks/578-7fc715865a81db73.js",
+      "static/chunks/687-831d21584f92f3fb.js",
+      "static/chunks/177-01cea2d5cc968c2a.js",
+      "static/chunks/app/treatments/skinbooster/page-5ce7777fbef2c38b.js"
+    ],
+    "/treatments/hypoxie-training/page": [
+      "static/chunks/webpack-58d0eb9701e2c1e2.js",
+      "static/chunks/67cfe1a8-f5ee48cd212fc0f1.js",
+      "static/chunks/221-404182f503a6158f.js",
+      "static/chunks/main-app-137a4b5c86f8053a.js",
+      "static/chunks/870-6148c065dfb7011a.js",
+      "static/chunks/578-7fc715865a81db73.js",
+      "static/chunks/687-831d21584f92f3fb.js",
+      "static/chunks/app/treatments/hypoxie-training/page-a0eb09909e570bda.js"
+    ],
+    "/treatments/dripspas/page": [
+      "static/chunks/webpack-58d0eb9701e2c1e2.js",
+      "static/chunks/67cfe1a8-f5ee48cd212fc0f1.js",
+      "static/chunks/221-404182f503a6158f.js",
+      "static/chunks/main-app-137a4b5c86f8053a.js",
+      "static/chunks/ca9a4ea3-843f6299b35c6da2.js",
+      "static/chunks/e87c8530-9cbab8c00ada07ac.js",
+      "static/chunks/870-6148c065dfb7011a.js",
+      "static/chunks/578-7fc715865a81db73.js",
+      "static/chunks/687-831d21584f92f3fb.js",
+      "static/chunks/31-d13fad1c581a42ef.js",
+      "static/chunks/app/treatments/dripspas/page-3a24a24eabfbde32.js"
     ]
   }
 }
