@@ -32,14 +32,6 @@ const Home = () => {
       <ProcessSection />
       <CtaSection />
       <div className="text-center mb-48 mt-12 py-12 flex flex-col md:flex-row justify-center items-center gap-4">
-        <button
-          onMouseEnter={mouseEnterHandler}
-          onMouseLeave={mouseLeaveHandler}
-          className="btn btn-lg bg-accent text-white hover:bg-accent-dark shadow-lg rounded-full px-6 py-3 text-lg md:px-8 md:py-4 md:text-xl transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-accent-300"
-          onClick={handleContactClick}
-        >
-          Jetzt Termin buchen
-        </button>
         <FaqModal />
       </div>
     </>

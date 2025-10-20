@@ -3,16 +3,8 @@ import { FaYoutube, FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 
 const socials = [
   {
-    icon: <FaYoutube />,
-    href: "/",
-  },
-  {
     icon: <FaFacebook />,
-    href: "/",
-  },
-  {
-    icon: <FaTwitter />,
-    href: "/",
+    href: "https://www.facebook.com/annette.fascherwendlandt/",
   },
   {
     icon: <FaInstagram />,
