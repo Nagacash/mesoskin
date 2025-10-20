@@ -109,9 +109,8 @@ const PhilosophySection = () => {
                 <Image
                   src={item.src}
                   alt={item.alt}
-                  width={500}
-                  height={500}
-                  className="transition-transform duration-300 group-hover:scale-105 object-cover grayscale"
+                  fill
+                  className="transition-transform duration-300 group-hover:scale-105 object-cover"
                   priority
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">

@@ -30,7 +30,10 @@ const HeroSection = () => {
                           transition: { delay: 2, duration: 1, ease: "easeInOut" },
                         }}
                       >
-                        <div className="bg-accent-100 px-4 py-2 rounded-lg mb-8 mx-auto max-w-max">
+                        <div className="bg-accent-100 px-4 py-2 rounded-lg mb-8 mx-auto max-w-max"
+                            onMouseEnter={mouseEnterHandler}
+                            onMouseLeave={mouseLeaveHandler}
+                        >
                           <motion.h2
                             className="h2"
                           >
