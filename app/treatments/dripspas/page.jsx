@@ -14,12 +14,11 @@ const Dripspas = () => {
     const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
 
     return (
-        <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1, transition: { delay: 0.2, duration: 0.8 } }}
-            className="min-h-screen pb-12 pt-32 xl:pt-32 overflow-x-hidden"
-        >
-            {/* Hero Section */}
+                                <motion.div
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1, transition: { delay: 0.2, duration: 0.8 } }}
+                                className="min-h-screen pb-12 pt-32 xl:pt-32 overflow-x-hidden"
+                            >            {/* Hero Section */}
             <section className="bg-primary-100 py-12 mt-0 mb-12">
                 <div className="container mx-auto flex flex-col xl:flex-row items-center justify-between gap-8">
                     <div className="text-center xl:text-left xl:w-1/2 xl:flex-shrink-0 pt-0">
@@ -52,6 +51,8 @@ const Dripspas = () => {
                             height={550}
                             alt="Liposana 3"
                             className="rounded-lg shadow-lg"
+                            loading="eager"
+                            priority
                         />
                     </motion.div>
                 </div>
@@ -97,6 +98,8 @@ const Dripspas = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, amount: 0.3 }}
                         transition={{ delay: 0.4, duration: 0.8 }}
+                        onMouseEnter={mouseEnterHandler}
+                        onMouseLeave={mouseLeaveHandler}
                         className="flex justify-center mt-8"
                     >
                         <Image
@@ -384,6 +387,111 @@ const Dripspas = () => {
                                 </p>
                             </CollapsibleSection>
                         </div>
+
+                        {/* NAD+ Infusionen Section */}
+                        <div className="bg-gray-50 p-8 rounded-lg shadow-lg">
+    <CollapsibleSection
+        title="NAD+ Infusionen: Entdecke die Vorteile für mehr Energie und Vitalität"
+        titleClassName="text-gray-900 h2"
+    >
+        <p className="text-lg text-gray-700 mb-6">
+            Erlebe die beeindruckenden Vorteile von **NAD+ Infusionen** – der Schlüssel zu mehr Energie, besserer Zellreparatur und gesteigerten kognitiven Funktionen.
+        </p>
+        <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+            className="flex justify-center mt-8 mb-8"
+        >
+            <Image
+                src="/assets/vitamin3.png"
+                width={500}
+                height={300}
+                alt="NAD+ Infusionen"
+                className="rounded-lg shadow-xl p-8"
+            />
+        </motion.div>
+
+        {/* Vorteile im Überblick */}
+        <h3 className="h3 mb-3 text-primary">Vorteile im Überblick:</h3>
+        <ul className="list-disc list-inside space-y-2 text-gray-700 mb-8">
+            <li>
+                <strong>Energie und Vitalität:</strong> NAD+ verbessert die Mitochondrienfunktion, was zu mehr Ausdauer und Klarheit führt.
+            </li>
+            <li>
+                <strong>Anti-Aging:</strong> Unterstützt die DNA-Reparatur, verlangsamt die Zellalterung und fördert jugendliche Vitalität.
+            </li>
+            <li>
+                <strong>Unterstützung bei chronischen Erkrankungen:</strong> Hilft bei Diabetes, Bluthochdruck und chronischer Müdigkeit.
+            </li>
+            <li>
+                <strong>Kognitive Verbesserung:</strong> Erlebe geistige Frische und emotionale Ausgeglichenheit.
+            </li>
+        </ul>
+
+        {/* Häufige Fragen */}
+        <h3 className="h3 mb-3 text-primary">Häufige Fragen:</h3>
+        <ul className="list-disc list-inside space-y-2 text-gray-700 mb-8">
+            <li>
+                <strong>Wie schnell wirkt eine NAD+ Infusion?</strong> Viele Patienten berichten bereits nach der ersten Sitzung von mehr Energie.
+            </li>
+            <li>
+                <strong>Kann ich NAD+ oral einnehmen?</strong> Ja, aber die Bioverfügbarkeit ist bei Infusionen deutlich höher.
+            </li>
+            <li>
+                <strong>Gibt es Risiken?</strong> Bei Überdosierung können Nebenwirkungen wie Übelkeit und Kopfschmerzen auftreten.
+            </li>
+        </ul>
+
+        {/* Kosten und Anwendung */}
+        <h3 className="h3 mb-3 text-primary">Kosten und Anwendung:</h3>
+        <div className="bg-white p-6 rounded-lg shadow-md mb-8">
+            <p className="text-lg text-gray-700 font-semibold mb-4">
+                Die Preise variieren je nach Dosierung:
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                <div className="p-4 bg-gray-100 rounded-lg">
+                    <p className="font-bold text-primary">125 mg</p>
+                    <p className="text-gray-800">ca. <span className="text-pink-500">200 €</span></p>
+                </div>
+                <div className="p-4 bg-gray-100 rounded-lg">
+                    <p className="font-bold text-primary">250 mg</p>
+                    <p className="text-gray-800">ca. <span className="text-pink-500">450 €</span></p>
+                </div>
+                <div className="p-4 bg-gray-100 rounded-lg">
+                    <p className="font-bold text-primary">500 mg</p>
+                    <p className="text-gray-800">ca. <span className="text-pink-500">550 €</span></p>
+                </div>
+            </div>
+        </div>
+
+        <h3 className="h3 mb-3 text-primary">Empfohlene Häufigkeit:</h3>
+        <div className="bg-white p-6 rounded-lg shadow-md mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-center">
+                <div className="p-4 bg-gray-100 rounded-lg">
+                    <p className="font-bold text-primary">Initialphase</p>
+                    <p className="text-gray-800"><span className="text-pink-500">1-2</span> Infusionen pro Woche für <span className="text-pink-500">3-4</span> Wochen.</p>
+                </div>
+                <div className="p-4 bg-gray-100 rounded-lg">
+                    <p className="font-bold text-primary">Erhaltungsphase</p>
+                    <p className="text-gray-800"><span className="text-pink-500">1</span> Infusion alle <span className="text-pink-500">4-6</span> Wochen.</p>
+                </div>
+            </div>
+        </div>
+
+        {/* Call to Action */}
+        <p className="text-lg text-gray-700 mb-4">
+            Starten Sie Ihre Reise zu mehr Energie und Vitalität!
+        </p>
+        <p className="text-blue-600 hover:text-blue-800 transition-colors duration-300 cursor-pointer font-semibold">
+            Kontaktieren Sie uns für eine persönliche Beratung und finden Sie heraus, ob NAD+ Infusionen die richtige Wahl, wir sind für dich da.
+        </p>
+    </CollapsibleSection>
+</div>
+
+
+
 
                     </div>
                 </section>

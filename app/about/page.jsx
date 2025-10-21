@@ -52,7 +52,7 @@ const About = () => {
                 Schönheit, die bleibt – seit 30 Jahren, natürlich und echt.
               </p>
             <p className="lead max-w-2xl mx-auto text-gray-700 mb-8">
-              Mit <strong>Mesoskin</strong> Hamburg steht Annette Fascher-Wendlandt in Hamburg-Wandsbek für einen exklusiven Ort, der ganz der sanften und gesunden Behandlung der Haut gewidmet ist – mit authentischen Ergebnissen. Faltenbehandlung, Gesichtsformung und Hautverjüngung sind hier wichtige Stichworte. Zu den Schwerpunkten ihrer Arbeit zählt im Bereich der Ästhetik die Doll Lip-Technik. Für diese spezielle Technik wurde sie in Moskau und London ausgebildet. Dazu bietet Annette Fascher-Wendlandt begleitende und ergänzende Maßnahmen wie Kraft und Gesundheit spendende Infusionen an.
+              Mit <strong>Mesoskin</strong> Hamburg steht Annette Fascher-Wendlandt in Hamburg-Rothenbaumchausee 156 für einen exklusiven Ort, der ganz der sanften und gesunden Behandlung der Haut gewidmet ist – mit authentischen Ergebnissen. Faltenbehandlung, Gesichtsformung und Hautverjüngung sind hier wichtige Stichworte. Zu den Schwerpunkten ihrer Arbeit zählt im Bereich der Ästhetik die Doll Lip-Technik. Für diese spezielle Technik wurde sie in Moskau und London ausgebildet. Dazu bietet Annette Fascher-Wendlandt begleitende und ergänzende Maßnahmen wie Kraft und Gesundheit spendende Infusionen an.
             </p>
             </div>
             <button className='btn btn-lg block mx-auto mt-8'>

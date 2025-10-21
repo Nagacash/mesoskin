@@ -29,9 +29,9 @@ const interTight = Inter_Tight({
 });
 
 export const metadata = {
-  title: "Mesoskin Hamburg | Ihr Experte für Schönheit & Wohlbefinden in Deutschland",
-  description: "Entdecken Sie bei Mesoskin Hamburg innovative Schönheits- und Wellness-Services in Deutschland. Wir bieten Dripspas, PDO Fäden, Doll Lips, Hyaluronsäure und Skinbooster für natürliche Ergebnisse und Ihr Wohlbefinden in Hamburg.",
-  keywords: ["naga codex", "maurice holda", "Annette Fascher-Wendlandt"],
+  title: "Mesoskin Hamburg | Dripspas, PDO Fäden, Hyaluronsäure & mehr für Ihre Schönheit",
+  description: "Mesoskin Hamburg bietet innovative Schönheits- und Wellness-Services: Dripspas, PDO Fäden, Doll Lips, Hyaluronsäure, Skinbooster und mehr. Erleben Sie natürliche Ergebnisse und Ihr Wohlbefinden in Hamburg.",
+  keywords: ["Mesoskin Hamburg", "Dripspas Hamburg", "PDO Fäden Hamburg", "Doll Lips Hamburg", "Hyaluronsäure Hamburg", "Skinbooster Hamburg", "Schönheit Hamburg", "Wellness Hamburg", "ästhetische Behandlungen Hamburg", "Faltenunterspritzung Hamburg", "Hautverjüngung Hamburg", "natürliche Schönheit", "Annette Fascher-Wendlandt", "NAD+ Infusionen Hamburg", "NAD+ Therapie Hamburg", "Anti-Aging Hamburg", "Energieboost Hamburg"],
 };
 
 export default function RootLayout({ children }) {
