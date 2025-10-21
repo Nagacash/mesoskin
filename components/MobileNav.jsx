@@ -49,7 +49,7 @@ const links = [
 const MobileNav = ({ setMobileNav }) => {
   const pathname = usePathname();
   return (
-    <nav className="relative flex flex-col h-full p-8">
+    <nav className="relative flex flex-col h-full p-8 pb-20">
       <div
         className="absolute top-4 right-4 cursor-pointer text-accent-DEFAULT z-50"
         onClick={() => setMobileNav(false)}
