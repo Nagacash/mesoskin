@@ -33,7 +33,7 @@ const Header = () => {
     };
   }, []);
   return (
-    <header className={`fixed top-0 left-0 z-[500] w-full bg-white overflow-x-hidden transition-all duration-300 ${scrolled ? 'backdrop-blur-md bg-white/30 pb-3 xl:pb-[25px]' : 'pb-6 xl:pb-[50px]'}`}>
+    <header className={`fixed top-0 left-0 z-[500] w-full bg-white transition-all duration-300 ${scrolled ? 'backdrop-blur-md bg-white/30 pb-3 xl:pb-[25px]' : 'pb-6 xl:pb-[50px]'}`}>
       <div className="bg-primary mb-6 xl:mb-[20px] xl:h-[20px] py-1 xl:py-0 hidden md:block">
         <div className="container mx-auto h-full">
           <div className="flex items-center justify-between h-full">

@@ -36,6 +36,10 @@ const links = [
     href: "/treatments/hypoxie-training",
     name: "Hypoxie-Training",
   },
+  {
+    href: "/contact",
+    name: "Kontakt",
+  },
 ];
 
 const Nav = () => {
