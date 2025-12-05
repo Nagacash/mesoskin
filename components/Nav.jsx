@@ -42,8 +42,10 @@ const links = [
   },
 ];
 
-const Nav = () => {
+const Nav = ({ scrolled }) => {
   const pathname = usePathname();
+  const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
+
   return (
     <nav>
       <div className="container mx-auto flex gap-8">
@@ -52,7 +54,14 @@ const Nav = () => {
             <Link
               href={link.href}
               key={index}
-              className={`${pathname === link.href ? 'border-b-2 border-accent-DEFAULT' : 'text-primary hover:text-accent-DEFAULT'} uppercase transition-colors whitespace-nowrap`}            >
+              onMouseEnter={mouseEnterHandler}
+              onMouseLeave={mouseLeaveHandler}
+              className={`${pathname === link.href
+                ? "border-b-2 border-accent"
+                : ""
+                } ${scrolled ? "text-primary hover:text-accent" : "text-white hover:text-accent"
+                } uppercase transition-colors duration-300 whitespace-nowrap font-medium tracking-wider text-sm`}
+            >
               {link.name}
             </Link>
           );

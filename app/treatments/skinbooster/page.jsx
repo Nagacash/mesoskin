@@ -6,250 +6,198 @@ import { motion } from "framer-motion";
 import { useContext } from "react";
 import { CursorContext } from "@/components/CursorContext";
 import CtaSection from "@/components/CtaSection";
-import FaqModal from "@/components/FaqModal";
-import { useRouter } from "next/navigation";
+import TreatmentHero from "@/components/TreatmentHero";
+import { FaCheck, FaWater, FaGem, FaMagic, FaHandSparkles, FaEye } from "react-icons/fa";
 
 const SkinboosterPage = () => {
   const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
-  const router = useRouter();
-  const handleContactClick = () => {
-    router.push("/contact");
-  };
 
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { delay: 0.2, duration: 0.8 } }}
-      className="min-h-screen pb-12 pt-32 xl:pt-32 overflow-x-hidden z-10"
+      className="min-h-screen overflow-x-hidden"
     >
       {/* Hero Section */}
-      <section className="bg-accent-100 py-16 mb-24">
-        <div className="container mx-auto flex flex-col xl:flex-row items-center justify-between gap-8 pt-12">
-          <div className="text-center xl:text-left xl:w-1/2">
-            <motion.h1
-              onMouseEnter={mouseEnterHandler}
-              onMouseLeave={mouseLeaveHandler}
-              className="h1 mb-4 text-primary"
+      <TreatmentHero
+        title="Skinbooster"
+        subtitle="Spannkraft, die großflächig wirkt – für ein strahlendes, jugendliches Hautbild."
+        imageSrc="/assets/treatments/girls3.png"
+        imageAlt="Skinbooster"
+        overlayOpacity="bg-black/20"
+      />
+
+      <div className="container mx-auto py-24 relative z-10">
+
+        {/* Intro Section */}
+        <section className="mb-32">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
             >
-              Spannkraft, die großflächig wirkt – der Skinbooster
-            </motion.h1>
-            <p className="text-lg text-gray-700 mb-6">
-              Willkommen bei <strong>Mesoskin</strong> – Ihre Experten für Skinbooster
-            </p>
+              <h2 className="h2 mb-8 text-primary">Tiefenwirksame <span className="text-accent">Hydratation</span></h2>
+              <div className="space-y-6 text-lg text-gray-600 font-light leading-relaxed">
+                <p>
+                  Skinbooster sind eine revolutionäre Behandlung zur Verbesserung der Hautqualität. Diese minimalinvasive Methode nutzt hyaluronsäurehaltige Injektionen, um die Haut intensiv mit Feuchtigkeit zu versorgen.
+                </p>
+                <p>
+                  Im Gegensatz zu herkömmlichen Fillern, die Volumen aufbauen, zielen Skinbooster darauf ab, die Haut von innen heraus zu durchfeuchten und ihre Elastizität nachhaltig zu steigern.
+                </p>
+                <p>
+                  Das Ergebnis ist ein strahlendes, jugendliches Aussehen und ein frisches, gesundes Hautbild – ganz ohne künstliche Veränderung der Gesichtszüge.
+                </p>
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="relative"
+            >
+              <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl border border-white/50 aspect-[4/3]">
+                <Image
+                  src="/assets/treatments/girls3.png"
+                  fill
+                  alt="Skinbooster Behandlung"
+                  className="object-cover hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+              <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-accent/10 rounded-full blur-3xl -z-10"></div>
+              <div className="absolute -top-10 -right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl -z-10"></div>
+            </motion.div>
           </div>
-          <motion.div
-            initial={{ opacity: 0, y: 50, scale: 0.9 }}
-            animate={{ opacity: 1, y: 0, scale: 1, transition: { delay: 0.6, duration: 0.8 } }}
-            onMouseEnter={mouseEnterHandler}
-            onMouseLeave={mouseLeaveHandler}
-            className="xl:w-1/2 flex justify-center xl:mt-12 bg-white p-6 rounded-lg shadow-2xl"
-          >
-            <Image
-              src="/assets/treatments/girls3.png"
-              width={500}
-              height={350}
-              alt="Skinbooster"
-              className="rounded-lg w-full h-auto object-cover"
-            />
-          </motion.div>
-        </div>
-      </section>
+        </section>
 
-      <div className="max-w-3xl mx-auto z-0 px-4">
-        <motion.section
-          initial={{ opacity: 0, x: -100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="pt-8 mb-24 text-center px-4"
-        >
-          <motion.h2
-            onMouseEnter={mouseEnterHandler}
-            onMouseLeave={mouseLeaveHandler}
-            className="h2 mb-6 text-accent"
-          >
-            Was sind Skinbooster?
-          </motion.h2>
-            <p className="mb-4 text-lg">
-              Skinbooster sind eine revolutionäre Behandlung zur Verbesserung der Hautqualität. Diese minimalinvasive Methode nutzt hyaluronsäurehaltige Injektionen, um die Haut intensiv mit Feuchtigkeit zu versorgen, die Elastizität zu steigern und ein strahlendes, jugendliches Aussehen zu fördern. Skinbooster sind ideal für alle, die ihre Haut revitalisieren und ein frisches, gesundes Hautbild erzielen möchten.
-            </p>
-        </motion.section>
-        <motion.section
-          initial={{ opacity: 0, x: 100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="pt-12 pb-12 mb-24 bg-accent-100 rounded-lg shadow-md text-center px-12"
-        >
-          <ul className="space-y-2 text-lg text-gray-700 mb-6 text-center">
-            <motion.li onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler} className="pt-12 pb-12">
-              <strong>Intensive Hydratation:</strong> Skinbooster dringen tief in die Haut ein und sorgen für eine langanhaltende Feuchtigkeitsversorgung.
-            </motion.li>
-            <motion.li onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>
-              <strong>Verbesserte Hautstruktur:</strong> Die Behandlung kann feine Linien und Fältchen reduzieren und das allgemeine Hautbild verfeinern.
-            </motion.li>
-            <motion.li onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>
-              <strong>Natürliche Ergebnisse:</strong> Skinbooster fördern die körpereigene Kollagenproduktion, was zu einem natürlichen und strahlenden Aussehen führt.
-            </motion.li>
-          </ul>
-          <motion.p
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ delay: 1.3, duration: 0.8 }}
-            onMouseEnter={mouseEnterHandler}
-            onMouseLeave={mouseLeaveHandler}
-            className="mb-4 text-lg text-gray-700"
-          >
-            In Frage kommen die Skinbooster vor allem für:
-          </motion.p>
-          <ul className="flex flex-wrap justify-center gap-4 mb-6 text-center">
-            <motion.h3 initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 1.4, duration: 0.8 }} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler} className="h3 mb-2 text-gray-700"><strong>Gesicht</strong></motion.h3>,
-            <motion.h3 initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 1.5, duration: 0.8 }} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler} className="h3 mb-2 text-gray-700"><strong>Hals</strong></motion.h3>,
-            <motion.h3 initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 1.6, duration: 0.8 }} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler} className="h3 mb-2 text-gray-700"><strong>Dekolleté</strong></motion.h3>,
-            <motion.h3 initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: 1.7, duration: 0.8 }} onMouseEnter={mouseLeaveHandler} onMouseLeave={mouseEnterHandler} className="h3 mb-2 text-gray-700"><strong>Hände</strong></motion.h3>
-          </ul>
-        </motion.section>
-
-        <motion.section
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.8 }}
-          className="pt-8 mb-24 text-center px-4"
-        >
-          <motion.h2
-            onMouseEnter={mouseEnterHandler}
-            onMouseLeave={mouseLeaveHandler}
-            className="h2 mb-6 text-accent font-bold"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-          >
-            Entdecken Sie die Kraft der Polynukleotide für Ihre Haut!
-          </motion.h2>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-            className="text-lg text-gray-700 mb-6"
-          >
-            Polynukleotide sind natürliche Moleküle, die aus den Bausteinen von DNA und RNA bestehen. In der ästhetischen Medizin werden sie als innovative injizierbare Gels eingesetzt, um die Hautregeneration zu fördern und ein jugendlicheres Aussehen zu erzielen.
-          </motion.p>
-
-          <motion.h3
-            onMouseEnter={mouseEnterHandler}
-            onMouseLeave={mouseLeaveHandler}
-            className="h3 mb-4 text-primary font-semibold"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.8 }}
-          >
-            Wie wirken Polynukleotide?
-          </motion.h3>
-
-          <motion.ul
-            className="text-lg text-gray-700 mb-6 list-disc list-inside"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8, duration: 0.8 }}
-          >
-            <li>
-              <strong>Stimulierung der Haut:</strong> Sie aktivieren die Produktion von Kollagen und Elastin, verbessern die Hautstruktur und Elastizität.
-            </li>
-            <li>
-              <strong>Feuchtigkeit und Schutz:</strong> Polynukleotide binden Feuchtigkeit und schützen die Haut vor schädlichen Umwelteinflüssen.
-            </li>
-          </motion.ul>
-
-          <motion.h3
-            onMouseEnter={mouseEnterHandler}
-            onMouseLeave={mouseLeaveHandler}
-            className="h3 mb-4 text-primary font-semibold"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.0, duration: 0.8 }}
-          >
-            Vielseitige Anwendungen:
-          </motion.h3>
-
-          <motion.ol
-            className="text-lg text-gray-700 mb-6 list-decimal list-inside"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.2, duration: 0.8 }}
-          >
-            <li>
-              <strong>Hautverjüngung:</strong> Für einen strahlenden, frischen Teint.
-            </li>
-            <li>
-              <strong>Pigmentstörungen:</strong> Mildern Sie unschöne Flecken.
-            </li>
-            <li>
-              <strong>Dunkle Augenringe:</strong> Reduzieren Sie Schatten unter den Augen.
-            </li>
-          </motion.ol>
-
-          <motion.h3
-            onMouseEnter={mouseEnterHandler}
-            onMouseLeave={mouseLeaveHandler}
-            className="h3 mb-4 text-primary font-semibold"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.4, duration: 0.8 }}
-          >
-            Verträglichkeit:
-          </motion.h3>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.6, duration: 0.8 }}
-            className="text-lg text-gray-700 mb-6"
-          >
-            Die Behandlung ist gut verträglich. Mögliche leichte Reaktionen wie Rötungen oder Schwellungen klingen schnell ab.
-          </motion.p>
-
-          <motion.h3
-            onMouseEnter={mouseEnterHandler}
-            onMouseLeave={mouseLeaveHandler}
-            className="h3 mb-4 text-primary font-semibold"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.8, duration: 0.8 }}
-          >
-            Fazit:
-          </motion.h3>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 2.0, duration: 0.8 }}
-            className="text-lg text-gray-700 mb-6"
-          >
-            Erleben Sie die transformative Wirkung von Polynukleotiden und bringen Sie Ihre Haut zum Strahlen!
-          </motion.p>
-        </motion.section>
-
-        <div className="text-center mb-24 flex flex-col justify-center items-center">
-          <button
-            onMouseEnter={mouseEnterHandler}
-            onMouseLeave={mouseLeaveHandler}
-            className="btn btn-lg bg-accent text-white hover:bg-accent-dark shadow-lg rounded-full px-8 py-4 transition-all duration-300 ease-in-out transform hover:scale-105 text-xl focus:outline-none focus:ring-4 focus:ring-accent-300 w-full max-w-xs"
-            onClick={handleContactClick}
-          >
-            Jetzt Termin buchen
-          </button>
-          <div className="mt-4 w-full max-w-xs">
-            <FaqModal />
+        {/* Benefits Grid */}
+        <section className="mb-32">
+          <h2 className="h2 text-center mb-16 text-primary">Vorteile der Skinbooster</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Intensive Hydratation",
+                desc: "Dringt tief in die Haut ein und sorgt für eine langanhaltende Feuchtigkeitsversorgung.",
+                icon: <FaWater />
+              },
+              {
+                title: "Verbesserte Struktur",
+                desc: "Reduziert feine Linien und Fältchen und verfeinert das allgemeine Hautbild sichtbar.",
+                icon: <FaGem />
+              },
+              {
+                title: "Natürliche Ergebnisse",
+                desc: "Fördert die körpereigene Kollagenproduktion für ein natürliches und strahlendes Aussehen.",
+                icon: <FaMagic />
+              }
+            ].map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.2, duration: 0.6 }}
+                className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 text-center group hover:-translate-y-2 transition-all duration-300"
+              >
+                <div className="w-16 h-16 mx-auto bg-primary/5 rounded-full flex items-center justify-center text-2xl text-primary mb-6 group-hover:bg-accent group-hover:text-white transition-colors duration-300">
+                  {item.icon}
+                </div>
+                <h3 className="text-xl font-bold text-primary mb-4">{item.title}</h3>
+                <p className="text-gray-600 font-light leading-relaxed">
+                  {item.desc}
+                </p>
+              </motion.div>
+            ))}
           </div>
-        </div>
+        </section>
 
-        {/* Call to Action Section */}
-        <motion.section className="text-center mb-24">
-          <CtaSection />
-        </motion.section>
+        {/* Application Areas */}
+        <section className="mb-32">
+          <div className="bg-primary/5 rounded-3xl p-12 text-center">
+            <h2 className="h2 mb-8 text-primary">Anwendungsbereiche</h2>
+            <div className="flex flex-wrap justify-center gap-4">
+              {["Gesicht", "Hals", "Dekolleté", "Hände"].map((area, index) => (
+                <motion.span
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1, duration: 0.5 }}
+                  className="bg-white px-8 py-4 rounded-full shadow-sm text-lg font-medium text-gray-700 border border-gray-100"
+                >
+                  {area}
+                </motion.span>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Polynukleotide Section */}
+        <section className="mb-32">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="order-2 lg:order-1"
+            >
+              <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl border border-white/50 aspect-square bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                {/* Abstract representation or another image could go here */}
+                <div className="text-9xl text-white/50">
+                  <FaGem />
+                </div>
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="order-1 lg:order-2"
+            >
+              <h2 className="h2 mb-6 text-primary">Die Kraft der <span className="text-accent">Polynukleotide</span></h2>
+              <p className="text-lg text-gray-600 font-light leading-relaxed mb-6">
+                Polynukleotide sind natürliche Moleküle aus DNA- und RNA-Bausteinen. Als innovative injizierbare Gels fördern sie die Hautregeneration und sorgen für ein jugendlicheres Aussehen.
+              </p>
+
+              <div className="space-y-6">
+                <div className="flex gap-4">
+                  <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent shrink-0">
+                    <FaMagic />
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold text-primary mb-2">Wirkung</h4>
+                    <p className="text-gray-600 font-light">Aktiviert Kollagen & Elastin, verbessert Struktur & Elastizität. Bindet Feuchtigkeit & schützt vor Umwelteinflüssen.</p>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent shrink-0">
+                    <FaHandSparkles />
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold text-primary mb-2">Anwendung</h4>
+                    <p className="text-gray-600 font-light">Ideal für Hautverjüngung, gegen Pigmentstörungen und zur Milderung dunkler Augenringe.</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="text-center mb-12">
+          <div className="bg-white/50 backdrop-blur-md rounded-3xl p-12 shadow-xl border border-white/60">
+            <h2 className="h2 mb-6 text-primary">Bereit für strahlende Haut?</h2>
+            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+              Erleben Sie die transformative Wirkung von Skinboostern und Polynukleotiden. Vereinbaren Sie jetzt Ihren Termin.
+            </p>
+            <CtaSection />
+          </div>
+        </section>
+
       </div>
     </motion.div>
   );

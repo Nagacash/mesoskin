@@ -32,15 +32,16 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#343434",
+          DEFAULT: "#1F1F1F", // Sharp, Premium Black
         },
         secondary: {
-          DEFAULT: "#F5F5F5",
-          100: "#C29B7D",
+          DEFAULT: "#FCFBF9", // Clean, Warm White
+          100: "#E8DCD5", // Pale Sand
         },
         accent: {
-          DEFAULT: "#D48C70",
-          100: "#F8E0D7",
+          DEFAULT: "#C5A085", // Bronze/Latte
+          100: "#E8DCD5", // Pale Sand
+          soft: "#F5F0EB", // Soft Linen
         },
       },
       keyframes: {

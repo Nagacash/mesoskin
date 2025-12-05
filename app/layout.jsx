@@ -1,4 +1,4 @@
-import { Marcellus, Montserrat } from "next/font/google";
+import { Marcellus, Montserrat, Inter_Tight } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import CursorProvider from "@/components/CursorContext";
@@ -6,26 +6,32 @@ import Transition from "@/components/Transition";
 import PageTransition from "@/components/PageTransition";
 import Footer from "@/components/Footer";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
+import Chatbot from "@/components/Chatbot";
 import CookieBanner from "@/components/CookieBanner";
 
+// Optimize font loading - only load weights actually used
 const marcellus = Marcellus({
   subsets: ["latin"],
   weight: ["400"],
   variable: "--font-marcellus",
-});
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  variable: "--font-montserrat",
+  display: "swap",
+  preload: true,
 });
 
-// Import Inter Tight from Google Fonts
-import { Inter_Tight } from "next/font/google";
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-montserrat",
+  display: "swap",
+  preload: true,
+});
 
 const interTight = Inter_Tight({
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  weight: ["300", "400", "500", "600"],
   variable: "--font-inter-tight",
+  display: "swap",
+  preload: true,
 });
 
 export const metadata = {
@@ -46,6 +52,7 @@ export default function RootLayout({ children }) {
           <PageTransition>{children}</PageTransition>
           <Footer />
           <ScrollToTopButton />
+          <Chatbot />
           <CookieBanner />
         </CursorProvider>
       </body>

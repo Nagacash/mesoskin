@@ -12,81 +12,58 @@
   h4,
   h5,
   h6 {
-    @apply font-primary;
+    @apply font-primary tracking-wide;
   }
   .h1 {
-    @apply text-[48px] leading-[56px] xl:text-[96px] xl:leading-[100px];
+    @apply text-[48px] leading-[1.1] xl:text-[80px] xl:leading-[1.1];
   }
   .h2 {
-    @apply text-[36px] leading-[44px] xl:text-[64px] xl:leading-[72px];
+    @apply text-[36px] leading-[1.2] xl:text-[56px] xl:leading-[1.2];
   }
   .h3 {
-    @apply text-[28px] leading-[36px] xl:text-[48px] xl:leading-[60px];
+    @apply text-[28px] leading-[1.3] xl:text-[40px] xl:leading-[1.3];
   }
   .lead {
-    @apply text-xl mb-10;
+    @apply text-lg leading-relaxed mb-8 text-primary/80;
   }
   a {
-    @apply font-primary;
+    @apply font-primary hover:text-accent transition-colors duration-300;
   }
 }
 
 .btn {
-  @apply bg-accent rounded-tl-[30px] rounded-bl-[30px] rounded-tr-[4px] rounded-br-[24px] font-primary uppercase tracking-[1px] h-auto py-3 px-6 flex items-center justify-center text-white transition-colors hover:bg-accent/80 text-center w-full max-w-xs;
+  @apply bg-accent rounded-full font-primary uppercase tracking-[2px] text-sm h-[50px] px-8 flex items-center justify-center text-white transition-all duration-300 hover:bg-accent/90 hover:shadow-lg hover:-translate-y-0.5 text-center w-full max-w-[200px];
   white-space: normal;
   word-break: break-word;
 }
 
 .input {
-  @apply h-[54px] bg-white rounded-full px-6;
+  @apply h-[50px] bg-white rounded-lg px-6 border border-gray-200 focus:border-accent transition-colors duration-300;
 }
 
 .textarea {
-  @apply h-[120px] rounded-[20px] px-6 pt-4 resize-none;
+  @apply h-[120px] rounded-lg px-6 pt-4 resize-none border border-gray-200 focus:border-accent transition-colors duration-300;
 }
 
   .input,
-
   .textarea {
-
-    @apply outline-none ring-1 ring-accent/80 focus:ring-1 focus:ring-accent font-primary text-sm uppercase placeholder:text-primary text-primary;
-
+    @apply outline-none font-primary text-sm uppercase placeholder:text-primary/50 text-primary;
   }
 
-
-
   .my-masonry-grid {
-
     display: -webkit-box; /* Not needed if autoprefixing */
-
     display: -ms-flexbox; /* Not needed if autoprefixing */
-
     display: flex;
-
     margin-left: -30px; /* gutter size offset */
-
     width: auto;
-
   }
 
   .my-masonry-grid_column {
-
     padding-left: 30px; /* gutter size */
-
     background-clip: padding-box;
-
   }
 
-
-
-  /* Style your items */
-
-  .my-masonry-grid_column > div {
-
-    /* change div to reference your element you put in <Masonry> */
-
-    background: grey;
-
-    margin-bottom: 30px;
-
+  /* Focus styles for accessibility */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-accent ring-offset-2;
   }

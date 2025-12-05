@@ -6,205 +6,185 @@ import { motion } from "framer-motion";
 import { useContext } from "react";
 import { CursorContext } from "@/components/CursorContext";
 import CtaSection from "@/components/CtaSection";
-import { useRouter } from "next/navigation";
+import TreatmentHero from "@/components/TreatmentHero";
+import { FaBolt, FaLungs, FaHeartbeat, FaRunning, FaBed, FaShieldAlt } from "react-icons/fa";
 
 const HypoxieTrainingPage = () => {
   const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
-  const router = useRouter();
-  const handleContactClick = () => {
-    router.push("/contact");
-  };
 
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { delay: 0.2, duration: 0.8 } }}
-      className="min-h-screen pb-12 pt-32 xl:pt-32 overflow-x-hidden z-10"
+      className="min-h-screen overflow-x-hidden"
     >
       {/* Hero Section */}
-      <section className="bg-accent-100 py-16 mb-24">
-        <div className="container mx-auto flex flex-col xl:flex-row items-center justify-between gap-8 xl:gap-16 pt-12">
-          <div className="text-center xl:w-1/2">
-            <motion.h1
-              onMouseEnter={mouseEnterHandler}
-              onMouseLeave={mouseLeaveHandler}
-              className="h3 mb-4 text-primary"
+      <TreatmentHero
+        title="Mitochondrien & Hypoxie"
+        subtitle="Innovatives Behandlungskonzept für mehr Energie, Vitalität und Leistungsfähigkeit."
+        imageSrc="/assets/vitamin2.png"
+        imageAlt="Hypoxie-Training"
+        overlayOpacity="bg-black/20"
+      />
+
+      <div className="container mx-auto py-24 relative z-10">
+
+        {/* Intro Section */}
+        <section className="mb-32">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
             >
-              Innovatives Behandlungskonzept: Mitochondrien-Infusion & Hypoxie-Training
-            </motion.h1>
-            <p className="text-lg text-gray-700 mb-6">
-              Steigern Sie Ihre Gesundheit und Leistungsfähigkeit mit unserem einzigartigen Behandlungskonzept! In der unseren Praxisräumen und n der Rothenbaumchaussee in Hamburg kombinieren wir die Kraft der Mitochondrien-Infusion mit dem effektiven Hypoxie-Training. Dieses synergistische Konzept ist ideal für alle, die ihre Vitalität und Lebensqualität nachhaltig verbessern möchten.
-            </p>
+              <h2 className="h2 mb-8 text-primary">Synergie für Ihre <span className="text-accent">Gesundheit</span></h2>
+              <div className="space-y-6 text-lg text-gray-600 font-light leading-relaxed">
+                <p>
+                  Steigern Sie Ihre Gesundheit und Leistungsfähigkeit mit unserem einzigartigen Behandlungskonzept! In unseren Praxisräumen kombinieren wir die Kraft der Mitochondrien-Infusion mit dem effektiven Hypoxie-Training.
+                </p>
+                <p>
+                  Dieses synergistische Konzept ist ideal für alle, die ihre Vitalität und Lebensqualität nachhaltig verbessern möchten. Wir zielen direkt auf die Kraftwerke Ihrer Zellen ab – die Mitochondrien.
+                </p>
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="relative"
+            >
+              <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl border border-white/50 aspect-[4/3]">
+                <Image
+                  src="/assets/vitamin2.png"
+                  fill
+                  alt="Mitochondrien Behandlung"
+                  className="object-cover hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+              <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-accent/10 rounded-full blur-3xl -z-10"></div>
+              <div className="absolute -top-10 -right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl -z-10"></div>
+            </motion.div>
           </div>
-          <motion.div
-            initial={{ opacity: 0, y: 50, scale: 0.9 }}
-            animate={{ opacity: 1, y: 0, scale: 1, transition: { delay: 0.6, duration: 0.8 } }}
-            onMouseEnter={mouseEnterHandler}
-            onMouseLeave={mouseLeaveHandler}
-            className="xl:w-1/2 flex justify-center bg-white p-6 rounded-lg shadow-2xl"
-          >
-            <Image
-              src="/assets/vitamin2.png" // Placeholder image
-              width={500}
-              height={350}
-              alt="Hypoxie-Training"
-              className="rounded-lg w-full h-auto object-cover"
-            />
-          </motion.div>
-        </div>
-      </section>
+        </section>
 
-      <div className="max-w-3xl mx-auto z-0 px-4">
-        <motion.section
-          initial={{ opacity: 0, x: -100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="pt-8 mb-24 text-center px-4"
-        >
-          <motion.h2
-            onMouseEnter={mouseEnterHandler}
-            onMouseLeave={mouseLeaveHandler}
-            className="h2 mb-6 text-accent"
-          >
-            Was ist Mitochondrien-Infusion?
-          </motion.h2>
-            <p className="mb-4 text-lg">
-              Die Mitochondrien-Infusion liefert essentielle Nährstoffe, die Ihre Zellen mit Energie versorgen. Diese Infusion fördert den Energiestoffwechsel, steigert die Zellregeneration und verbessert die Funktion von geschädigten Mitochondrien – den Kraftwerken Ihrer Zellen. Erleben Sie, wie Sie sich energiegeladener und vitaler fühlen!
+        {/* Concept Details */}
+        <section className="mb-32">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="bg-white p-10 rounded-3xl shadow-lg border border-gray-100"
+            >
+              <div className="w-16 h-16 bg-primary/5 rounded-2xl flex items-center justify-center text-3xl text-primary mb-8">
+                <FaBolt />
+              </div>
+              <h3 className="h3 mb-4 text-primary">Mitochondrien-Infusion</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Die Infusion liefert essentielle Nährstoffe, die Ihre Zellen mit Energie versorgen. Sie fördert den Energiestoffwechsel, steigert die Zellregeneration und verbessert die Funktion geschädigter Mitochondrien. Fühlen Sie sich energiegeladener und vitaler!
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+              className="bg-white p-10 rounded-3xl shadow-lg border border-gray-100"
+            >
+              <div className="w-16 h-16 bg-accent/5 rounded-2xl flex items-center justify-center text-3xl text-accent mb-8">
+                <FaLungs />
+              </div>
+              <h3 className="h3 mb-4 text-primary">Hypoxie-Training (IHHT)</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Das Intervall-Hypoxie-Hyperoxie-Training simuliert Höhenbedingungen. Mit dem modernen MITOVIT®-Gerät wird die Sauerstoffkonzentration gezielt verändert. Dies aktiviert Mitochondrien, fördert deren Neubildung und verbessert die Sauerstoffversorgung aller Organe.
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Benefits Grid */}
+        <section className="mb-32">
+          <h2 className="h2 text-center mb-16 text-primary">Vorteile des kombinierten Ansatzes</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                title: "Energieproduktion",
+                desc: "Maximieren Sie die Energie in Ihren Zellen.",
+                icon: <FaBolt />
+              },
+              {
+                title: "Regeneration",
+                desc: "Abbau alter und Bildung neuer, leistungsfähiger Mitochondrien.",
+                icon: <FaHeartbeat />
+              },
+              {
+                title: "Stressresistenz",
+                desc: "Stärken Sie Ihre Widerstandskraft und fördern Sie Ihr Wohlbefinden.",
+                icon: <FaShieldAlt />
+              },
+              {
+                title: "Leistungsfähigkeit",
+                desc: "Fortschritte in physischer und psychischer Leistung.",
+                icon: <FaRunning />
+              }
+            ].map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+                className="bg-white/60 backdrop-blur-sm p-6 rounded-xl shadow-sm border border-white/60 text-center hover:shadow-md transition-all duration-300"
+              >
+                <div className="w-12 h-12 mx-auto bg-primary/5 rounded-full flex items-center justify-center text-xl text-primary mb-4">
+                  {item.icon}
+                </div>
+                <h4 className="text-lg font-bold text-primary mb-2">{item.title}</h4>
+                <p className="text-sm text-gray-600">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </section>
+
+        {/* Target Group Section */}
+        <section className="mb-32">
+          <div className="bg-accent/5 rounded-3xl p-12 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-white/40 to-transparent pointer-events-none"></div>
+            <div className="relative z-10 text-center max-w-4xl mx-auto">
+              <h2 className="h2 mb-8 text-primary">Für wen ist es geeignet?</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="bg-white p-6 rounded-xl shadow-sm">
+                  <FaBed className="text-4xl text-accent mx-auto mb-4" />
+                  <p className="font-medium text-gray-700">Menschen mit Erschöpfung, Stress oder Schlafstörungen</p>
+                </div>
+                <div className="bg-white p-6 rounded-xl shadow-sm">
+                  <FaRunning className="text-4xl text-accent mx-auto mb-4" />
+                  <p className="font-medium text-gray-700">Leistungssportler zur Verbesserung von Ausdauer & Regeneration</p>
+                </div>
+                <div className="bg-white p-6 rounded-xl shadow-sm">
+                  <FaHeartbeat className="text-4xl text-accent mx-auto mb-4" />
+                  <p className="font-medium text-gray-700">Menschen mit chronischen Erkrankungen</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="text-center mb-12">
+          <div className="bg-white/50 backdrop-blur-md rounded-3xl p-12 shadow-xl border border-white/60">
+            <h2 className="h2 mb-6 text-primary">Erleben Sie die Synergie!</h2>
+            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+              Entdecken Sie, wie Sie Ihre Energie, Leistungsfähigkeit und Lebensqualität nachhaltig steigern können. Vereinbaren Sie noch heute einen Termin.
             </p>
-        </motion.section>
-        <motion.section
-          initial={{ opacity: 0, x: 100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="pt-12 pb-12 mb-24 bg-accent-100 rounded-lg shadow-md text-center px-12"
-        >
-          <motion.h2
-            onMouseEnter={mouseEnterHandler}
-            onMouseLeave={mouseLeaveHandler}
-            className="h2 mb-6 text-accent"
-          >
-            Was ist Hypoxie-Training?
-          </motion.h2>
-          <p className="mb-4 text-lg">
-            Das Intervall-Hypoxie-Hyperoxie-Training (IHHT) simuliert Höhenbedingungen, um Ihre Leistungsfähigkeit zu steigern. Mit dem modernen MITOVIT®-Gerät wird die Sauerstoffkonzentration in der eingeatmeten Luft gezielt verändert. Dies aktiviert Ihre Mitochondrien, fördert die Bildung neuer Mitochondrien und verbessert die Sauerstoffversorgung aller Organe.
-          </p>
-        </motion.section>
+            <CtaSection />
+          </div>
+        </section>
 
-        <motion.section
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.8 }}
-          className="pt-8 mb-24 text-center px-4"
-        >
-          <motion.h2
-            onMouseEnter={mouseEnterHandler}
-            onMouseLeave={mouseLeaveHandler}
-            className="h2 mb-6 text-accent font-bold"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-          >
-            Die Vorteile unseres kombinierten Ansatzes:
-          </motion.h2>
-
-          <motion.ul
-            className="text-lg text-gray-700 mb-6 list-disc list-inside"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8, duration: 0.8 }}
-          >
-            <li>
-              <strong>Steigerung der Energieproduktion:</strong> Maximieren Sie die Energie in Ihren Zellen durch die Kombination von Infusion und Hypoxie-Training.
-            </li>
-            <li>
-              <strong>Verbesserte Regeneration:</strong> Alte Mitochondrien werden abgebaut, während neue, leistungsfähige Mitochondrien gebildet werden.
-            </li>
-            <li>
-              <strong>Erhöhte Stressresistenz:</strong> Stärken Sie Ihre Widerstandskraft gegen Stress und fördern Sie Ihr allgemeines Wohlbefinden.
-            </li>
-            <li>
-              <strong>Optimierte Leistungsfähigkeit:</strong> Erleben Sie Fortschritte in Ihrer physischen und psychischen Leistungsfähigkeit, sei es im Alltag oder im Sport.
-            </li>
-          </motion.ul>
-        </motion.section>
-
-        <motion.section
-          initial={{ opacity: 0, x: 100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="pt-12 pb-12 mb-24 bg-accent-100 rounded-lg shadow-md text-center px-12"
-        >
-          <motion.h2
-            onMouseEnter={mouseEnterHandler}
-            onMouseLeave={mouseLeaveHandler}
-            className="h2 mb-6 text-accent"
-          >
-            Für wen ist dieses Behandlungskonzept geeignet?
-          </motion.h2>
-          <p className="mb-4 text-lg">
-            Unser innovatives Konzept ist ideal für:
-          </p>
-          <ul className="text-lg text-gray-700 mb-6 list-disc list-inside">
-            <li>Menschen mit chronischen Erkrankungen, die kein körperliches Training absolvieren können</li>
-            <li>Leistungssportler, die ihre Ausdauer und Regeneration verbessern möchten</li>
-            <li>Personen, die unter Erschöpfung, Stress oder Schlafstörungen leiden</li>
-          </ul>
-        </motion.section>
-
-        <motion.section
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.8 }}
-          className="pt-8 mb-24 text-center px-4"
-        >
-          <motion.h2
-            onMouseEnter={mouseEnterHandler}
-            onMouseLeave={mouseLeaveHandler}
-            className="h2 mb-6 text-accent font-bold"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-          >
-            Erleben Sie die Synergie von Infusion und Hypoxie-Training!
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-            className="text-lg text-gray-700 mb-6"
-          >
-            Kombinieren Sie die Vorteile der Mitochondrien-Infusion mit dem effektiven Hypoxie-Training und entdecken Sie, wie Sie Ihre Energie, Leistungsfähigkeit und Lebensqualität nachhaltig steigern können.
-          </motion.p>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.8 }}
-            className="text-lg text-gray-700 mb-6"
-          >
-            Vereinbaren Sie noch heute einen Termin in unserer Privatpraxis am Bült und erleben Sie die transformative Wirkung unseres ganzheitlichen Behandlungskonzepts!
-          </motion.p>
-        </motion.section>
-
-        <div className="text-center mb-24 flex flex-col justify-center items-center">
-          <button
-            onMouseEnter={mouseEnterHandler}
-            onMouseLeave={mouseLeaveHandler}
-            className="btn btn-lg bg-accent text-white hover:bg-accent-dark shadow-lg rounded-full px-8 py-4 transition-all duration-300 ease-in-out transform hover:scale-105 text-xl focus:outline-none focus:ring-4 focus:ring-accent-300 w-full max-w-xs"
-            onClick={handleContactClick}
-          >
-            Jetzt Termin buchen
-          </button>
-        </div>
-
-        {/* Call to Action Section */}
-        <motion.section className="text-center mb-24">
-          <CtaSection />
-        </motion.section>
       </div>
     </motion.div>
   );

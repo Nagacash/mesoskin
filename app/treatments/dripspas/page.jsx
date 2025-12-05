@@ -5,674 +5,267 @@ import { motion } from "framer-motion";
 import { useContext } from "react";
 import { CursorContext } from "@/components/CursorContext";
 import CtaSection from "@/components/CtaSection";
-import InfusionSection from "@/components/InfusionSection";
 import CollapsibleSection from "@/components/CollapsibleSection";
-import { FaStar } from "react-icons/fa";
+import TreatmentHero from "@/components/TreatmentHero";
+import Button from "@/components/Button";
+import { FaStar, FaCheck } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
+import { useRouter } from "next/navigation";
+import { CONTACT_INFO } from "@/lib/constants";
 
 const Dripspas = () => {
     const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
+    const router = useRouter();
 
     return (
-                                <motion.div
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1, transition: { delay: 0.2, duration: 0.8 } }}
-                                className="min-h-screen pb-12 pt-32 xl:pt-32 overflow-x-hidden"
-                            >            {/* Hero Section */}
-            <section className="bg-primary-100 py-12 mt-0 mb-12">
-                <div className="container mx-auto flex flex-col xl:flex-row items-center justify-between gap-8">
-                    <div className="text-center xl:text-left xl:w-1/2 xl:flex-shrink-0 pt-0">
-                        <motion.h1
-                            onMouseEnter={mouseEnterHandler}
-                            onMouseLeave={mouseLeaveHandler}
-                            className="h1 mb-4 text-primary py-4 px-8"
-                        >
-                            Infusionstherapie: Ihre Lösung für eine schnelle Genesung
-                        </motion.h1>
-                        <motion.p
-                            onMouseEnter={mouseEnterHandler}
-                            onMouseLeave={mouseLeaveHandler}
-                            className="lead max-w-2xl mx-auto xl:mx-0 text-gray-700 px-8"
-                        >
-                            Entdecken Sie die Vorteile der Infusionstherapie – eine effektive Methode zur gezielten Zufuhr von Medikamenten, Vitaminen und Mineralstoffen direkt in die Blutbahn.
-                        </motion.p>
-                    </div>
-                    <motion.div
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ amount: 0.3 }}
-                        transition={{ delay: 0.3, duration: 0.8 }}
-                        onMouseEnter={mouseEnterHandler}
-                        onMouseLeave={mouseLeaveHandler}
-                        className="xl:w-1/2 flex justify-center xl:justify-end">
-                    <Image
-                            src="/assets/vitamin1.png"
-                            width={700}
-                            height={550}
-                            alt="Liposana 3"
-                            className="rounded-lg shadow-lg"
-                            loading="eager"
-                            priority
-                        />
-                    </motion.div>
-                </div>
-            </section>
-
-            <div className="container mx-auto">
-
-
-                {/* Key Benefits Section */}
-                <section className="mb-12 py-12 bg-accent-100 p-8 rounded-lg shadow-xl">
-                    <motion.h2
-                        onMouseEnter={mouseEnterHandler}
-                        onMouseLeave={mouseLeaveHandler}
-                        className="h2 mb-6 text-accent mt-24"
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ amount: 0.3 }}
-                        transition={{ delay: 0.3, duration: 0.8 }}
-                    >
-                        Vorteile der Infusionstherapie
-                    </motion.h2>
-                    <ul className="list-disc list-inside space-y-4 text-lg text-gray-700 ml-4 mb-6">
-                        <motion.li onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler} className="py-4">
-                            <strong>Schnelle Wirkung:</strong> Stoffe wirken direkt im Blutkreislauf.
-                        </motion.li>
-                        <motion.li onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler} className="py-4">
-                            <strong>Individuelle Anpassung:</strong> Jede Infusion wird auf Ihre Bedürfnisse abgestimmt.
-                        </motion.li>
-                        <motion.li onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler} className="py-4">
-                            <strong>Vielfältige Anwendungen:</strong>
-                            <ul className="list-circle list-inside ml-6 mt-2 space-y-1 text-base">
-                                <li>Energie- und Leistungssteigerung</li>
-                                <li>Stärkung des Immunsystems</li>
-                                <li>Detox zur Entgiftung</li>
-                                <li>Unterstützung bei chronischen Erkrankungen</li>
-                                <li>Haut- und Schönheitspflege</li>
-                                <li>Stressbewältigung und mentale Klarheit.</li>
-                            </ul>
-                        </motion.li>
-                    </ul>
-                    <motion.div
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, amount: 0.3 }}
-                        transition={{ delay: 0.4, duration: 0.8 }}
-                        onMouseEnter={mouseEnterHandler}
-                        onMouseLeave={mouseLeaveHandler}
-                        className="flex justify-center mt-8"
-                    >
-                        <Image
-                            src="/assets/ing5.png"
-                            width={500}
-                            height={300}
-                            alt="Vorteile der Infusionstherapie"
-                            className="rounded-lg shadow-xl p-8"
-                        />
-                    </motion.div>
-                </section>
-                <InfusionSection />
-
-
-
-                {/* Restyled Section */}
-                <section className="py-12">
-                    <div className="space-y-12">
-
-                        {/* Ablauf Section */}
-                        <div className="bg-white p-8 rounded-lg shadow-lg">
-                            <CollapsibleSection title="Ablauf der Infusionstherapie" titleClassName="h2 text-gray-900">
-                                <p className="text-lg text-gray-700 mb-6">
-                                    Zunächst erfolgt eine Stressmessung (HRV), um Ihre individuelle Situation zu beurteilen. Anschließend wird die Therapie in entspannter Atmosphäre durchgeführt.
-                                </p>
-                                <div className="border-t pt-4 mt-6">
-                                    <h3 className="h3 mb-3 text-primary">Fazit</h3>
-                                    <p className="text-lg text-gray-700 mb-4">
-                                        Erleben Sie, wie schnell Sie sich wieder vital und gesund fühlen können. Kontaktieren Sie uns für eine individuelle Beratung zur Infusionstherapie!
-                                    </p>
-                                </div>
-                            </CollapsibleSection>
-                        </div>
-
-                        {/* BasenBalance-Infusion Section */}
-                        <div className="bg-gray-50 p-8 rounded-lg shadow-lg">
-                            <CollapsibleSection title="BasenBalance-Infusion" titleClassName="text-gray-900 h2">
-                                <p className="text-xl text-gray-700 mb-6">
-                                    Entgiften und regenerieren Sie Ihren Körper mit unserer BasenBalance-Infusion!
-                                </p>
-                                <p className="text-lg text-gray-700 mb-8">
-                                    In der heutigen schnelllebigen Welt sind wir ständig Umweltgiften, ungesunder Ernährung und Stress ausgesetzt, die unseren Säure-Basen-Haushalt aus dem Gleichgewicht bringen können. Bei Body&Mind  bieten wir Ihnen die BasenBalance-Infusion an, eine innovative Gesundheitsbehandlung, die speziell entwickelt wurde, um Ihren Körper zu entgiften und ein gesundes, alkalisches Milieu zu fördern.
-                                </p>
-                                <h3 className="h3 mb-3 text-primary">Was sind Baseninfusionen?</h3>
-                                <p className="text-gray-700 mb-6">
-                                    Baseninfusionen sind hochwirksame Flüssigkeitsbehandlungen, die wichtige Mineralien und Nährstoffe enthalten, um den pH-Wert Ihres Körpers zu regulieren. Diese Infusionen helfen nicht nur bei der Entgiftung, sondern unterstützen auch die Zellregeneration und das allgemeine Wohlbefinden.
-                                </p>
-                                <h3 className="h3 mb-3 text-primary">Warum BasenBalance-Infusion?</h3>
-                                <ul className="list-disc list-inside space-y-2 text-gray-700">
-                                    <li><strong>Entgiftung:</strong> Entfernen Sie schädliche Säuren und Toxine aus Ihrem Körper.</li>
-                                    <li><strong>Vitalität:</strong> Steigern Sie Ihre Energie und Lebensqualität durch einen ausgeglichenen Säure-Basen-Haushalt.</li>
-                                    <li><strong>Wohlbefinden:</strong> Fördern Sie ein Gefühl der inneren Ruhe und Ausgeglichenheit.</li>
-                                </ul>
-                                <p className="text-lg text-gray-700 font-medium mb-4">
-                                    Erleben Sie die Vorteile der BasenBalance-Infusion und tun Sie Ihrem Körper etwas Gutes! Lassen Sie uns gemeinsam den Weg zu mehr Gesundheit und Vitalität gehen.
-                                </p>
-                                <p className="italic text-base text-gray-500 text-center">
-                                    Schönheit und Gesundheit, die bleibt – seit 30 Jahren, natürlich und echt.
-                                </p>
-                            </CollapsibleSection>
-                        </div>
-
-                        {/* Radiance Infusion Section */}
-                        <div className="bg-white p-8 rounded-lg shadow-lg">
-                            <CollapsibleSection title="Radiance Infusion – Strahlende Haut und glänzendes Haar" titleClassName="h2 text-gray-900">
-                                <p className="text-xl text-gray-700 mb-8">
-                                    Entdecken Sie die Radiance Infusion – Ihre Lösung für gesunde Haut und glänzendes Haar! Diese innovative Infusion kombiniert hochwertige Inhaltsstoffe, die speziell entwickelt wurden, um Ihre natürliche Schönheit zu fördern.
-                                </p>
-                                <h3 className="h3 mb-4 text-accent">Vorteile der Radiance Infusion:</h3>
-                                <ul className="list-disc list-inside space-y-3 text-gray-700">
-                                    <li><strong>Strahlende Hautpflege:</strong> Verbessert das Hautbild und sorgt für einen frischen Teint.</li>
-                                    <li><strong>Gesundes Haar:</strong> Unterstützt die Haarstruktur und verleiht strahlenden Glanz.</li>
-                                    <li><strong>Intensive Feuchtigkeitsversorgung:</strong> Versorgt trockene Haut und Haare mit essenziellen Nährstoffen.</li>
-                                </ul>
-                                <h3 className="h3 mb-4 text-accent">Schlüsselwirkstoffe:</h3>
-                                <ul className="list-disc list-inside space-y-3 text-gray-700">
-                                    <li><strong>N-Acetyl-L-Cystein (300 mg):</strong> Schützt die Haut vor Umwelteinflüssen und stärkt die Hautbarriere.</li>
-                                    <li><strong>D-Panthenol (100 mg):</strong> Bietet intensive Feuchtigkeit und unterstützt die Hautheilung.</li>
-                                    <li><strong>Pyridoxin-HCl (Vitamin B6, 100 mg):</strong> Fördert den Zellstoffwechsel und verbessert das Hautbild.</li>
-                                    <li><strong>Zink-D-Gluconat-Trihydrat (69,7 mg):</strong> Reguliert die Talgproduktion und wirkt entzündungshemmend.</li>
-                                    <li><strong>D-Biotin (5 mg):</strong> Unterstützt gesundes Haarwachstum und erhält die Hautelastizität.</li>
-                                </ul>
-                                <p className="text-lg text-gray-700 font-medium mb-3">
-                                    Gönnen Sie sich die Pflege, die Sie verdienen! Erleben Sie die transformative Wirkung der Radiance Infusion – für gesunde Haut und glänzendes Haar. Kontaktieren Sie uns für weitere Informationen!
-                                </p>
-                            </CollapsibleSection>
-                        </div>
-
-                        {/* Mitochondrien Vitalitäts-Boost Section */}
-                        <div className="bg-gray-50 p-8 rounded-lg shadow-lg">
-                            <CollapsibleSection title="Mitochondrien Vitalitäts-Boost – Ihre Quelle für nachhaltige Energie und Wohlbefinden" titleClassName="text-gray-900 h2">
-                                <p className="text-lg text-gray-700 mb-6">
-                                    Entdecken Sie die Mitochondrien Vitalitäts-Boost-Infusion in unserer Privatpraxis. Diese innovative Behandlung ist darauf ausgelegt, Ihre Zellleistung zu maximieren und Ihnen einen kraftvollen Energieschub zu verleihen.
-                                </p>
-                                <h3 className="h3 mb-3 text-primary">Was ist die Mitochondrien Vitalitäts-Boost-Infusion?</h3>
-                                <p className="text-lg text-gray-700 mb-8">
-                                    Unsere Mitochondrien Vitalitäts-Boost-Infusion kombiniert hochwertige Inhaltsstoffe, die speziell entwickelt wurden, um die Funktion Ihrer Mitochondrien – den Kraftwerken Ihrer Zellen – zu optimieren. Durch die gezielte Förderung der ATP-Produktion unterstützen wir Ihre körperliche und geistige Leistungsfähigkeit.
-                                </p>
-                                <h3 className="h3 mb-3 text-primary">Starke Inhaltsstoffe für Ihre Gesundheit:</h3>
-                                <ul className="list-disc list-inside space-y-2 text-gray-700">
-                                    <li><strong>Aminosäuren:</strong> L-Arginin, L-Lysin, L-Carnitin und L-Glutathion zur Stärkung der Zellfunktion und des Immunsystems.</li>
-                                    <li><strong>Vitamine:</strong> B2, B3, B5, B6, B7, B9, B12 und Vitamin C für eine optimale Nährstoffversorgung und Unterstützung des Stoffwechsels.</li>
-                                    <li><strong>Mineralien:</strong> Calcium, Kalium, Magnesium, Selen und Zink zur Förderung einer gesunden Zellfunktion und Immunabwehr.</li>
-                                    <li><strong>Weitere:</strong> Taurin, N-Acetyl-L-Cystein und Alpha-Liponsäure für Entgiftung und antioxidativen Schutz.</li>
-                                </ul>
-                                <h3 className="h3 mb-3 text-primary">Vorteile der Mitochondrien Vitalitäts-Boost-Infusion:</h3>
-                                <ul className="list-disc list-inside space-y-2 text-gray-700">
-                                    <li><strong>Optimierung der Zellleistung:</strong> Verbessern Sie Ihre mitochondriale Atmung und die ATP-Bildung für mehr Energie.</li>
-                                    <li><strong>Effektive Entgiftung:</strong> Unterstützen Sie die Schwermetalldetoxifikation und schützen Sie sich vor freien Radikalen.</li>
-                                    <li><strong>Steigerung der Leistungsfähigkeit:</strong> Erleben Sie schnelle Regeneration, gesteigerte Vitalität und reduzierte Stresssymptome.</li>
-                                </ul>
-                                <h3 className="h3 mb-3 text-primary">Positive Erfahrungen unserer Patienten:</h3>
-                                <p className="text-lg text-gray-700 mb-8">
-                                    Zahlreiche Patienten berichten von Verbesserungen bei Allergien, Mangelzuständen, Bluthochdruck und chronischen Schmerzen. Die Mitochondrien Vitalitäts-Boost-Infusion fördert außerdem die Regeneration nach Erkrankungen und steigert das allgemeine Wohlbefinden.
-                                </p>
-                                <p className="text-lg text-gray-700 font-medium mb-4">
-                                    Gönnen Sie sich den Vitalitäts-Boost, den Sie verdienen! Erleben Sie, wie die Mitochondrien Vitalitäts-Boost-Infusion Ihr Energielevel und Ihre Lebensqualität nachhaltig steigern kann.
-                                </p>
-                                <p className="text-blue-600 hover:text-blue-800 transition-colors duration-300 cursor-pointer font-semibold">
-                                    Vereinbaren Sie noch heute einen Termin in unseren Räumen in der RothenbaumChaussee in Hamburg.Starten Sie Ihre Reise zu mehr Energie und Gesundheit!
-                                </p>
-                            </CollapsibleSection>
-                        </div>
-
-                        {/* B Energy Infusion Section */}
-                        <div className="bg-white p-8 rounded-lg shadow-lg">
-                            <CollapsibleSection title="B Energy Infusion – Ihre Quelle für Vitalität!" titleClassName="h2 text-gray-900">
-                                <p className="text-lg text-gray-700 mb-6">
-                                    Erleben Sie einen Energie-Boost mit unserer B Energy Infusion! Diese leistungsstarke Mischung aus essenziellen B-Vitaminen steigert Ihre körperliche und geistige Leistungsfähigkeit.
-                                </p>
-                                <h3 className="h3 mb-3 text-primary">Vorteile der B Energy Infusion:</h3>
-                                <ul className="list-disc list-inside space-y-2 text-gray-700">
-                                    <li><strong>Energie und Vitalität:</strong> Wandelt Nährstoffe in Energie um und bekämpft Müdigkeit.</li>
-                                    <li><strong>Stressbewältigung:</strong> Unterstützt das Nervensystem und fördert emotionale Balance.</li>
-                                    <li><strong>Kognitive Unterstützung:</strong> Stärkt Konzentration und Gedächtnisleistung.</li>
-                                    <li><strong>Stimmungsaufhellung:</strong> Verbessert Ihre mentale Gesundheit durch Neurotransmitterproduktion.</li>
-                                    <li><strong>Haut- und Haarpflege:</strong> Fördert die Zellregeneration für gesunde Haut und Haare.</li>
-                                    <li><strong>Immunsystemstärkung:</strong> Hilft, Krankheiten abzuwehren und die Abwehrkräfte zu unterstützen.</li>
-                                    <li><strong>Herzgesundheit:</strong> Reguliert Homocystein und unterstützt ein gesundes Herz-Kreislaufsystem.</li>
-                                </ul>
-                                <p className="text-lg text-gray-700 font-medium mb-4">
-                                    Gönnen Sie sich den Energie-Kick, den Sie verdienen! Kontaktieren Sie uns, um mehr über die B Energy Infusion zu erfahren und Ihre Vitalität zu steigern!
-                                </p>
-                            </CollapsibleSection>
-                        </div>
-
-                        {/* Gluta C Cholin Infusion Section */}
-                        <div className="bg-gray-50 p-8 rounded-lg shadow-lg">
-                            <CollapsibleSection title="Gluta C Cholin Infusion" titleClassName="text-gray-900 h2">
-                                <p className="text-xl text-gray-700 mb-6">
-                                    Entgiftende Infusion mit Glutathion, Vitamin C und Cholin
-                                </p>
-                                <p className="text-lg text-gray-700 mb-8">
-                                    Entfalten Sie Ihr volles Potenzial mit unserer einzigartigen Infusion!
-                                </p>
-                                <p className="text-lg text-gray-700 mb-8">
-                                    Unsere hochwertige Infusion kombiniert die kraftvollen Inhaltsstoffe Glutathion, Vitamin C und Cholin, um Ihre Gesundheit auf ein neues Level zu heben. Diese synergistische Formel bietet eine Vielzahl von Vorteilen, die Ihr Wohlbefinden nachhaltig fördern.
-                                </p>
-                                <h3 className="h3 mb-3 text-primary">Anwendungsgebiete der Infusion</h3>
-                                <ol className="list-decimal list-inside space-y-2 text-gray-700">
-                                    <li><strong>Entgiftung:</strong><br/>Stärken Sie die natürlichen Entgiftungsprozesse Ihres Körpers. Glutathion wirkt als starkes Antioxidans, das freie Radikale neutralisiert und toxische Substanzen ausleitet.</li>
-                                    <li><strong>Immunsystemstärkung:</strong><br/>Unterstützen Sie Ihre Immunabwehr mit der antioxidativen Kraft von Vitamin C und Glutathion. Schützen Sie sich effektiv gegen Krankheiten und Infektionen.</li>
-                                    <li><strong>Energie- und Leistungssteigerung:</strong><br/>Erleben Sie einen Energieschub! Cholin verbessert die Gehirnfunktion und steigert Ihre körperliche Ausdauer, sodass Sie den Alltag mit neuer Vitalität meistern können.</li>
-                                    <li><strong>Hautgesundheit:</strong><br/>Erhalten Sie eine strahlende Haut! Vitamin C fördert die Kollagenproduktion und verbessert die Hautelastizität, während es Anzeichen der Hautalterung reduziert.</li>
-                                    <li><strong>Lebergesundheit:</strong><br/>Unterstützen Sie Ihre Leber mit der regenerativen Kraft von Glutathion und Cholin. Fördern Sie einen gesunden Fettstoffwechsel und eine optimale Leberfunktion.</li>
-                                    <li><strong>Kognitive Unterstützung:</strong><br/>Verbessern Sie Ihre Konzentration und Gedächtnisleistung. Cholin ist entscheidend für die Gehirnfunktion und kann neurodegenerativen Erkrankungen entgegenwirken.</li>
-                                    <li><strong>Stimmungsverbesserung:</strong><br/>Steigern Sie Ihr emotionales Wohlbefinden. Die Kombination aus Glutathion, Vitamin C und Cholin kann Ihre Stimmung positiv beeinflussen und Stress abbauen.</li>
-                                </ol>
-                                <h3 className="h3 mb-3 text-primary">Warum unsere Infusion?</h3>
-                                <p className="text-lg text-gray-700 mb-8">
-                                    Unsere Infusion mit Glutathion, Vitamin C und Cholin ist die perfekte Wahl für alle, die ihre Gesundheit aktiv unterstützen möchten. Ideal für Sportler, Berufstätige und alle, die sich eine natürliche Vitalitätssteigerung wünschen.
-                                </p>
-                                <p className="text-lg text-gray-700 font-medium mb-4">
-                                    Erleben Sie die Vorteile einer entgiftenden Infusion und bringen Sie Körper und Geist in Einklang. Kontaktieren Sie uns noch heute, um mehr über diese transformative Behandlung zu erfahren!
-                                </p>
-                            </CollapsibleSection>
-                        </div>
-
-                        {/* Vitamin C-Infusion Section */}
-                        <div className="bg-white p-8 rounded-lg shadow-lg">
-                            <CollapsibleSection title="Vitamin C-Infusion – Energie und Immunstärkung in einer Sitzung" titleClassName="h2 text-gray-900">
-                                <p className="text-lg text-gray-700 mb-6">
-                                    Entdecken Sie die Kraft der Vitamin C-Infusion in unserer Privatpraxis am Bült! Diese hochdosierte Behandlung liefert Vitamin C direkt in Ihren Blutkreislauf und bietet zahlreiche gesundheitliche Vorteile.
-                                </p>
-                                <h3 className="h3 mb-3 text-primary">Ihre Vorteile auf einen Blick:</h3>
-                                <ul className="list-disc list-inside space-y-2 text-gray-700">
-                                    <li><strong>Stärkt das Immunsystem:</strong> Schützt vor Erkältungen und Infektionen.</li>
-                                    <li><strong>Antioxidative Wirkung:</strong> Reduziert oxidative Stressbelastungen.</li>
-                                    <li><strong>Verbessert die Hautgesundheit:</strong> Unterstützt die Kollagenproduktion für einen strahlenden Teint.</li>
-                                    <li><strong>Energieboost:</strong> Spürbare Vitalitätssteigerung und schnelle Regeneration.</li>
-                                </ul>
-                                <h3 className="h3 mb-3 text-primary">Ideal für:</h3>
-                                <ul className="list-disc list-inside space-y-2 text-gray-700">
-                                    <li>Personen in der Genesung von Krankheiten oder Operationen.</li>
-                                    <li>Menschen mit erhöhtem Stress oder chronischer Erschöpfung.</li>
-                                    <li>Alle, die ihre Gesundheit proaktiv stärken möchten.</li>
-                                </ul>
-                                <p className="text-lg text-gray-700 font-medium mb-4">
-                                    Erleben Sie die transformative Wirkung der Vitamin C-Infusion! Vereinbaren Sie noch einen Termin.
-                                </p>
-                            </CollapsibleSection>
-                        </div>
-
-                        {/* ImmunVitalis Section */}
-                        <div className="bg-gray-50 p-8 rounded-lg shadow-lg">
-                            <CollapsibleSection title="ImmunVitalis" titleClassName="text-gray-900 h2">
-                                <p className="text-xl text-gray-700 mb-6">
-                                    Stärken Sie Ihr Immunsystem mit ImmunVitalis!
-                                </p>
-                                <p className="text-lg text-gray-700 mb-8">
-                                    Unser Immun-Infusions-Set kombiniert 12.000 mg L-Ascorbinsäure mit einer kraftvollen Mischung aus Aminosäuren und Vitaminen, um Ihre Gesundheit zu maximieren.
-                                </p>
-                                <h3 className="h3 mb-3 text-primary">Highlights:</h3>
-                                <ul className="list-disc list-inside space-y-2 text-gray-700">
-                                    <li><strong>L-Ascorbinsäure (12.000 mg):</strong> Stärkt das Immunsystem und wirkt antioxidativ.</li>
-                                    <li><strong>Taurin (1.200 mg) & L-Arginin (1.000 mg):</strong> Fördern Regeneration und Durchblutung.</li>
-                                    <li><strong>Essentielle Vitamine:</strong> Unterstützen den Energiestoffwechsel und die Abwehr.</li>
-                                </ul>
-                                <p className="text-lg text-gray-700 font-medium mb-4">
-                                    Revitalisieren Sie Ihren Körper!
-                                </p>
-                                <p className="text-lg text-gray-700 mb-8">
-                                    Infusion mit 3.000 mg S-Acetyl-Glutathion entgiftet und schützt Ihre Zellen.
-                                </p>
-                                <h3 className="h3 mb-3 text-primary">Vorteile:</h3>
-                                <ul className="list-disc list-inside space-y-2 text-gray-700">
-                                    <li><strong>S-Acetyl-Glutathion (3.000 mg):</strong> Stärkt die Entgiftungsprozesse und wirkt als starkes Antioxidans.</li>
-                                </ul>
-                                <p className="text-lg text-gray-700 font-medium mb-4">
-                                    Gönnen Sie sich die Energie und Vitalität, die Sie verdienen! Starten Sie jetzt Ihre Gesundheitsreise mit ImmunVitalis.
-                                </p>
-                            </CollapsibleSection>
-                        </div>
-
-                        {/* C-Vital-Drip Section */}
-                        <div className="bg-white p-8 rounded-lg shadow-lg">
-                            <CollapsibleSection title="C-Vital-Drip" titleClassName="h2 text-gray-900">
-                                <p className="text-xl text-gray-700 mb-6">
-                                    Hochdosiertes Vitamin C für Ihre Gesundheit.
-                                </p>
-                            </CollapsibleSection>
-                        </div>
-
-                        {/* StressRelief Elixier Section */}
-                        <div className="bg-gray-50 p-8 rounded-lg shadow-lg">
-                            <CollapsibleSection title="StressRelief Elixier – Ihre Lösung für Stressbewältigung und vegetative Balance" titleClassName="text-gray-900 h2">
-                                <p className="text-lg text-gray-700 mb-6">
-                                    Fühlen Sie sich oft gestresst oder aus dem Gleichgewicht? Mit dem StressRelief Elixier bringen Sie Körper und Geist in Einklang. Unsere innovative Infusion kombiniert sorgfältig ausgewählte Inhaltsstoffe, die speziell zur Unterstützung Ihres Nervensystems entwickelt wurden.
-                                </p>
-                                <h3 className="h3 mb-3 text-primary">Stressbewältigung leicht gemacht</h3>
-                                <p className="text-lg text-gray-700 mb-8">
-                                    In der hektischen Welt von heute ist es wichtiger denn je, das innere Gleichgewicht zu finden. Das StressRelief Elixier hilft Ihnen, Stress abzubauen und die vegetative Balance wiederherzustellen. Erleben Sie, wie Sie mit neuer Energie den Herausforderungen des Alltags begegnen!
-                                </p>
-                                <h3 className="h3 mb-3 text-primary">Die Vorteile auf einen Blick:</h3>
-                                <ul className="list-disc list-inside space-y-2 text-gray-700">
-                                    <li><strong>Stressreduktion:</strong> Fördert Entspannung und innere Ruhe.</li>
-                                    <li><strong>Vegetative Ausgleichung:</strong> Stabilisiert das vegetative Nervensystem für mehr Gelassenheit.</li>
-                                    <li><strong>Energie und Vitalität:</strong> Unterstützt körperliche und geistige Leistungsfähigkeit.</li>
-                                    <li><strong>Optimale Nährstoffversorgung:</strong> Liefert essentielle Aminosäuren und Antioxidantien für Ihr Wohlbefinden.</li>
-                                </ul>
-                                <h3 className="h3 mb-3 text-primary">Wirkstoffe, die wirken:</h3>
-                                <ul className="list-disc list-inside space-y-2 text-gray-700">
-                                    <li><strong>Cholin:</strong> Fördert die Gehirnfunktion und verbessert die kognitive Klarheit – ideal für mentale Höchstleistungen.</li>
-                                    <li><strong>L-Glutathion:</strong> Ein starkes Antioxidans, das Entgiftungsprozesse unterstützt und Ihre Zellen vor oxidativem Stress schützt.</li>
-                                    <li><strong>Cystein:</strong> Stärkt die Glutathionsynthese und hilft, schädliche Substanzen aus dem Körper zu eliminieren.</li>
-                                    <li><strong>Kalium:</strong> Essenziell für die Regulierung des Elektrolythaushalts und die Unterstützung von Muskeln und Nerven.</li>
-                                </ul>
-                                <p className="text-lg text-gray-700 font-medium mb-4">
-                                    Starten Sie Ihre Reise zu mehr Wohlbefinden!
-                                </p>
-                                <p className="text-lg text-gray-700 mb-8">
-                                    Das StressRelief Elixier ist die perfekte Lösung für alle, die aktiv gegen Stress ankämpfen und ihr vegetatives Gleichgewicht fördern möchten. Gönnen Sie sich die Unterstützung, die Sie verdienen, und erleben Sie, wie sich Ihr Körper und Geist revitalisieren.
-                                </p>
-                                <p className="text-blue-600 hover:text-blue-800 transition-colors duration-300 cursor-pointer font-semibold">
-                                    Kontaktieren Sie uns noch heute, um mehr über das StressRelief Elixier zu erfahren und den ersten Schritt zu einem stressfreieren Leben zu machen!
-                                </p>
-                            </CollapsibleSection>
-                        </div>
-
-                        {/* Haare & Haut Section */}
-                        <div className="bg-white p-8 rounded-lg shadow-lg">
-                            <CollapsibleSection title="Haare & Haut" titleClassName="h2 text-gray-900">
-                                <p className="text-xl text-gray-700 mb-6">
-                                    Für gesundes Haar und strahlende Haut.
-                                </p>
-                            </CollapsibleSection>
-                        </div>
-
-                        {/* NAD+ Infusionen Section */}
-                        <div className="bg-gray-50 p-8 rounded-lg shadow-lg">
-    <CollapsibleSection
-        title="NAD+ Infusionen: Entdecke die Vorteile für mehr Energie und Vitalität"
-        titleClassName="text-gray-900 h2"
-    >
-        <p className="text-lg text-gray-700 mb-6">
-            Erlebe die beeindruckenden Vorteile von **NAD+ Infusionen** – der Schlüssel zu mehr Energie, besserer Zellreparatur und gesteigerten kognitiven Funktionen.
-        </p>
         <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-            className="flex justify-center mt-8 mb-8"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, transition: { delay: 0.2, duration: 0.8 } }}
+            className="min-h-screen overflow-x-hidden"
         >
-            <Image
-                src="/assets/vitamin3.png"
-                width={500}
-                height={300}
-                alt="NAD+ Infusionen"
-                className="rounded-lg shadow-xl p-8"
+            {/* Hero Section */}
+            <TreatmentHero
+                title="Drip Spa Infusionen"
+                subtitle="Ihre Lösung für eine schnelle Genesung, mehr Energie und strahlende Schönheit."
+                imageSrc="/assets/vitamin1.png"
+                imageAlt="Drip Spa Infusionen"
+                overlayOpacity="bg-black/30"
             />
-        </motion.div>
 
-        {/* Vorteile im Überblick */}
-        <h3 className="h3 mb-3 text-primary">Vorteile im Überblick:</h3>
-        <ul className="list-disc list-inside space-y-2 text-gray-700 mb-8">
-            <li>
-                <strong>Energie und Vitalität:</strong> NAD+ verbessert die Mitochondrienfunktion, was zu mehr Ausdauer und Klarheit führt.
-            </li>
-            <li>
-                <strong>Anti-Aging:</strong> Unterstützt die DNA-Reparatur, verlangsamt die Zellalterung und fördert jugendliche Vitalität.
-            </li>
-            <li>
-                <strong>Unterstützung bei chronischen Erkrankungen:</strong> Hilft bei Diabetes, Bluthochdruck und chronischer Müdigkeit.
-            </li>
-            <li>
-                <strong>Kognitive Verbesserung:</strong> Erlebe geistige Frische und emotionale Ausgeglichenheit.
-            </li>
-        </ul>
+            <div className="container mx-auto py-24 relative z-10">
 
-        {/* Häufige Fragen */}
-        <h3 className="h3 mb-3 text-primary">Häufige Fragen:</h3>
-        <ul className="list-disc list-inside space-y-2 text-gray-700 mb-8">
-            <li>
-                <strong>Wie schnell wirkt eine NAD+ Infusion?</strong> Viele Patienten berichten bereits nach der ersten Sitzung von mehr Energie.
-            </li>
-            <li>
-                <strong>Kann ich NAD+ oral einnehmen?</strong> Ja, aber die Bioverfügbarkeit ist bei Infusionen deutlich höher.
-            </li>
-            <li>
-                <strong>Gibt es Risiken?</strong> Bei Überdosierung können Nebenwirkungen wie Übelkeit und Kopfschmerzen auftreten.
-            </li>
-        </ul>
-
-        {/* Kosten und Anwendung */}
-        <h3 className="h3 mb-3 text-primary">Kosten und Anwendung:</h3>
-        <div className="bg-white p-6 rounded-lg shadow-md mb-8">
-            <p className="text-lg text-gray-700 font-semibold mb-4">
-                Die Preise variieren je nach Dosierung:
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
-                <div className="p-4 bg-gray-100 rounded-lg">
-                    <p className="font-bold text-primary">125 mg</p>
-                    <p className="text-gray-800">ca. <span className="text-pink-500">200 €</span></p>
-                </div>
-                <div className="p-4 bg-gray-100 rounded-lg">
-                    <p className="font-bold text-primary">250 mg</p>
-                    <p className="text-gray-800">ca. <span className="text-pink-500">450 €</span></p>
-                </div>
-                <div className="p-4 bg-gray-100 rounded-lg">
-                    <p className="font-bold text-primary">500 mg</p>
-                    <p className="text-gray-800">ca. <span className="text-pink-500">550 €</span></p>
-                </div>
-            </div>
-        </div>
-
-        <h3 className="h3 mb-3 text-primary">Empfohlene Häufigkeit:</h3>
-        <div className="bg-white p-6 rounded-lg shadow-md mb-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-center">
-                <div className="p-4 bg-gray-100 rounded-lg">
-                    <p className="font-bold text-primary">Initialphase</p>
-                    <p className="text-gray-800"><span className="text-pink-500">1-2</span> Infusionen pro Woche für <span className="text-pink-500">3-4</span> Wochen.</p>
-                </div>
-                <div className="p-4 bg-gray-100 rounded-lg">
-                    <p className="font-bold text-primary">Erhaltungsphase</p>
-                    <p className="text-gray-800"><span className="text-pink-500">1</span> Infusion alle <span className="text-pink-500">4-6</span> Wochen.</p>
-                </div>
-            </div>
-        </div>
-
-        {/* Call to Action */}
-        <p className="text-lg text-gray-700 mb-4">
-            Starten Sie Ihre Reise zu mehr Energie und Vitalität!
-        </p>
-        <p className="text-blue-600 hover:text-blue-800 transition-colors duration-300 cursor-pointer font-semibold">
-            Kontaktieren Sie uns für eine persönliche Beratung und finden Sie heraus, ob NAD+ Infusionen die richtige Wahl, wir sind für dich da.
-        </p>
-    </CollapsibleSection>
-</div>
-
-
-
-
+                {/* Intro & Benefits */}
+                <section className="mb-32">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        <motion.div
+                            initial={{ opacity: 0, x: -50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8 }}
+                        >
+                            <h2 className="h2 mb-8 text-primary">Vorteile der <span className="text-accent">Infusionstherapie</span></h2>
+                            <p className="text-lg text-gray-600 mb-8 leading-relaxed font-light">
+                                Entdecken Sie die Vorteile der Infusionstherapie – eine effektive Methode zur gezielten Zufuhr von Medikamenten, Vitaminen und Mineralstoffen direkt in die Blutbahn. Da die Stoffe nicht erst durch den Verdauungstrakt müssen, wirken sie schneller und effizienter.
+                            </p>
+                            <ul className="space-y-4">
+                                {[
+                                    "Schnelle Wirkung direkt im Blutkreislauf",
+                                    "Individuelle Anpassung auf Ihre Bedürfnisse",
+                                    "Energie- und Leistungssteigerung",
+                                    "Stärkung des Immunsystems",
+                                    "Detox & Entgiftung",
+                                    "Haut- und Schönheitspflege"
+                                ].map((item, index) => (
+                                    <li key={index} className="flex items-center gap-4 text-primary/80 font-medium">
+                                        <span className="w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center text-accent text-xs">
+                                            <FaCheck />
+                                        </span>
+                                        {item}
+                                    </li>
+                                ))}
+                            </ul>
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, x: 50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8 }}
+                            className="relative"
+                        >
+                            <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl border border-white/50">
+                                <Image
+                                    src="/assets/ing5.png"
+                                    width={600}
+                                    height={400}
+                                    alt="Vorteile der Infusionstherapie"
+                                    className="w-full h-auto object-cover"
+                                />
+                            </div>
+                            <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-accent/20 rounded-full blur-3xl -z-10"></div>
+                            <div className="absolute -top-10 -right-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl -z-10"></div>
+                        </motion.div>
                     </div>
                 </section>
 
-                {/* New CTA Section */}
-                <section className="py-12 xl:py-24 bg-primary-100 text-white text-center">
-                    <div className="container mx-auto">
-                                                    <motion.h2
-                                                        initial={{ opacity: 0, y: 50 }}
-                                                        whileInView={{ opacity: 1, y: 0 }}
-                                                        viewport={{ once: true, amount: 0.3 }}
-                                                        transition={{ delay: 0.3, duration: 0.8 }}
-                                                        className="h2 mb-4 text-gray-900"
-                                                    >
-                                                        Transformiere Deine Gesundheit durch maßgeschneiderte Infusionen.
-                                                    </motion.h2>                        <motion.p
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, amount: 0.3 }}
-                            transition={{ delay: 0.4, duration: 0.8 }}
-                            className="lead max-w-2xl mx-auto mb-8 text-gray-900 pb-12 pt-12"
-                        >
-                            Schluss mit Erkältung oder Müdigkeit. Buche jetzt Deine Infusion und tanke neue Energie und Wohlbefinden – verabreicht von qualifiziertem Personal in deutscher Apothekenqualität.
-                        </motion.p>
-                        <motion.div
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, amount: 0.3 }}
-                            transition={{ delay: 0.5, duration: 0.8 }}
-                            className="flex flex-col md:flex-row justify-center gap-4 mx-auto"
-                        >
-                            <a
-                                href="https://g.page/mesoskinhamburg/review" // Placeholder for Google review link
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="btn btn-lg bg-blue-500 text-white hover:bg-blue-600 shadow-lg rounded-full px-6 py-3 text-base md:px-8 md:py-4 md:text-lg transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-300 flex items-center justify-center gap-1"
+                {/* NAD+ Highlight Section */}
+                <section className="mb-32 relative">
+                    <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent/5 rounded-3xl transform -skew-y-1"></div>
+                    <div className="relative bg-white/60 backdrop-blur-md p-12 rounded-3xl shadow-xl border border-white/50">
+                        <div className="text-center mb-16">
+                            <h2 className="h2 mb-4 text-primary">NAD+ Infusionen</h2>
+                            <p className="text-xl text-accent font-light">Der Schlüssel zu mehr Energie und Vitalität</p>
+                        </div>
+
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                            <div className="order-2 lg:order-1">
+                                <Image
+                                    src="/assets/vitamin3.png"
+                                    width={500}
+                                    height={350}
+                                    alt="NAD+ Infusionen"
+                                    className="rounded-2xl shadow-lg mx-auto"
+                                />
+                            </div>
+                            <div className="order-1 lg:order-2 space-y-6">
+                                <p className="text-lg text-gray-600 leading-relaxed">
+                                    Erlebe die beeindruckenden Vorteile von <strong>NAD+ Infusionen</strong>. NAD+ verbessert die Mitochondrienfunktion, was zu mehr Ausdauer, Klarheit und einer verlangsamten Zellalterung führt.
+                                </p>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                                        <h4 className="font-bold text-primary mb-2">Energie</h4>
+                                        <p className="text-sm text-gray-500">Maximale Mitochondrienfunktion für mehr Power.</p>
+                                    </div>
+                                    <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                                        <h4 className="font-bold text-primary mb-2">Anti-Aging</h4>
+                                        <p className="text-sm text-gray-500">Unterstützt DNA-Reparatur und Zellverjüngung.</p>
+                                    </div>
+                                    <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                                        <h4 className="font-bold text-primary mb-2">Klarheit</h4>
+                                        <p className="text-sm text-gray-500">Fördert kognitive Frische und Fokus.</p>
+                                    </div>
+                                    <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                                        <h4 className="font-bold text-primary mb-2">Gesundheit</h4>
+                                        <p className="text-sm text-gray-500">Hilft bei chronischer Müdigkeit und mehr.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Pricing for NAD+ */}
+                        <div className="bg-white/80 rounded-2xl p-8 shadow-inner">
+                            <h3 className="h3 text-center mb-8 text-primary">Preise & Anwendung</h3>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                                <div className="p-6 bg-white rounded-xl shadow-sm border border-gray-100 hover:border-accent/30 transition-colors duration-300">
+                                    <p className="font-bold text-primary text-xl mb-2">125 mg</p>
+                                    <p className="text-gray-500 mb-4">Einstieg</p>
+                                    <p className="text-3xl font-primary text-accent">ca. 200 €</p>
+                                </div>
+                                <div className="p-6 bg-white rounded-xl shadow-sm border border-accent/50 relative transform scale-105 z-10">
+                                    <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-accent text-white px-4 py-1 rounded-full text-sm font-bold">Beliebt</div>
+                                    <p className="font-bold text-primary text-xl mb-2">250 mg</p>
+                                    <p className="text-gray-500 mb-4">Standard</p>
+                                    <p className="text-3xl font-primary text-accent">ca. 450 €</p>
+                                </div>
+                                <div className="p-6 bg-white rounded-xl shadow-sm border border-gray-100 hover:border-accent/30 transition-colors duration-300">
+                                    <p className="font-bold text-primary text-xl mb-2">500 mg</p>
+                                    <p className="text-gray-500 mb-4">Intensiv</p>
+                                    <p className="text-3xl font-primary text-accent">ca. 550 €</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Other Infusions Grid */}
+                <section className="mb-32">
+                    <h2 className="h2 text-center mb-16 text-primary">Unsere Spezial-Infusionen</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+                        {[
+                            {
+                                title: "Mitochondrien Vitalitäts-Boost",
+                                desc: "Maximieren Sie Ihre Zellleistung für nachhaltige Energie.",
+                                price: "Ab 199€ - 249€",
+                                details: "Optimierung der Zellleistung, effektive Entgiftung, Steigerung der Leistungsfähigkeit."
+                            },
+                            {
+                                title: "BasenBalance-Infusion",
+                                desc: "Entgiften und regenerieren Sie Ihren Körper.",
+                                price: "Ab 179€ - 220€",
+                                details: "Reguliert den pH-Wert, fördert Entgiftung und innere Ruhe."
+                            },
+                            {
+                                title: "ImmunVitalis",
+                                desc: "Der ultimative Boost für Ihr Immunsystem.",
+                                price: "Ab 179€ - 279€",
+                                details: "Hochdosiertes Vitamin C (12g), Taurin, Aminosäuren für maximale Abwehrkraft."
+                            },
+                            {
+                                title: "C-Vital-Drip",
+                                desc: "Hochdosiertes Vitamin C für schnelle Regeneration.",
+                                price: "Ab 149€ - 189€",
+                                details: "Stärkt das Immunsystem, wirkt antioxidativ, verbessert Hautgesundheit."
+                            },
+                            {
+                                title: "B Energy Infusion",
+                                desc: "Der Energie-Kick aus essenziellen B-Vitaminen.",
+                                price: "Ab 179€ - 199€",
+                                details: "Gegen Müdigkeit, für Stressbewältigung und kognitive Unterstützung."
+                            },
+                            {
+                                title: "Gluta C Cholin",
+                                desc: "Entgiftung und Lebergesundheit.",
+                                price: "Ab 179€",
+                                details: "Kombination aus Glutathion, Vitamin C und Cholin für Entgiftung und Vitalität."
+                            },
+                            {
+                                title: "StressRelief Elixier",
+                                desc: "Finden Sie Ihre innere Balance wieder.",
+                                price: "Ab 179€",
+                                details: "Unterstützt das Nervensystem, fördert Entspannung und vegetative Balance."
+                            },
+                            {
+                                title: "Radiance Infusion",
+                                desc: "Für den perfekten Glow von innen.",
+                                price: "Ab 179€",
+                                details: "Verbessert das Hautbild, stärkt Haare und spendet Feuchtigkeit."
+                            }
+                        ].map((item, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: index * 0.1, duration: 0.6 }}
+                                className="group bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col"
                             >
-                                <FcGoogle className="text-xl" /> {/* Google logo */}
-                                <FaStar className="text-yellow-400" />
-                                <FaStar className="text-yellow-400" />
-                                <FaStar className="text-yellow-400" />
-                                <FaStar className="text-yellow-400" />
-                                <FaStar className="text-yellow-400" />
-                                <span>Review</span>
-                            </a>
-                            <button
+                                <h3 className="text-xl font-bold text-primary mb-4 group-hover:text-accent transition-colors">{item.title}</h3>
+                                <p className="text-gray-600 mb-6 flex-grow">{item.desc}</p>
+                                <div className="mb-6 p-4 bg-gray-50 rounded-lg text-sm text-gray-500">
+                                    {item.details}
+                                </div>
+                                <div className="mt-auto pt-6 border-t border-gray-100 flex justify-between items-center">
+                                    <span className="text-lg font-bold text-accent">{item.price}</span>
+                                    <button
+                                        onClick={() => router.push("/contact")}
+                                        className="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center text-primary group-hover:bg-accent group-hover:text-white transition-all duration-300"
+                                    >
+                                        <FaCheck />
+                                    </button>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+                </section>
+
+                <section className="py-16 bg-primary rounded-3xl relative overflow-hidden text-center text-white mb-12">
+                    <div className="absolute inset-0 bg-white/5"></div>
+                    <div className="relative z-10 container mx-auto px-4">
+                        <h2 className="h2 mb-6 text-white">Bereit für mehr Vitalität?</h2>
+                        <p className="text-xl text-white/80 mb-10 max-w-2xl mx-auto font-light">
+                            Vereinbaren Sie jetzt Ihren Termin für eine individuelle Infusionstherapie und spüren Sie den Unterschied.
+                        </p>
+                        <div className="flex flex-col sm:flex-row justify-center gap-6">
+                            <Button
                                 onClick={() => router.push("/contact")}
-                                className="btn btn-lg bg-accent text-white hover:bg-accent-dark shadow-lg rounded-full px-6 py-3 text-lg md:px-8 md:py-4 md:text-xl transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-accent-300"
+                                variant="white"
+                                size="large"
+                                className="shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(212,140,112,0.6)]"
+                                ariaLabel="Termin vereinbaren"
                             >
-                                Behandlung buchen
-                            </button>
-                            <a
-                                href="https://wa.me/4917661639830"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="btn btn-lg bg-green-500 text-white hover:bg-green-600 shadow-lg rounded-full px-6 py-3 text-lg md:px-8 md:py-4 md:text-xl transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-green-300"
+                                Termin vereinbaren
+                            </Button>
+                            <Button
+                                href={CONTACT_INFO.whatsappUrl}
+                                variant="secondary"
+                                size="large"
+                                ariaLabel="WhatsApp Chat öffnen"
                             >
-                                Auf WhatsApp chatten
-                            </a>
-                        </motion.div>
+                                WhatsApp Chat
+                            </Button>
+                        </div>
                     </div>
                 </section>
 
-                {/* Preise Section */}
-                <section className="pt-24 mb-12">
-                    <motion.h2
-                        onMouseEnter={mouseEnterHandler}
-                        onMouseLeave={mouseLeaveHandler}
-                        className="h2 mb-6 text-accent text-center"
-                    >
-                        Preise
-                    </motion.h2>
-                    <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-12">
-                        <motion.div
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, amount: 0.3 }}
-                            transition={{ delay: 0.3, duration: 0.8 }}
-                            className="bg-white p-12 rounded-lg shadow-lg text-center w-full"
-                        >
-                            <h3 className="text-2xl font-extrabold mb-3 text-primary">Mitochondrien Vitalitäts-Boost</h3>
-                            <p className="text-lg text-gray-800 mb-6">Ihre Quelle für nachhaltige Energie und Wohlbefinden</p>
-                            <p className="text-4xl font-black text-accent mb-3">Ab 199€ - 249€</p>
-                        </motion.div>
-                        <motion.div
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, amount: 0.3 }}
-                            transition={{ delay: 0.4, duration: 0.8 }}
-                            className="bg-white p-12 rounded-lg shadow-lg text-center w-full"
-                        >
-                            <h3 className="text-2xl font-extrabold mb-3 text-primary">BasenBalance-Infusion</h3>
-                            <p className="text-lg text-gray-800 mb-6">Entgiften und regenerieren Sie Ihren Körper mit unserer BasenBalance-Infusion!</p>
-                            <p className="text-4xl font-black text-accent mb-3">Ab 179€ - 220€</p>
-                        </motion.div>
-                        <motion.div
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, amount: 0.3 }}
-                            transition={{ delay: 0.5, duration: 0.8 }}
-                            className="bg-white p-12 rounded-lg shadow-lg text-center w-full"
-                        >
-                            <h3 className="text-2xl font-extrabold mb-3 text-primary">ImmunVitalis</h3>
-                            <p className="text-lg text-gray-800 mb-6">Stärken Sie Ihr Immunsystem mit ImmunVitalis!</p>
-                            <p className="text-4xl font-black text-accent mb-3">Ab 179€ - 279€</p>
-                        </motion.div>
-                        <motion.div
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, amount: 0.3 }}
-                            transition={{ delay: 0.6, duration: 0.8 }}
-                            className="bg-white p-12 rounded-lg shadow-lg text-center w-full"
-                        >
-                            <h3 className="text-2xl font-extrabold mb-3 text-primary">C-Vital-Drip</h3>
-                            <p className="text-lg text-gray-800 mb-6">Hochdosiertes Vitamin C für Ihre Gesundheit</p>
-                            <p className="text-4xl font-black text-accent mb-3">Ab 149€ - 189€</p>
-                        </motion.div>
-                        <motion.div
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, amount: 0.3 }}
-                            transition={{ delay: 0.7, duration: 0.8 }}
-                            className="bg-white p-12 rounded-lg shadow-lg text-center w-full"
-                        >
-                            <h3 className="text-2xl font-extrabold mb-3 text-primary">B Energy Infusion</h3>
-                            <p className="text-lg text-gray-800 mb-6">Ihre Quelle für Vitalität!</p>
-                            <p className="text-4xl font-black text-accent mb-3">Ab 179€ - 199€</p>
-                        </motion.div>
-                        <motion.div
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, amount: 0.3 }}
-                            transition={{ delay: 0.8, duration: 0.8 }}
-                            className="bg-white p-12 rounded-lg shadow-lg text-center w-full"
-                        >
-                            <h3 className="text-2xl font-extrabold mb-3 text-primary">Gluta C Cholin Infusion</h3>
-                            <p className="text-lg text-gray-800 mb-6">Entgiftende Infusion mit Glutathion, Vitamin C und Cholin</p>
-                            <p className="text-4xl font-black text-accent mb-3">Ab 179€</p>
-                        </motion.div>
-                        <motion.div
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, amount: 0.3 }}
-                            transition={{ delay: 0.9, duration: 0.8 }}
-                            className="bg-white p-12 rounded-lg shadow-lg text-center w-full"
-                        >
-                            <h3 className="text-2xl font-extrabold mb-3 text-primary">StressRelief Elixier</h3>
-                            <p className="text-lg text-gray-800 mb-6">Ihre Lösung für Stressbewältigung und vegetative Balance</p>
-                            <p className="text-4xl font-black text-accent mb-3">Ab 179€</p>
-                        </motion.div>
-                        <motion.div
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, amount: 0.3 }}
-                            transition={{ delay: 1.0, duration: 0.8 }}
-                            className="bg-white p-12 rounded-lg shadow-lg text-center w-full"
-                        >
-                            <h3 className="text-2xl font-extrabold mb-3 text-primary">Radiance Infusion</h3>
-                            <p className="text-lg text-gray-800 mb-6">Strahlende Haut und glänzendes Haar</p>
-                            <p className="text-4xl font-black text-accent mb-3">Ab 179€</p>
-                        </motion.div>
-                        <motion.div
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, amount: 0.3 }}
-                            transition={{ delay: 1.1, duration: 0.8 }}
-                            className="bg-white p-12 rounded-lg shadow-lg text-center w-full"
-                        >
-                            <h3 className="text-2xl font-extrabold mb-3 text-primary">Vitamin C-Infusion</h3>
-                            <p className="text-lg text-gray-800 mb-6">Energie und Immunstärkung in einer Sitzung</p>
-                            <p className="text-4xl font-black text-accent mb-3">Ab 149€ - 189€</p>
-                        </motion.div>
-                    </div>
-                </section>
-
-                {/* Call to Action Section */}
-                <section className="text-center mb-12">
-
-
-                    <CtaSection />
-                </section>
             </div>
         </motion.div>
     );

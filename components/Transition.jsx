@@ -32,7 +32,7 @@ const Transition = () => {
                 ease: "easeInOut",
                 delay: 0.1,
               }}
-              className="w-full h-full bg-[#e2cfbd] relative"
+              className="w-full h-full bg-accent-100 relative"
             ></motion.div>
           </div>
         </div>

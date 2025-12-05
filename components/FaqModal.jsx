@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   Dialog,
   DialogContent,
@@ -40,38 +40,50 @@ const FaqModal = () => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <span className="bg-white border border-gray-300 text-gray-800 py-3 px-6 rounded-lg shadow-sm hover:bg-gray-100 transition-all duration-300 ease-in-out text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-gray-400 cursor-pointer w-full max-w-xs text-wrap text-center">Häufige Fragen (FAQ)</span>
+        <button className="group relative px-8 py-4 bg-white/80 backdrop-blur-sm border border-primary/10 rounded-full overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+          <div className="absolute inset-0 bg-accent/5 group-hover:bg-accent/10 transition-colors duration-300"></div>
+          <span className="relative z-10 text-primary font-primary uppercase tracking-widest text-sm font-medium group-hover:text-accent transition-colors duration-300">
+            Häufige Fragen (FAQ)
+          </span>
+        </button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[800px] p-6">
-        <DialogHeader>
-          <DialogTitle className="h3 text-accent text-center mb-4">Häufige Fragen (FAQ)</DialogTitle>
-          <DialogDescription className="text-center text-gray-700">
-            Hier finden Sie Antworten auf die häufigsten Fragen zu unseren Skinbooster-Behandlungen.
-          </DialogDescription>
-        </DialogHeader>
-        <div className="mt-6 space-y-4">
-          {faqData.map((item, index) => (
-            <div key={index} className="border-b border-gray-200 pb-4">
-              <button
-                className="flex justify-between items-center w-full text-left font-semibold text-lg text-gray-800 hover:text-primary transition-all duration-300"
-                onClick={() => toggleAccordion(index)}
-              >
-                {item.question}
-                {openAccordion === index ? <Minus className="h-5 w-5 text-primary" /> : <Plus className="h-5 w-5 text-accent" />}
-              </button>
-              {openAccordion === index && (
-                <motion.p
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: "auto" }}
-                  exit={{ opacity: 0, height: 0 }}
-                  transition={{ duration: 0.3 }}
-                  className="mt-2 text-gray-600"
+      <DialogContent className="sm:max-w-[800px] p-0 overflow-hidden bg-white/95 backdrop-blur-xl border-none shadow-2xl">
+        <div className="p-10">
+          <DialogHeader>
+            <DialogTitle className="h3 text-primary text-center mb-4">Häufige Fragen</DialogTitle>
+            <DialogDescription className="text-center text-primary/60 text-lg font-light mb-8">
+              Hier finden Sie Antworten auf die häufigsten Fragen zu unseren Behandlungen.
+            </DialogDescription>
+          </DialogHeader>
+          <div className="space-y-4">
+            {faqData.map((item, index) => (
+              <div key={index} className="border border-primary/5 rounded-xl overflow-hidden bg-white/50 hover:bg-white/80 transition-colors duration-300">
+                <button
+                  className="flex justify-between items-center w-full text-left p-6 font-primary tracking-wide text-lg text-primary hover:text-accent transition-colors duration-300"
+                  onClick={() => toggleAccordion(index)}
                 >
-                  {item.answer}
-                </motion.p>
-              )}
-            </div>
-          ))}
+                  {item.question}
+                  <div className={`p-2 rounded-full transition-colors duration-300 ${openAccordion === index ? 'bg-accent text-white' : 'bg-primary/5 text-primary'}`}>
+                    {openAccordion === index ? <Minus className="h-4 w-4" /> : <Plus className="h-4 w-4" />}
+                  </div>
+                </button>
+                <AnimatePresence>
+                  {openAccordion === index && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                    >
+                      <div className="px-6 pb-6 text-primary/70 leading-relaxed font-light">
+                        {item.answer}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            ))}
+          </div>
         </div>
       </DialogContent>
     </Dialog>

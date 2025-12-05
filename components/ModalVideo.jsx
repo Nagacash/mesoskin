@@ -1,8 +1,19 @@
+import React from "react";
 import ReactPlayer from "react-player";
 import { Dialog, DialogContent, DialogTrigger } from "./ui/dialog";
 import Image from "next/image";
 
 const ModalVideo = () => {
+  const [hasMounted, setHasMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setHasMounted(true);
+  }, []);
+
+  if (!hasMounted) {
+    return null;
+  }
+
   return (
     <Dialog>
       <DialogTrigger asChild>

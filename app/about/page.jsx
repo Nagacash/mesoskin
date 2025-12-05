@@ -3,115 +3,177 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Form from '@/components/Form';
 import TestimonialCarousel from '@/components/TestimonialCarousel';
+import { useContext } from 'react';
+import { CursorContext } from '@/components/CursorContext';
 
 const About = () => {
+  const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
+
   return (
-    <motion.section
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1, transition: { delay: 2 } }}
-      className='min-h-screen overflow-x-hidden z-10 pt-32 xl:pt-32'
-    >
-      <div className='container mx-auto pt-40 pb-24'>
-        <div className='text-center mb-24 bg-accent-100 p-8 rounded-lg shadow-md'>
-          <motion.h1
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ delay: 0.3, duration: 0.8 }}
-            className='h1 mb-4'>Über mich</motion.h1>
-          <motion.h1
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
-            className="h1 mb-4 text-primary"><strong>Mesoskin</strong> Hamburg</motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ delay: 0.7, duration: 0.8 }}
-            className='max-w-2xl mx-auto'>
-            Willkommen in der Welt der natürlichen Schönheit!
-          </motion.p>
+    <section className='min-h-screen overflow-x-hidden'>
+      {/* Hero Section */}
+      <div className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/assets/about/meso-annette.jpg"
+            alt="Annette Fascher Background"
+            fill
+            className="object-cover object-center opacity-90"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-secondary"></div>
         </div>
 
-        <div className='flex flex-col xl:flex-row items-center justify-between gap-16 mb-24'>
-          <div className='flex-1'>
-            <h2 className='h2 mb-6'>Über Annette Fascher</h2>
-            <div className='space-y-6 text-lg'>
-              <p>
-                Seit über 30 Jahren bin ich leidenschaftlich in der Schönheitsbranche tätig und habe mich als langjährige Expertin im Anti-Aging-Bereich sowie im Bodyforming und der Straffung etabliert. Besonders in der Anti-Aging-Behandlung habe ich meine Expertise vertieft. Seit der Einführung von Hyaluronsäure habe ich zahlreiche Fortbildungen absolviert, darunter spezialisierte Master Classes in der Anwendung von PDO-Fäden und Hyaluronsäure-Injektionen mit stumpfer Kanüle.
-              </p>
-              <p>
-                Mein Ziel ist es, meinen Klienten zu einem strahlenden und gesunden Erscheinungsbild zu verhelfen. Dabei greife ich auf die neuesten Entwicklungen und Techniken in der ästhetischen Medizin zurück, um individuelle Lösungen zu bieten, die auf Ihre Bedürfnisse abgestimmt sind.
-              </p>
-              <p>
-                Ich lade Sie ein, sich mit mir auf eine transformative Reise zu begeben, die Ihre Gesundheit, Ihr Wohlbefinden und Ihre natürliche Schönheit in den Mittelpunkt stellt. Lassen Sie uns gemeinsam Ihre persönliche Schönheit entfalten!
-              </p>
-              <p className='font-serif italic text-xl'>
-                Schönheit, die bleibt – seit 30 Jahren, natürlich und echt.
-              </p>
-            <p className="lead max-w-2xl mx-auto text-gray-700 mb-8">
-              Mit <strong>Mesoskin</strong> Hamburg steht Annette Fascher-Wendlandt in Hamburg-Rothenbaumchausee 156 für einen exklusiven Ort, der ganz der sanften und gesunden Behandlung der Haut gewidmet ist – mit authentischen Ergebnissen. Faltenbehandlung, Gesichtsformung und Hautverjüngung sind hier wichtige Stichworte. Zu den Schwerpunkten ihrer Arbeit zählt im Bereich der Ästhetik die Doll Lip-Technik. Für diese spezielle Technik wurde sie in Moskau und London ausgebildet. Dazu bietet Annette Fascher-Wendlandt begleitende und ergänzende Maßnahmen wie Kraft und Gesundheit spendende Infusionen an.
+        <div className="container mx-auto relative z-10 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+          >
+            <h1
+              className="text-6xl md:text-8xl font-primary text-white mb-4 tracking-wide"
+              onMouseEnter={mouseEnterHandler}
+              onMouseLeave={mouseLeaveHandler}
+            >
+              Über Mich
+            </h1>
+            <p className="text-xl md:text-2xl text-white/90 font-light tracking-wider uppercase">
+              Annette Fascher-Wendlandt
             </p>
+          </motion.div>
+        </div>
+      </div>
+
+      <div className='container mx-auto py-24 relative z-10'>
+
+        {/* Profile Section */}
+        <div className='flex flex-col xl:flex-row items-center gap-16 mb-32'>
+          {/* Image Column */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className='flex-1 relative'
+          >
+            <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border border-white/20">
+              <Image
+                src='/assets/about/meso-annette.jpg'
+                width={600}
+                height={800}
+                alt='Annette Fascher-Wendlandt'
+                className='w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700'
+              />
             </div>
-            <button className='btn btn-lg block mx-auto mt-8'>
-              Jetzt Termin vereinbaren
-            </button>
-          </div>
-                    <div className='flex-1 flex justify-center items-center gap-4 bg-white p-6 rounded-lg shadow-xl'>
-                      <Image
-                        src='/assets/about/meso-annette.jpg'
-                        width={500}
-                        height={350}
-                        alt='Annette Fascher-Wendlandt'
-                        className='rounded-lg shadow-2xl w-full h-[500px] md:h-[700px] object-cover'
-                      />
-                    </div>
+            {/* Decorative Elements */}
+            <div className="absolute -top-10 -left-10 w-40 h-40 bg-accent/20 rounded-full blur-3xl -z-10"></div>
+            <div className="absolute -bottom-10 -right-10 w-60 h-60 bg-primary/10 rounded-full blur-3xl -z-10"></div>
+          </motion.div>
+
+          {/* Text Column */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className='flex-1'
+          >
+            <h2
+              className='h2 mb-8 text-primary'
+              onMouseEnter={mouseEnterHandler}
+              onMouseLeave={mouseLeaveHandler}
+            >
+              Leidenschaft für <span className="text-accent italic">natürliche</span> Schönheit
+            </h2>
+            <div className='space-y-6 text-lg text-primary/80 font-light leading-relaxed'>
+              <p>
+                Seit über 30 Jahren bin ich leidenschaftlich in der Schönheitsbranche tätig. Was als Beruf begann, wurde schnell zur Berufung. Als Expertin für Anti-Aging, Bodyforming und Straffung habe ich es mir zur Aufgabe gemacht, die natürliche Schönheit meiner Klienten nicht nur zu bewahren, sondern sie zum Strahlen zu bringen.
+              </p>
+              <p>
+                Besonders die ästhetische Medizin hat es mir angetan. Mit der Einführung von Hyaluronsäure und PDO-Fäden eröffneten sich neue Welten der sanften Verjüngung. Durch stetige Fortbildungen und Master Classes halte ich mein Wissen immer auf dem neuesten Stand, um Ihnen die besten und sichersten Behandlungen bieten zu können.
+              </p>
+              <div className="border-l-4 border-accent pl-6 py-2 my-8 bg-accent/5 rounded-r-lg">
+                <p className='font-primary text-xl italic text-primary font-medium'>
+                  "Schönheit ist für mich kein starres Ideal, sondern das harmonische Zusammenspiel von innerem Wohlbefinden und äußerer Ausstrahlung."
+                </p>
+              </div>
+              <p>
+                Bei <strong>Mesoskin Hamburg</strong> habe ich einen Ort geschaffen, an dem Sie im Mittelpunkt stehen. Ein Ort der Ruhe, der Kompetenz und der ehrlichen Beratung. Lassen Sie uns gemeinsam Ihre persönliche Schönheit entfalten.
+              </p>
+            </div>
+          </motion.div>
         </div>
 
-        <div className='text-center max-w-3xl mx-auto mb-24 bg-accent-100 p-8 rounded-lg shadow-md'>
-          <motion.h2
-            initial={{ opacity: 0, y: 50 }}
+        {/* Philosophy & Qualifications Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-32">
+          {/* Philosophy Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ delay: 0.3, duration: 0.8 }}
-            className='h2 mb-6'>Maßgeschneidert</motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 50 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="bg-white p-10 rounded-3xl shadow-lg border border-gray-100 flex flex-col justify-center"
+          >
+            <h3 className="h3 mb-6 text-accent">Maßgeschneidert</h3>
+            <p className="text-lg text-primary/80 leading-relaxed">
+              Jeder Mensch ist einzigartig, und genau so sollte auch seine Pflege sein. Bei Mesoskin gibt es keine Standardlösungen. Jede Behandlung beginnt mit einem ausführlichen Gespräch und einer genauen Analyse. Wir entwickeln gemeinsam einen Plan, der perfekt auf Ihre Hautbedürfnisse und Ihre Lebenssituation abgestimmt ist.
+            </p>
+          </motion.div>
+
+          {/* Qualifications Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
-            className='text-lg mb-8'>
-            Bei <strong>Mesoskin</strong> Hamburg steht immer das individuelle Angebot im Zentrum. Warum? Weil jeder Mensch und jede Haut anders ist. Oder anders formuliert: Der Mensch steht im Vordergrund. Entsprechend beginnt jede Behandlung mit einem ausführlichen Beratungsgespräch und einem individuelle Therapieplan. Eine umfassende Nachbetreuung steht ebenfalls „auf dem Programm“.
-          </motion.p>
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="bg-primary p-10 rounded-3xl shadow-lg text-white relative overflow-hidden"
+          >
+            <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
 
+            <h3 className="h3 mb-8 text-white">Qualifikationen</h3>
+            <ul className="space-y-6 relative z-10">
+              <li className="flex items-start gap-4">
+                <span className="w-2 h-2 mt-2.5 bg-accent rounded-full flex-shrink-0"></span>
+                <div>
+                  <strong className="block text-accent text-lg mb-1">Heilpraktikerin seit 1995</strong>
+                  <span className="text-white/70 font-light">Langjährige Erfahrung in der alternativen Medizin und Gesundheitsförderung.</span>
+                </div>
+              </li>
+              <li className="flex items-start gap-4">
+                <span className="w-2 h-2 mt-2.5 bg-accent rounded-full flex-shrink-0"></span>
+                <div>
+                  <strong className="block text-accent text-lg mb-1">Psychologische Beraterin</strong>
+                  <span className="text-white/70 font-light">Ganzheitliche Unterstützung für Körper und Geist.</span>
+                </div>
+              </li>
+              <li className="flex items-start gap-4">
+                <span className="w-2 h-2 mt-2.5 bg-accent rounded-full flex-shrink-0"></span>
+                <div>
+                  <strong className="block text-accent text-lg mb-1">Expertin für Infusionstherapie</strong>
+                  <span className="text-white/70 font-light">Spezialisiert auf Vitamin- und NAD+ Infusionen für Vitalität.</span>
+                </div>
+              </li>
+            </ul>
+          </motion.div>
         </div>
 
-        <div className='text-center max-w-3xl mx-auto mb-24 bg-accent-100 p-8 rounded-lg shadow-md'>
-          <h2 className='h2 mb-6'>Qualifikationen</h2>
-          <ul className='text-lg text-left list-disc list-inside'>
-            <li className='mb-4'>
-              <strong>Heilpraktikerin seit 1995:</strong> Langjährige Erfahrung in der alternativen Medizin und Gesundheitsförderung.
-            </li>
-            <li className='mb-4'>
-              <strong>Zertifizierte psychologische Beraterin:</strong> Weiterbildung in psychologischer Beratung und Coaching, um Klienten bei der Bewältigung von Lebensherausforderungen zu unterstützen.
-            </li>
-            <li className='mb-4'>
-              <strong>Spezialisiert auf Vitamininfusionen:</strong> Expertise in der Anwendung von Vitamininfusionen zur Förderung von Energie, Immunsystem und Entgiftung.
-            </li>
-            <li className='mb-4'>
-              <strong>Regelmäßige Fortbildungen:</strong> Kontinuierliche Weiterbildung, um mein Wissen über aktuelle Trends und Entwicklungen im Gesundheitsbereich zu vertiefen.
-            </li>
-          </ul>
+        {/* Testimonials */}
+        <div className="mb-32">
+          <TestimonialCarousel />
         </div>
 
-        <TestimonialCarousel />
-
-        <div className='max-w-3xl mx-auto'>
-          <div className='text-center mb-8 pb-12'>
-            <h2 className='h2'>Termin vereinbaren</h2>
-            <p className='mt-4 text-lg'>
+        {/* Contact Form Section */}
+        <div className='max-w-4xl mx-auto bg-white/50 backdrop-blur-sm p-8 md:p-12 rounded-3xl shadow-xl border border-white/50'>
+          <div className='text-center mb-12'>
+            <h2
+              className='h2 mb-4'
+              onMouseEnter={mouseEnterHandler}
+              onMouseLeave={mouseLeaveHandler}
+            >
+              Termin vereinbaren
+            </h2>
+            <p className='text-lg text-primary/70'>
               Sie möchten einen Termin vereinbaren? Füllen Sie das Kontaktformular aus und ich werde mich schnellsmöglich zurückmelden.
             </p>
           </div>
@@ -125,7 +187,7 @@ const About = () => {
           />
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 

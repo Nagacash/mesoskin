@@ -2,15 +2,12 @@
 import { useContext, useState, useEffect } from "react";
 import { CursorContext } from "./CursorContext";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
 import { AiOutlineMenu } from "react-icons/ai";
 import MobileNav from "./MobileNav";
 import Nav from "./Nav";
 import Socials from "./Socials";
-import { FaPhoneAlt } from "react-icons/fa";
-import { IoMdMail } from "react-icons/io";
 
 const Header = () => {
   const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
@@ -19,7 +16,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) { // Adjust scroll threshold as needed
+      if (window.scrollY > 50) {
         setScrolled(true);
       } else {
         setScrolled(false);
@@ -32,53 +29,72 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
-    <header className={`fixed top-0 left-0 z-[500] w-full bg-white transition-all duration-300 ${scrolled ? 'backdrop-blur-md bg-white/30 pb-3 xl:pb-[25px]' : 'pb-6 xl:pb-[50px]'}`}>
-      <div className="bg-primary mb-6 xl:mb-[20px] xl:h-[20px] py-1 xl:py-0 hidden md:block">
-        <div className="container mx-auto h-full">
-          <div className="flex items-center justify-between h-full">
-
-
-            <motion.div
-              onMouseEnter={mouseEnterHandler}
-              onMouseLeave={mouseLeaveHandler}
-              className="hidden xl:block"
-            >
-              <Socials containerStyles="flex gap-6 text-white" />
-            </motion.div>
-          </div>
-        </div>
-      </div>
-      <div className="container mx-auto flex items-center justify-between px-4 pt-2 pb-0">
+    <header
+      className={`fixed top-0 left-0 z-[500] w-full transition-all duration-500 ${scrolled
+        ? "bg-white/80 backdrop-blur-md py-4 shadow-sm"
+        : "bg-transparent py-6"
+        }`}
+    >
+      <div className="container mx-auto flex items-center justify-between px-4">
+        {/* Logo */}
         <motion.div
           onMouseEnter={mouseEnterHandler}
           onMouseLeave={mouseLeaveHandler}
-          className="mx-auto xl:mx-0"
+          className="z-50"
         >
-          <Link href="/">
-            <h1 className="text-2xl font-bold text-primary"><strong>MESOSKIN</strong> HAMBURG</h1>
+          <Link href="/" aria-label="Mesoskin Hamburg Home">
+            <h1 className={`text-2xl font-bold tracking-widest uppercase transition-colors duration-300 ${scrolled ? 'text-primary' : 'text-white'}`}>
+              Mesoskin<span className="font-light">Hamburg</span>
+            </h1>
           </Link>
         </motion.div>
-        <div
-          className="xl:hidden cursor-pointer"
-          onClick={() => setMobileNav(!mobileNav)}
-        >
-          <AiOutlineMenu className="text-3xl text-primary" />
+
+        {/* Desktop Nav & Socials */}
+        <div className="hidden xl:flex items-center gap-12">
+          <motion.div
+            onMouseEnter={mouseEnterHandler}
+            onMouseLeave={mouseLeaveHandler}
+          >
+            <Nav scrolled={scrolled} />
+          </motion.div>
+
+          <div className={`h-6 w-[1px] ${scrolled ? 'bg-primary/20' : 'bg-white/20'}`}></div>
+
+          <motion.div
+            onMouseEnter={mouseEnterHandler}
+            onMouseLeave={mouseLeaveHandler}
+          >
+            <Socials containerStyles={`flex gap-6 ${scrolled ? 'text-primary' : 'text-white'} transition-colors duration-300`} />
+          </motion.div>
         </div>
-        <motion.div
-          initial={{ right: "-100%" }}
-          animate={{ right: mobileNav ? 0 : "-100%" }}
-          className="fixed bg-primary top-0 bottom-0 right-0 w-full h-screen xl:hidden z-[999]"
+
+        {/* Mobile Menu Trigger */}
+        <button
+          type="button"
+          className={`xl:hidden cursor-pointer z-50 transition-opacity duration-300 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 rounded ${mobileNav ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
+          onClick={() => setMobileNav(!mobileNav)}
+          aria-label="Toggle mobile menu"
+          aria-expanded={mobileNav}
         >
-          <MobileNav setMobileNav={setMobileNav} />
-        </motion.div>
-        <motion.div
-          onMouseEnter={mouseEnterHandler}
-          onMouseLeave={mouseLeaveHandler}
-          className="hidden xl:block"
-        >
-          <Nav />
-        </motion.div>
+          <AiOutlineMenu className={`text-3xl transition-colors duration-300 ${scrolled ? 'text-primary' : 'text-white'}`} />
+        </button>
+
+        {/* Mobile Nav Overlay */}
+        <AnimatePresence>
+          {mobileNav && (
+            <motion.div
+              initial={{ opacity: 0, x: "100%" }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: "100%" }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+              className="fixed inset-0 z-40 flex flex-col justify-center items-center"
+            >
+              <MobileNav setMobileNav={setMobileNav} />
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </header>
   );
