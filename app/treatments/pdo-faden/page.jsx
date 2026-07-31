@@ -22,7 +22,7 @@ const PdoFadenPage = () => {
       <TreatmentHero
         title="PDO Fäden"
         subtitle="Fadenlifting für viel natürlich wirkende Schönheit. Ohne Skalpell, für ein strafferes, jüngeres Ich."
-        imageSrc="/assets/treatments/meso8.jpg"
+        imageSrc="/assets/treatments/meso8.webp"
         imageAlt="PDO Fäden"
         overlayOpacity="bg-black/20"
       />
@@ -61,7 +61,7 @@ const PdoFadenPage = () => {
               <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl border border-white/50 aspect-square">
                 {/* Placeholder for a detail shot or graphic, reusing existing image for now but styled differently */}
                 <Image
-                  src="/assets/ing6.png"
+                  src="/assets/ing6.webp"
                   fill
                   alt="PDO Fäden Detail"
                   className="object-cover scale-110 hover:scale-100 transition-transform duration-700"

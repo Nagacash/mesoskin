@@ -1,0 +1,15 @@
+http://127.0.0.1:3000/
+http://127.0.0.1:3000/about
+http://127.0.0.1:3000/contact
+http://127.0.0.1:3000/datenschutz
+http://127.0.0.1:3000/impressum
+http://127.0.0.1:3000/treatments
+http://127.0.0.1:3000/treatments/dripspas
+http://127.0.0.1:3000/treatments/drip-spa-infusionen
+http://127.0.0.1:3000/treatments/doll-lips
+http://127.0.0.1:3000/treatments/hyaluronsaure
+http://127.0.0.1:3000/treatments/hypoxie-training
+http://127.0.0.1:3000/treatments/liposana-3
+http://127.0.0.1:3000/treatments/notox
+http://127.0.0.1:3000/treatments/pdo-faden
+http://127.0.0.1:3000/treatments/skinbooster

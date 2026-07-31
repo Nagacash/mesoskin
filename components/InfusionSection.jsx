@@ -32,7 +32,7 @@ const InfusionSection = () => {
           >
             <div className="xl:w-1/2 flex justify-center ml-auto">
               <Image
-                src="/assets/in.png"
+                src="/assets/in.webp"
                 width={500}
                 height={300}
                 alt="Baseninfusion"

@@ -23,7 +23,7 @@ const HeroSection = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/assets/home/meso10.jpg"
+          src="/assets/home/meso10.webp"
           alt="Background"
           fill
           className="object-cover object-center"

@@ -77,7 +77,7 @@ const Footer = () => {
             <li className="flex items-start gap-3 group">
               <MapPin size={24} className="text-accent mt-1 group-hover:scale-110 transition-transform" aria-hidden="true" />
               <a 
-                href="https://maps.apple.com/place?map=explore&place-id=IAB8A0CAEED0E2BF3&address=Rothenbaumchaussee+156%2C+20149+Hamburg%2C+Germany&coordinate=53.5784825%2C9.9893272&name=Body+%26+Mind+by+Natalie+Zimmermann&_provider=9902" 
+                href="https://maps.apple.com/?q=Osterstraße+92,+20259+Hamburg,+Germany" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="hover:text-accent transition-colors duration-300 leading-tight focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-primary rounded"

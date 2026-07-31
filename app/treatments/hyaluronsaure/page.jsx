@@ -21,7 +21,7 @@ const HyaluronsaurePage = () => {
       <TreatmentHero
         title="Hyaluronsäure"
         subtitle="Frische und Vitalität für Ihr Gesicht – natürlich, effektiv und sofort sichtbar."
-        imageSrc="/assets/treatments/girls2.jpg"
+        imageSrc="/assets/treatments/girls2.webp"
         imageAlt="Hyaluron-Unterspritzung"
         overlayOpacity="bg-black/20"
       />
@@ -59,7 +59,7 @@ const HyaluronsaurePage = () => {
             >
               <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl border border-white/50 aspect-[4/3]">
                 <Image
-                  src="/assets/new8.jpg"
+                  src="/assets/new8.webp"
                   fill
                   alt="Hyaluronsäure Behandlung"
                   className="object-cover hover:scale-105 transition-transform duration-700 grayscale hover:grayscale-0"

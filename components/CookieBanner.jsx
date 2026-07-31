@@ -5,28 +5,21 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const CookieBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [cookieConsent, setCookieConsent] = useState(null);
-
-  console.log("CookieBanner is rendering. isVisible:", isVisible, "cookieConsent:", cookieConsent);
 
   useEffect(() => {
     const consent = localStorage.getItem("cookieConsent");
     if (consent === null) {
       setIsVisible(true);
-    } else {
-      setCookieConsent(consent === "true");
     }
   }, []);
 
   const handleAccept = () => {
     localStorage.setItem("cookieConsent", "true");
-    setCookieConsent(true);
     setIsVisible(false);
   };
 
   const handleDecline = () => {
     localStorage.setItem("cookieConsent", "false");
-    setCookieConsent(false);
     setIsVisible(false);
   };
 

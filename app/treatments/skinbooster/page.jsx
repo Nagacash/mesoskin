@@ -22,7 +22,7 @@ const SkinboosterPage = () => {
       <TreatmentHero
         title="Skinbooster"
         subtitle="Spannkraft, die großflächig wirkt – für ein strahlendes, jugendliches Hautbild."
-        imageSrc="/assets/treatments/girls3.png"
+        imageSrc="/assets/treatments/girls3.webp"
         imageAlt="Skinbooster"
         overlayOpacity="bg-black/20"
       />
@@ -60,7 +60,7 @@ const SkinboosterPage = () => {
             >
               <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl border border-white/50 aspect-[4/3]">
                 <Image
-                  src="/assets/treatments/girls3.png"
+                  src="/assets/treatments/girls3.webp"
                   fill
                   alt="Skinbooster Behandlung"
                   className="object-cover hover:scale-105 transition-transform duration-700"

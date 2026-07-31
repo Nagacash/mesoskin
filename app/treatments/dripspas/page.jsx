@@ -27,7 +27,7 @@ const Dripspas = () => {
             <TreatmentHero
                 title="Drip Spa Infusionen"
                 subtitle="Ihre Lösung für eine schnelle Genesung, mehr Energie und strahlende Schönheit."
-                imageSrc="/assets/vitamin1.png"
+                imageSrc="/assets/vitamin1.webp"
                 imageAlt="Drip Spa Infusionen"
                 overlayOpacity="bg-black/30"
             />
@@ -74,7 +74,7 @@ const Dripspas = () => {
                         >
                             <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl border border-white/50">
                                 <Image
-                                    src="/assets/ing5.png"
+                                    src="/assets/ing5.webp"
                                     width={600}
                                     height={400}
                                     alt="Vorteile der Infusionstherapie"
@@ -99,7 +99,7 @@ const Dripspas = () => {
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
                             <div className="order-2 lg:order-1">
                                 <Image
-                                    src="/assets/vitamin3.png"
+                                    src="/assets/vitamin3.webp"
                                     width={500}
                                     height={350}
                                     alt="NAD+ Infusionen"

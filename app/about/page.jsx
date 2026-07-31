@@ -15,7 +15,7 @@ const About = () => {
       <div className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/assets/about/meso-annette.jpg"
+            src="/assets/about/meso-annette.webp"
             alt="Annette Fascher Background"
             fill
             className="object-cover object-center opacity-90"
@@ -59,7 +59,7 @@ const About = () => {
           >
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border border-white/20">
               <Image
-                src='/assets/about/meso-annette.jpg'
+                src='/assets/about/meso-annette.webp'
                 width={600}
                 height={800}
                 alt='Annette Fascher-Wendlandt'

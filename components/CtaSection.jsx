@@ -73,7 +73,7 @@ const CtaSection = () => {
           >
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border border-white/10">
               <Image
-                src="/assets/treatments/meso8.jpg"
+                src="/assets/treatments/meso8.webp"
                 width={600}
                 height={400}
                 alt="Treatment"

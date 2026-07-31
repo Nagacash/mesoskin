@@ -22,7 +22,7 @@ const HypoxieTrainingPage = () => {
       <TreatmentHero
         title="Mitochondrien & Hypoxie"
         subtitle="Innovatives Behandlungskonzept für mehr Energie, Vitalität und Leistungsfähigkeit."
-        imageSrc="/assets/vitamin2.png"
+        imageSrc="/assets/vitamin2.webp"
         imageAlt="Hypoxie-Training"
         overlayOpacity="bg-black/20"
       />
@@ -57,7 +57,7 @@ const HypoxieTrainingPage = () => {
             >
               <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl border border-white/50 aspect-[4/3]">
                 <Image
-                  src="/assets/vitamin2.png"
+                  src="/assets/vitamin2.webp"
                   fill
                   alt="Mitochondrien Behandlung"
                   className="object-cover hover:scale-105 transition-transform duration-700"

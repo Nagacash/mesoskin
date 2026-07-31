@@ -98,7 +98,7 @@ const Treatments = () => {
             className="hidden xl:flex w-[384px] h-[534px] relative"
           >
             <Image
-              src="/assets/treatments/img.jpg"
+              src="/assets/treatments/img.webp"
               fill
               quality={100}
               alt=""

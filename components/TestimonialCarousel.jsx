@@ -11,35 +11,35 @@ const testimonials = [
     name: "Anna Schmidt",
     title: "Sportlerin",
     text: "Die Behandlungen bei Mesoskin Hamburg haben meine Haut revitalisiert und mir ein unglaubliches Gefühl von Frische verliehen. Ich fühle mich energiegeladener und meine Haut strahlt. Absolut empfehlenswert!",
-    // image: "/assets/testimonials/person1.jpg", // Placeholder image
+    // image: "/assets/testimonials/person1.webp", // Placeholder image
   },
   {
     id: 2,
     name: "Irene Mandoou",
     title: "Pilates Teacher",
     text: "Als Pilates Teacher lege ich Wert auf Wohlbefinden. Die Expertise und die maßgeschneiderten Lösungen von Mesoskin Hamburg sind herausragend. Meine Haut war noch nie so gut versorgt.",
-    // image: "/assets/testimonials/person2.jpg", // Placeholder image
+    // image: "/assets/testimonials/person2.webp", // Placeholder image
   },
   {
     id: 3,
     name: "Lena Meier",
     title: "Flugbegleiterin",
     text: "Durch meinen Beruf ist meine Haut oft strapaziert. Mesoskin Hamburg bietet genau die Pflege, die ich brauche, um frisch und erholt auszusehen. Die Ergebnisse sind einfach fantastisch!",
-    // image: "/assets/testimonials/person3.jpg", // Placeholder image
+    // image: "/assets/testimonials/person3.webp", // Placeholder image
   },
   {
     id: 4,
     name: "Dr. Klaus Weber",
     title: "Longevity Experte",
     text: "Die ganzheitlichen Ansätze bei Mesoskin Hamburg sind beeindruckend. Als Longevity Experte schätze ich die fundierte Beratung und die effektiven Behandlungen, die das allgemeine Wohlbefinden fördern.",
-    // image: "/assets/testimonials/person4.jpg", // Placeholder image
+    // image: "/assets/testimonials/person4.webp", // Placeholder image
   },
   {
     id: 5,
     name: "Sophie Müller",
     title: "Unternehmerin",
     text: "In meinem stressigen Alltag ist die Zeit bei Mesoskin Hamburg eine Oase der Ruhe. Die Behandlungen sind nicht nur entspannend, sondern liefern auch sichtbare Ergebnisse. Meine Haut dankt es mir!",
-    // image: "/assets/testimonials/person5.jpg", // Placeholder image
+    // image: "/assets/testimonials/person5.webp", // Placeholder image
   },
 ];
 

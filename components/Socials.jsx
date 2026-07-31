@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { FaYoutube, FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
+import { CONTACT_INFO } from "@/lib/constants";
 
 const socials = [
   {
@@ -8,7 +9,7 @@ const socials = [
   },
   {
     icon: <FaInstagram />,
-    href: "https://www.instagram.com/mesoskin.hamburg/",
+    href: CONTACT_INFO.social.instagram,
   },
 ];
 
@@ -18,7 +19,14 @@ const Socials = ({ containerStyles }) => {
       {socials.map((social, index) => {
         return (
           <li key={index}>
-            <Link href={social.href}>{social.icon}</Link>
+            <Link
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={social.href.includes("instagram") ? "Instagram" : "Facebook"}
+            >
+              {social.icon}
+            </Link>
           </li>
         );
       })}

@@ -1,0 +1,16 @@
+# Mesoskin — user-facing routes (base URL prefixed at measure time)
+/
+/about
+/contact
+/datenschutz
+/impressum
+/treatments
+/treatments/dripspas
+/treatments/drip-spa-infusionen
+/treatments/doll-lips
+/treatments/hyaluronsaure
+/treatments/hypoxie-training
+/treatments/liposana-3
+/treatments/notox
+/treatments/pdo-faden
+/treatments/skinbooster

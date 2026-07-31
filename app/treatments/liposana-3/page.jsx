@@ -43,7 +43,7 @@ const Liposana3Page = () => {
                         onMouseLeave={mouseLeaveHandler}
                         className="xl:w-1/2 flex justify-center xl:justify-end xl:-mr-16"
                       >            <Image
-              src="/assets/treatments/girls2.jpg"
+              src="/assets/treatments/girls2.webp"
               width={500}
               height={350}
               alt="Liposana 3"

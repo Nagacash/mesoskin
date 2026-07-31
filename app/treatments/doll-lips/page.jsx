@@ -21,7 +21,7 @@ const DollLipsPage = () => {
       <TreatmentHero
         title="Doll Lips"
         subtitle="Lippenaufbau mit der Doll Lip-Technik für natürlich volle, sinnliche Lippen."
-        imageSrc="/assets/treatments/doll-lips.jpeg"
+        imageSrc="/assets/treatments/doll-lips.webp"
         imageAlt="Doll Lips"
         overlayOpacity="bg-black/20"
       />
@@ -59,7 +59,7 @@ const DollLipsPage = () => {
             >
               <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl border border-white/50 aspect-[4/3]">
                 <Image
-                  src="/assets/treatments/doll-lips.jpeg"
+                  src="/assets/treatments/doll-lips.webp"
                   fill
                   alt="Doll Lips Detail"
                   className="object-cover hover:scale-105 transition-transform duration-700"

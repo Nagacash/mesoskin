@@ -36,7 +36,7 @@ const PdoFadenImageGallery = () => {
             onMouseLeave={mouseLeaveHandler}
           >
             <Image
-              src="/assets/treatments/pdo-faden/spa8.jpg"
+              src="/assets/treatments/pdo-faden/spa8.webp"
               width={500}
               height={350}
               alt="PDO Faden Treatment 1"
@@ -52,7 +52,7 @@ const PdoFadenImageGallery = () => {
             onMouseLeave={mouseLeaveHandler}
           >
             <Image
-              src="/assets/treatments/pdo-faden/spa9.jpg"
+              src="/assets/treatments/pdo-faden/spa9.webp"
               width={500}
               height={350}
               alt="PDO Faden Treatment 2"
@@ -68,7 +68,7 @@ const PdoFadenImageGallery = () => {
             onMouseLeave={mouseLeaveHandler}
           >
             <Image
-              src="/assets/ing6.png"
+              src="/assets/ing6.webp"
               width={500}
               height={350}
               alt="PDO Faden Treatment 3"

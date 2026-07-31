@@ -48,7 +48,7 @@ const Chatbot = () => {
         
         Wichtige Informationen:
         - Inhaberin: Annette Fascher-Wendlandt (Expertin für ästhetische Behandlungen, Fokus auf Natürlichkeit).
-        - Standort: Rothenbaumchaussee 156, 20149 Hamburg.
+        - Standort: Osterstraße 92, 20259 Hamburg.
         - Kontakt: Tel: +49 40 23491990, Email: kontakt@mesoskinhamburg.de.
         - Terminbuchung: Über Telefon, Email oder das Kontaktformular auf der Webseite.
         
