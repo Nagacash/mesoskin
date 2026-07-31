@@ -10,7 +10,6 @@ import Link from "next/link";
 import { AiOutlineMenu } from "react-icons/ai";
 import MobileNav from "./MobileNav";
 import Nav from "./Nav";
-import Socials from "./Socials";
 
 const Header = () => {
   const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
@@ -88,7 +87,7 @@ const Header = () => {
           >
             <Link href="/" aria-label="Mesoskin Hamburg Home">
               <span
-                className={`block text-lg sm:text-xl xl:text-2xl font-bold tracking-widest uppercase transition-colors duration-300 ${
+                className={`block text-base sm:text-lg lg:text-[15px] xl:text-xl min-[1400px]:text-2xl font-bold tracking-wide lg:tracking-widest uppercase transition-colors duration-300 ${
                   solidHeader ? "text-primary" : "text-white"
                 }`}
               >
@@ -98,31 +97,13 @@ const Header = () => {
             </Link>
           </motion.div>
 
-          <div className="hidden lg:flex min-w-0 flex-1 items-center justify-end gap-2 xl:gap-4 pl-2">
+          <div className="hidden lg:flex min-w-0 flex-1 items-center justify-end pl-1 xl:pl-2 max-w-[calc(100%-7.5rem)] sm:max-w-[calc(100%-9rem)]">
             <motion.div
-              className="min-w-0 flex-1 flex justify-end"
+              className="min-w-0 w-full flex justify-end"
               onMouseEnter={mouseEnterHandler}
               onMouseLeave={mouseLeaveHandler}
             >
               <Nav solidHeader={solidHeader} />
-            </motion.div>
-
-            <div
-              className={`hidden min-[1400px]:block h-6 w-px shrink-0 ${
-                solidHeader ? "bg-primary/20" : "bg-white/20"
-              }`}
-            />
-
-            <motion.div
-              className="hidden min-[1400px]:block shrink-0"
-              onMouseEnter={mouseEnterHandler}
-              onMouseLeave={mouseLeaveHandler}
-            >
-              <Socials
-                containerStyles={`flex gap-4 ${
-                  solidHeader ? "text-primary" : "text-white"
-                } transition-colors duration-300`}
-              />
             </motion.div>
           </div>
 

@@ -1,64 +1,50 @@
 "use client";
 
 import Link from "next/link";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { CursorContext } from "./CursorContext";
 import { usePathname } from "next/navigation";
-import { NAV_LINKS } from "@/lib/navLinks";
-
-const CONTACT_HREF = "/contact";
+import { NAV_LINKS, navLinkLabel } from "@/lib/navLinks";
 
 const linkClass = (pathname, href, solidHeader) =>
   `${
-    pathname === href ? "border-b-2 border-accent" : ""
+    pathname === href ? "border-b border-accent" : "border-b border-transparent"
   } ${
     solidHeader
       ? "text-primary hover:text-accent"
       : "text-white hover:text-accent"
-  } uppercase transition-colors duration-300 whitespace-nowrap font-medium tracking-wide text-[10px] lg:text-[11px] xl:text-xs min-[1400px]:text-sm py-1`;
+  } uppercase transition-colors duration-300 whitespace-nowrap font-normal tracking-normal xl:tracking-wide text-[8px] lg:text-[9px] xl:text-[10px] min-[1400px]:text-xs leading-none py-0.5`;
 
 const Nav = ({ solidHeader }) => {
   const pathname = usePathname();
   const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
+  const [compactLabels, setCompactLabels] = useState(true);
 
-  const mainLinks = NAV_LINKS.filter((link) => link.href !== CONTACT_HREF);
-  const contactLink = NAV_LINKS.find((link) => link.href === CONTACT_HREF);
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 1400px)");
+    const update = () => setCompactLabels(!mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
 
   return (
     <nav
-      className="flex items-center gap-2 xl:gap-3 min-w-0 w-full max-w-full justify-end"
+      className="flex flex-wrap items-center justify-end gap-x-1 gap-y-1 lg:gap-x-1.5 xl:gap-x-2 max-w-full"
       aria-label="Hauptnavigation"
     >
-      <div
-        className="min-w-0 flex-1 overflow-x-auto overscroll-x-contain scroll-smooth nav-scroll-fade lg:max-w-[calc(100vw-11rem)] xl:max-w-[calc(100vw-18rem)] min-[1400px]:max-w-none"
-        tabIndex={0}
-        aria-label="Behandlungen und Seiten"
-      >
-        <div className="flex w-max items-center gap-2 xl:gap-3 xl:pr-1">
-          {mainLinks.map((link) => (
-            <Link
-              href={link.href}
-              key={link.href}
-              onMouseEnter={mouseEnterHandler}
-              onMouseLeave={mouseLeaveHandler}
-              className={linkClass(pathname, link.href, solidHeader)}
-            >
-              {link.name}
-            </Link>
-          ))}
-        </div>
-      </div>
-
-      {contactLink && (
+      {NAV_LINKS.map((link) => (
         <Link
-          href={contactLink.href}
+          href={link.href}
+          key={link.href}
           onMouseEnter={mouseEnterHandler}
           onMouseLeave={mouseLeaveHandler}
-          className={`${linkClass(pathname, contactLink.href, solidHeader)} shrink-0 pl-1 border-l border-current/15`}
+          className={linkClass(pathname, link.href, solidHeader)}
+          title={link.name}
         >
-          {contactLink.name}
+          {navLinkLabel(link, compactLabels)}
         </Link>
-      )}
+      ))}
     </nav>
   );
 };
