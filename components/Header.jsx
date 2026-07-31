@@ -80,26 +80,27 @@ const Header = () => {
             : "bg-transparent pb-6 pt-[max(1.5rem,env(safe-area-inset-top))]"
         }`}
       >
-        <div className="container mx-auto flex items-center justify-between gap-3 px-4">
+        <div className="container mx-auto flex items-center justify-between gap-2 sm:gap-3 px-4 sm:px-6 lg:px-8">
           <motion.div
             onMouseEnter={mouseEnterHandler}
             onMouseLeave={mouseLeaveHandler}
-            className="z-50 shrink-0"
+            className="z-50 shrink-0 max-w-[42%] sm:max-w-none"
           >
             <Link href="/" aria-label="Mesoskin Hamburg Home">
               <span
-                className={`block text-xl lg:text-2xl font-bold tracking-widest uppercase transition-colors duration-300 ${
+                className={`block text-lg sm:text-xl xl:text-2xl font-bold tracking-widest uppercase transition-colors duration-300 ${
                   solidHeader ? "text-primary" : "text-white"
                 }`}
               >
-                Mesoskin<span className="font-light">Hamburg</span>
+                Mesoskin
+                <span className="font-light hidden min-[1400px]:inline">Hamburg</span>
               </span>
             </Link>
           </motion.div>
 
-          <div className="hidden lg:flex min-w-0 flex-1 items-center justify-end gap-3 xl:gap-6">
+          <div className="hidden lg:flex min-w-0 flex-1 items-center justify-end gap-2 xl:gap-4 pl-2">
             <motion.div
-              className="min-w-0"
+              className="min-w-0 flex-1 flex justify-end"
               onMouseEnter={mouseEnterHandler}
               onMouseLeave={mouseLeaveHandler}
             >
@@ -107,18 +108,18 @@ const Header = () => {
             </motion.div>
 
             <div
-              className={`hidden xl:block h-6 w-px shrink-0 ${
+              className={`hidden min-[1400px]:block h-6 w-px shrink-0 ${
                 solidHeader ? "bg-primary/20" : "bg-white/20"
               }`}
             />
 
             <motion.div
-              className="shrink-0"
+              className="hidden min-[1400px]:block shrink-0"
               onMouseEnter={mouseEnterHandler}
               onMouseLeave={mouseLeaveHandler}
             >
               <Socials
-                containerStyles={`flex gap-4 xl:gap-6 ${
+                containerStyles={`flex gap-4 ${
                   solidHeader ? "text-primary" : "text-white"
                 } transition-colors duration-300`}
               />

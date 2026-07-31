@@ -50,6 +50,22 @@
     @apply outline-none font-primary text-sm uppercase placeholder:text-primary/50 text-primary;
   }
 
+  /* Hint that desktop nav scrolls on mid-width viewports */
+  .nav-scroll-fade {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(197, 160, 133, 0.45) transparent;
+    mask-image: linear-gradient(to right, transparent 0, black 12px, black calc(100% - 28px), transparent 100%);
+  }
+
+  .nav-scroll-fade::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .nav-scroll-fade::-webkit-scrollbar-thumb {
+    background: rgba(197, 160, 133, 0.45);
+    border-radius: 9999px;
+  }
+
   .my-masonry-grid {
     display: -webkit-box; /* Not needed if autoprefixing */
     display: -ms-flexbox; /* Not needed if autoprefixing */
