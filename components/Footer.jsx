@@ -49,9 +49,6 @@ const Footer = () => {
           <h3 className="text-2xl font-primary tracking-wide mb-6 text-accent">Kontakt</h3>
           <ul className="space-y-4 text-white/80 font-light mx-auto md:mx-0 w-fit">
             <li className="flex items-start gap-3">
-              <span className="font-medium text-white">{CONTACT_INFO.location.name}</span>
-            </li>
-            <li className="flex items-start gap-3">
               <span>{CONTACT_INFO.practitionerName}</span>
             </li>
             <li className="flex items-center gap-3 group">
