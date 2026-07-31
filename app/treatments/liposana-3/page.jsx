@@ -1,10 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { useContext } from "react";
 import { CursorContext } from "@/components/CursorContext";
 import CtaSection from "@/components/CtaSection";
+import TreatmentHero from "@/components/TreatmentHero";
 
 const Liposana3Page = () => {
   const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
@@ -13,45 +13,15 @@ const Liposana3Page = () => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { delay: 0.2, duration: 0.8 } }}
-      className="min-h-screen pb-12 xl:pt-32"
+      className="min-h-screen overflow-x-hidden pb-12"
     >
-      {/* Hero Section */}
-      <section className="bg-accent-100 py-24 mt-32 mb-12">
-        <div className="container mx-auto flex flex-col xl:flex-row items-center justify-between gap-8">
-          <div className="text-center xl:text-left xl:w-1/2 xl:flex-shrink-0">
-            <motion.h1
-              onMouseEnter={mouseEnterHandler}
-              onMouseLeave={mouseLeaveHandler}
-              className="h1 mb-4 text-primary"
-            >
-              Liposana - Frequenzen die Ihr Leben verändern Health&Beauty
-            </motion.h1>
-            <motion.p
-              onMouseEnter={mouseEnterHandler}
-              onMouseLeave={mouseLeaveHandler}
-              className="lead max-w-2xl mx-auto xl:mx-0 text-gray-700"
-            >
-              Die LIPOSANA3-Gerätetechnologie setzt auf 3 patentierte Frequenzmuster, die ein Behandlungskonzept aus Medizin, Ästhetik und Therapie ergibt.
-            </motion.p>
-          </div>
-                      <motion.div
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ amount: 0.3 }}
-                        transition={{ delay: 0.3, duration: 0.8 }}
-                        onMouseEnter={mouseEnterHandler}
-                        onMouseLeave={mouseLeaveHandler}
-                        className="xl:w-1/2 flex justify-center xl:justify-end xl:-mr-16"
-                      >            <Image
-              src="/assets/treatments/girls2.webp"
-              width={500}
-              height={350}
-              alt="Liposana 3"
-              className="rounded-lg shadow-lg"
-            />
-          </motion.div>
-        </div>
-      </section>
+      <TreatmentHero
+        title="Liposana 3"
+        subtitle="Frequenztechnologie für Medizin, Ästhetik und Therapie — mit drei patentierten Frequenzmustern."
+        imageSrc="/assets/treatments/liposana-3-hero.webp"
+        imageAlt="Liposana 3 Behandlung"
+        overlayOpacity="bg-black/30"
+      />
 
       <div className="container mx-auto px-4">
 

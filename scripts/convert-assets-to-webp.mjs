@@ -10,6 +10,14 @@ import sharp from "sharp";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const publicDir = path.join(__dirname, "..", "public");
 
+/** Already WebP; do not re-encode or delete (retention list for prune step). */
+const KEEP_WEBP_ONLY = [
+  "assets/treatments/notox-hero.webp",
+  "assets/treatments/drip-spa-infusionen-hero.webp",
+  "assets/treatments/treatments-hero.webp",
+  "assets/treatments/liposana-3-hero.webp",
+];
+
 /** Paths under public/ that the app references (keep + convert). */
 const USED_REL = [
   "assets/about/meso-annette.jpg",
@@ -91,7 +99,12 @@ async function main() {
     converted.push(webpRel);
   }
 
-  const keepWebp = new Set(converted.map((r) => path.join(publicDir, r)));
+  const keepWebp = new Set(
+    [
+      ...converted.map((r) => path.join(publicDir, r)),
+      ...KEEP_WEBP_ONLY.map((r) => path.join(publicDir, r)),
+    ]
+  );
   const allFiles = await walk(publicDir);
 
   for (const file of allFiles) {

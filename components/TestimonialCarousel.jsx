@@ -2,8 +2,16 @@
 
 import React, { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { FaStar, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+
+function initials(name) {
+  return name
+    .split(/\s+/)
+    .map((part) => part[0])
+    .join("")
+    .slice(0, 2)
+    .toUpperCase();
+}
 
 const testimonials = [
   {
@@ -11,35 +19,30 @@ const testimonials = [
     name: "Anna Schmidt",
     title: "Sportlerin",
     text: "Die Behandlungen bei Mesoskin Hamburg haben meine Haut revitalisiert und mir ein unglaubliches Gefühl von Frische verliehen. Ich fühle mich energiegeladener und meine Haut strahlt. Absolut empfehlenswert!",
-    // image: "/assets/testimonials/person1.webp", // Placeholder image
   },
   {
     id: 2,
     name: "Irene Mandoou",
     title: "Pilates Teacher",
     text: "Als Pilates Teacher lege ich Wert auf Wohlbefinden. Die Expertise und die maßgeschneiderten Lösungen von Mesoskin Hamburg sind herausragend. Meine Haut war noch nie so gut versorgt.",
-    // image: "/assets/testimonials/person2.webp", // Placeholder image
   },
   {
     id: 3,
     name: "Lena Meier",
     title: "Flugbegleiterin",
     text: "Durch meinen Beruf ist meine Haut oft strapaziert. Mesoskin Hamburg bietet genau die Pflege, die ich brauche, um frisch und erholt auszusehen. Die Ergebnisse sind einfach fantastisch!",
-    // image: "/assets/testimonials/person3.webp", // Placeholder image
   },
   {
     id: 4,
     name: "Dr. Klaus Weber",
     title: "Longevity Experte",
     text: "Die ganzheitlichen Ansätze bei Mesoskin Hamburg sind beeindruckend. Als Longevity Experte schätze ich die fundierte Beratung und die effektiven Behandlungen, die das allgemeine Wohlbefinden fördern.",
-    // image: "/assets/testimonials/person4.webp", // Placeholder image
   },
   {
     id: 5,
     name: "Sophie Müller",
     title: "Unternehmerin",
     text: "In meinem stressigen Alltag ist die Zeit bei Mesoskin Hamburg eine Oase der Ruhe. Die Behandlungen sind nicht nur entspannend, sondern liefern auch sichtbare Ergebnisse. Meine Haut dankt es mir!",
-    // image: "/assets/testimonials/person5.webp", // Placeholder image
   },
 ];
 
@@ -62,7 +65,7 @@ const TestimonialCarousel = () => {
     const carousel = carouselRef.current;
     if (carousel) {
       carousel.addEventListener("scroll", checkScrollability);
-      checkScrollability(); // Initial check
+      checkScrollability();
     }
     return () => {
       if (carousel) {
@@ -73,7 +76,7 @@ const TestimonialCarousel = () => {
 
   const scroll = (direction) => {
     if (carouselRef.current) {
-      const scrollAmount = carouselRef.current.offsetWidth / 2; // Scroll half the width of the carousel
+      const scrollAmount = carouselRef.current.offsetWidth / 2;
       carouselRef.current.scrollBy({
         left: direction === "left" ? -scrollAmount : scrollAmount,
         behavior: "smooth",
@@ -83,60 +86,59 @@ const TestimonialCarousel = () => {
 
   return (
     <section className="py-12 xl:py-24 bg-gray-100">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4">
         <h2 className="h2 mb-12 text-center text-xl md:text-2xl">Das sagen unsere Kund*innen über uns</h2>
 
         <div className="relative">
           <div
             ref={carouselRef}
-            className="flex overflow-x-scroll snap-x snap-mandatory scroll-smooth pb-4 hide-scrollbar"
+            className="flex overflow-x-scroll snap-x snap-mandatory scroll-smooth pb-4 hide-scrollbar gap-4"
           >
             {testimonials.map((testimonial) => (
               <motion.div
                 key={testimonial.id}
-                className="flex-none w-full md:w-1/2 lg:w-1/3 snap-center bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center"
+                className="flex-none w-full md:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.75rem)] snap-center bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center min-h-[320px]"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.5 }}
               >
-                <div className="w-24 h-24 rounded-full overflow-hidden mb-4">
-                  {/* <Image
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    width={96}
-                    height={96}
-                    objectFit="cover"
-                    className="rounded-full"
-                  /> */}
+                <div
+                  className="w-20 h-20 rounded-full mb-4 flex items-center justify-center bg-gradient-to-br from-accent/30 to-primary/10 text-primary font-primary text-xl tracking-wide ring-2 ring-accent/40"
+                  aria-hidden
+                >
+                  {initials(testimonial.name)}
                 </div>
-                <div className="flex text-yellow-400 mb-4">
+                <div className="flex text-yellow-400 mb-4" aria-label="5 von 5 Sternen">
                   {[...Array(5)].map((_, i) => (
-                    <FaStar key={i} />
+                    <FaStar key={i} aria-hidden />
                   ))}
                 </div>
-                <p className="text-gray-700 mb-4 flex-grow">{testimonial.text}</p>
-                <p className="font-semibold text-primary whitespace-nowrap">{testimonial.name}</p>
+                <p className="text-gray-700 mb-4 flex-grow text-sm leading-relaxed">{testimonial.text}</p>
+                <p className="font-semibold text-primary">{testimonial.name}</p>
                 <p className="text-sm text-gray-500">{testimonial.title}</p>
               </motion.div>
             ))}
           </div>
 
-          {/* Navigation Arrows for Desktop */}
           {canScrollLeft && (
             <button
+              type="button"
               onClick={() => scroll("left")}
-              className="hidden md:block absolute top-1/2 -left-12 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg focus:outline-none z-10"
+              aria-label="Vorherige Bewertungen"
+              className="hidden md:flex absolute top-1/2 -left-4 lg:-left-12 -translate-y-1/2 bg-white p-3 rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-accent z-10 items-center justify-center"
             >
-              <FaChevronLeft className="text-gray-600" />
+              <FaChevronLeft className="text-gray-600" aria-hidden />
             </button>
           )}
           {canScrollRight && (
             <button
+              type="button"
               onClick={() => scroll("right")}
-              className="hidden md:block absolute top-1/2 -right-12 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg focus:outline-none z-10"
+              aria-label="Nächste Bewertungen"
+              className="hidden md:flex absolute top-1/2 -right-4 lg:-right-12 -translate-y-1/2 bg-white p-3 rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-accent z-10 items-center justify-center"
             >
-              <FaChevronRight className="text-gray-600" />
+              <FaChevronRight className="text-gray-600" aria-hidden />
             </button>
           )}
         </div>
@@ -146,8 +148,8 @@ const TestimonialCarousel = () => {
           display: none;
         }
         .hide-scrollbar {
-          -ms-overflow-style: none; /* IE and Edge */
-          scrollbar-width: none; /* Firefox */
+          -ms-overflow-style: none;
+          scrollbar-width: none;
         }
       `}</style>
     </section>

@@ -1,33 +1,27 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useContext } from "react";
-import { CursorContext } from "@/components/CursorContext";
+import TreatmentHero from "@/components/TreatmentHero";
 
 const NoToxPage = () => {
-  const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
-
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { delay: 0.2, duration: 0.8 } }}
-      className="min-h-screen pb-12 xl:pt-32"
+      className="min-h-screen overflow-x-hidden"
     >
-      {/* Hero Section */}
-      <section className="bg-accent-100 py-16 mt-32 mb-12">
-        <div className="container mx-auto text-center">
-          <motion.h1
-            onMouseEnter={mouseEnterHandler}
-            onMouseLeave={mouseLeaveHandler}
-            className="h1 mb-4 text-primary"
-          >
-            NoTox
-          </motion.h1>
-        </div>
-      </section>
+      <TreatmentHero
+        title="NoTox"
+        subtitle="Sanfte, natürliche Gesichtsverjüngung — individuell abgestimmt auf Ihre Bedürfnisse."
+        imageSrc="/assets/treatments/notox-hero.webp"
+        imageAlt="NoTox Behandlung bei Mesoskin Hamburg"
+        overlayOpacity="bg-black/25"
+      />
 
-      <div className="container mx-auto px-4">
-        <p className="text-lg text-gray-700">Content for NoTox will go here.</p>
+      <div className="container mx-auto px-4 py-24">
+        <p className="text-lg text-gray-700 max-w-3xl">
+          Content for NoTox will go here.
+        </p>
       </div>
     </motion.div>
   );

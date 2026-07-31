@@ -130,7 +130,6 @@ const HyaluronsaurePage = () => {
         {/* Application Areas Section */}
         <section className="mb-32">
           <div className="bg-accent/5 rounded-3xl p-12 md:p-20 relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-full bg-[url('/assets/pattern.svg')] opacity-5"></div>
             <div className="relative z-10">
               <h2 className="h2 text-center mb-12 text-primary">Behandlungsbereiche</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
