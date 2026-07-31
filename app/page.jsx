@@ -14,6 +14,7 @@ import HeroSection from '@/components/HeroSection';
 import PhilosophySection from '@/components/PhilosophySection';
 import ProcessSection from '@/components/ProcessSection';
 import FaqModal from '@/components/FaqModal';
+import GlamourAcademySection from '@/components/GlamourAcademySection';
 
 
 const Home = () => {
@@ -31,6 +32,7 @@ const Home = () => {
 
       <ProcessSection />
       <CtaSection />
+      <GlamourAcademySection />
       <div className="text-center mb-48 mt-12 py-12 flex flex-col md:flex-row justify-center items-center gap-4">
         <FaqModal />
       </div>

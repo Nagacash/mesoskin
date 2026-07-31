@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Form from '@/components/Form';
 import TestimonialCarousel from '@/components/TestimonialCarousel';
+import GlamourAcademySection from '@/components/GlamourAcademySection';
 import { useContext } from 'react';
 import { CursorContext } from '@/components/CursorContext';
 
@@ -157,6 +158,8 @@ const About = () => {
             </ul>
           </motion.div>
         </div>
+
+        <GlamourAcademySection className="mb-32" />
 
         {/* Testimonials */}
         <div className="mb-32">

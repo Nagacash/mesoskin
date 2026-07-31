@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useContext } from "react";
 import { CursorContext } from "./CursorContext";
 import { Facebook, Instagram, Mail, Phone, MapPin } from "lucide-react";
-import { CONTACT_INFO, TREATMENT_LINKS } from "@/lib/constants";
+import { CONTACT_INFO, TREATMENT_LINKS, GLAMOUR_ACADEMY } from "@/lib/constants";
 
 const Footer = () => {
   const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
@@ -24,6 +24,17 @@ const Footer = () => {
             <li><a href="/contact" className="hover:text-accent transition-colors duration-300 block w-fit focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-primary rounded">Kontakt</a></li>
             <li><a href="/impressum" className="hover:text-accent transition-colors duration-300 block w-fit focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-primary rounded">Impressum</a></li>
             <li><a href="/datenschutz" className="hover:text-accent transition-colors duration-300 block w-fit focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-primary rounded">Datenschutz</a></li>
+            <li>
+              <a
+                href={GLAMOUR_ACADEMY.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-accent transition-colors duration-300 inline-flex items-center gap-1.5 w-fit focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-primary rounded"
+              >
+                {GLAMOUR_ACADEMY.name}
+                <span className="sr-only"> (öffnet in neuem Tab)</span>
+              </a>
+            </li>
           </ul>
         </nav>
 
